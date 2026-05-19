@@ -12,3 +12,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML
 
 appendChild - essentially class inheritance
 https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+
+flex keyword
+https://developer.mozilla.org/en-US/docs/Web/CSS/flex

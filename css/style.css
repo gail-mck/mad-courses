@@ -1,9 +1,36 @@
-.course-card {
+/* setting up the two panels side by side */
+#app {
+  display: flex;
+  height: 100vh;
+}
+
+#catalog {
+  flex: 3;
+  overflow-y: scroll;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+#plan {
+  flex: 1;
+  overflow-y: scroll;
+  padding: 16px;
+  min-width: 250px;
+  background-color: #f0ece4;
+}
+
+/* each grade drop zone */
+.grade-column {
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 12px;
-  margin: 8px;
-  width: 200px;
-  display: inline-block;
-  vertical-align: top;
+  margin-bottom: 12px;
+  background-color: #e8e2df;
+}
+
+/* inside each grade column where cards get dropped */
+.drop-zone {
+  list-style: none;
+  padding: 0;
+  min-height: 50px;
 }

@@ -1,20 +1,41 @@
-<!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html -->
-
-<!DOCTYPE html>  
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Madeira Course Catalog</title>
-    <link rel="stylesheet" href="css/style.css"
-</head>
-
 <body>
-    <!-- JavaScript will put the cards into this catalog -->
+
+  <!-- two columns side by side -->
+  <div id="app">
+
+    <!-- left: the course catalog -->
     <div id="catalog">
+      <!-- course cards get put here by JS -->
     </div>
 
-    <!-- loads the JS file. Placed at bottom so HTML loads first -->
-    <script src="js/main.js"></script>
+    <!-- right: the 4-year plan -->
+    <div id="plan">
+      <h2>My 4-Year Plan</h2>
+
+      <!-- one drop zone per grade year -->
+      <!-- class="drop-zone" marks these as valid drop targets -->
+      <div class="grade-column" data-grade="9">
+        <h3>9th Grade</h3>
+        <ul class="drop-zone"></ul>
+      </div>
+
+      <div class="grade-column" data-grade="10">
+        <h3>10th Grade</h3>
+        <ul class="drop-zone"></ul>
+      </div>
+
+      <div class="grade-column" data-grade="11">
+        <h3>11th Grade</h3>
+        <ul class="drop-zone"></ul>
+      </div>
+
+      <div class="grade-column" data-grade="12">
+        <h3>12th Grade</h3>
+        <ul class="drop-zone"></ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
-</html>

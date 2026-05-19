@@ -1,0 +1,3312 @@
+{
+  "mathematics": [
+    {
+      "id": "algebra-i",
+      "name": "Algebra I",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students apply the basic concepts of arithmetic to the language of algebra and work with the structure and properties of the real number system. They learn to solve first- and second-degree equations, linear systems, and inequalities; they learn techniques of graphing and factoring; they work with polynomials, exponents, and radicals; and they set up and solve word problems. This course or its equivalent is a prerequisite for all subsequent courses in the department.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "geometry",
+      "name": "Geometry",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Algebra I; New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students learn to identify angle relationships, scale, proportion, triangle congruence, and similarity, how perpendicular and parallel relationships unify and extend earlier concepts, and how to apply new knowledge to applications in circles, polygons, and right triangles. Students learn how to compute the area of plane figures and apply trigonometric skills to problem-solving in their work with a variety of 2-D shapes. Students will apply principles of algebra with continued practice and reinforcement while also demonstrating increasing flexibility with coordinate geometry, building a strong foundation for success in higher mathematics.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "algebra-ii",
+      "name": "Algebra II",
+      "department": "mathematics",
+      "blocks": "3-4",
+      "blocks_min": 3,
+      "blocks_max": 4,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning Students – B+ or higher in Geometry leads to 3 Mods of Algebra II. New Students - by placement test.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course extends the algebraic principles learned in Algebra I, including an exploration of different number systems such as radical and complex numbers. Students will study the algebraic and graphical properties of a wide variety of functions including quadratic, polynomial functions, radical, rational, trigonometric, exponential and logarithmic. Additionally, foundational geometry concepts will be extended in order to address right-triangle relationships, the unit circle, equations with and graphs of all six trigonometric functions, sinusoidal motions, inverse trigonometric functions, identities, double-angle formulas, and half-angle formulas.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "extended-algebra-ii",
+      "name": "Extended Algebra II",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning Students - Geometry A or higher and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "The course assumes a strong mastery of the material in Algebra I and an ability to manage material at a faster pace than is offered in Algebra II. The course will broaden a student's understanding of foundation topics while applying these topics to more complex problems. New topics such as polynomial, logarithmic, and rational numbers will be studied. In addition, students will learn skills in abstract reasoning and quantitative thinking with non-traditional problems as well as exploring the full capabilities of the graphing calculator. Finally, foundational geometry concepts will be extended in order to address right-triangle relationships, the unit circle, equations with and graphs of all six trigonometric functions, sinusoidal motions, inverse trigonometric functions, identities, double-angle formulas, and half-angle formulas.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "precalculus",
+      "name": "Precalculus",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning Students - Algebra II with a B-. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course focuses on extending topics from Algebra II, including quadratic, polynomial, radical, rational, exponential and logarithmic functions. New units, such as conic sections, sequences and series, limits, and the definition of the derivative will be introduced. This course is designed for students who will proceed to the concepts in Calculus.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "extended-precalculus",
+      "name": "Extended Precalculus",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning Students – Extended Algebra II with an A and department approval. Algebra II students with an A or above, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course provides an introduction to higher mathematics and helps to develop the skills and study habits necessary for a rigorous math program. This course will continue to expand on topics from Advanced Algebra II, including rational, trigonometric exponential and logarithmic functions. New units, such as conic sections, sequences and series, limits, vectors, parametric and polar equations and derivatives will be introduced. This course is designed to prepare students for AP Calculus.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "calculus",
+      "name": "Calculus",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning Students - Trigonometry, Precalculus with a B- or higher, or Extended Precalculus. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course provides an introduction to first-year college calculus. Topics will include a review of functions, limits, continuity, rates of change, the derivative, and integration. Emphasis is on understanding of concepts and mechanical manipulation.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "ap-calculus-ab",
+      "name": "AP Calculus AB",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Extended Precalculus with a B or higher, Precalculus with an A or higher, or Calculus, and department approval.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course continues the path to higher mathematics and helps to develop the skills and study habits necessary for a rigorous math program. Students explore differential and integral calculus and their applications while learning to approach problems from a variety of perspectives—graphical, analytical, numerical, and verbal. Technology is used to explore the behaviors of functions and to make connections with analytic procedures. Students are prepared to sit for the Advanced Placement Calculus AB exam in the spring.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "ap-calculus-bc",
+      "name": "AP Calculus BC",
+      "department": "mathematics",
+      "blocks": "3-4",
+      "blocks_min": 3,
+      "blocks_max": 4,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Extended Precalculus with an A or higher, AP Calculus AB with a B or higher, and department approval. Students who complete AP Calculus AB prior to taking this course may elect not to take the first block of BC.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "In this rigorous course, students review the topics covered in Calculus AB, extend the procedures learned to include more sophisticated integration methods, and explore vectors, parametric and polar functions, and techniques in solving differential equations. Students analyze the behavior of sequences and series beyond arithmetic and geometric ones, with particular attention to divergence, convergence, intervals of convergence, and various test methods. Technology is used, particularly the programmable capabilities of the calculator, to simulate real-life applications of the concepts and to enhance understanding. Students are prepared to sit for the Advanced Placement Calculus BC exam in the spring.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "multivariable-calculus",
+      "name": "Multivariable Calculus",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "AP Calculus BC or AP Calculus AB with a B+ or higher.",
+      "coreqs": "None",
+      "notes": "Offered on a rotating basis with Linear Algebra and Differential Equations.",
+      "description": "This course provides an introduction to multivariable and vector calculus. The course covers vectors and analytic geometry in three dimensions, partial differentiation, multiple integration, and ends with vector calculus topics that build up to Green's, Stokes', and the Divergence Theorem. Students develop new problem-solving and critical reasoning skills to prepare them for further study in mathematics, the physical sciences, or engineering. Topics include surfaces in three-dimensional space, algebraic and geometric properties of vectors and vector functions in two and three dimensions, dot products and cross products, derivatives and integrals of vector functions, partial derivatives of functions of several variables, directional derivatives and gradients of scalar functions, multiple variable maximum and minimum value problems, double and triple integrals, line integrals, Green's theorem, and Stoke's theorem.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "linear-algebra",
+      "name": "Linear Algebra",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "AP Calculus BC or AP Calculus AB with a B+ or higher.",
+      "coreqs": "None",
+      "notes": "Offered on a rotating basis with Multivariable Calculus and Differential Equations.",
+      "description": "This course provides a study of computational and proof techniques of matrix algebra and an introduction to vector spaces. It pushes students to ask questions and communicate mathematical thinking. Topics covered include matrix algebra, systems of linear equations, eigenvalues and eigenvectors, least squares, vector spaces, inner products, and introduction to numerical techniques, and applications of linear algebra. Students also explore linear transformations, matrix representations of a linear transformation, characteristics and minimal polynomials, and diagonalization of a matrix.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "AP Calculus BC or AP Calculus AB with a B+ or higher",
+      "coreqs": "None",
+      "notes": "Offered on a rotating basis with Linear Algebra and Multivariable Calculus.",
+      "description": "This course introduces first order differential equations and systems, second and higher order linear equations, solutions by series and Laplace transform, and applications. Students develop new problem-solving and critical reasoning skills preparing them for further study in mathematics, the physical sciences, or engineering. The course covers initial value problems, solution curves, separable and exact equations, linear and nonlinear models of first order ODEs, non/homogeneous linear equations with constant coefficients, the reduction of order, undetermined coefficients, variation of parameters, Cauchy-Euler equations, Green's Functions, Spring/Mass systems, Series circuit analogues, Laplace Transforms, The Transforms of Derivatives, Operational Properties, The Dirac Delta Function, Systems of Linear Differential Equations, Inverse Transforms, Power Series, and Solutions about Ordinary and Singular Points.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "computer-science-i",
+      "name": "Computer Science I",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Algebra I",
+      "coreqs": "None",
+      "notes": "Meets Interdisciplinary and Coding credit.",
+      "description": "A first look at computer programming in Python. This course will take a project-based approach to developing essential programming skills. Students will write programs using variables, user interaction, basic data structures, conditional and logical control structures, functions, and other topics in modern Python programming. With this strong foundation, \"Advanced Programming\" courses are open to interested students following completion.",
+      "credits_toward": [
+        "Coding",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "computer-science-ii",
+      "name": "Computer Science II",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Computer Science 1 or Placement test.",
+      "coreqs": "None",
+      "notes": "Meets the Design Thinking and coding credit.",
+      "description": "Building upon the topics from Computer Science I, Computer Science II takes a project-based approach to developing more advanced programming skills. In addition to the topics covered in Computer Science I, students will work with complex data structures, write programs that read from and write to external files, define classes for use in object-oriented programming, and explore other topics in modern Python programming.",
+      "credits_toward": [
+        "Coding",
+        "Design Thinking",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "computer-science-iii",
+      "name": "Computer Science III",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Computer Science 2 or Placement test.",
+      "coreqs": "None",
+      "notes": "Meets the Design Thinking credit.",
+      "description": "Building upon the topics from Computer Science I and II, Computer Science III students will learn how to design, implement, evaluate, and iterate on complex problems with Python. Topics covered include advanced data structures and algorithms, different programming paradigms, software development best practices, project management methodologies, and design thinking as they develop real world programming skills. Through hands-on projects and group work, students will apply their knowledge to create fully executable computer programs solving real-world problems.",
+      "credits_toward": [
+        "Coding",
+        "Design Thinking",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "computer-science-seminar",
+      "name": "Computer Science Seminar",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Computer Science 3.",
+      "coreqs": "None",
+      "notes": "Meets the Design Thinking credit.",
+      "description": "This culminating, student-directed and project-based computer science course combines all skills learned in Computer Science I, II, and III. Students will use programming skills and the design thinking process to identify real-world problems and create innovative solutions. By the end of this course students will have practical experience in developing real-world applications throughout all phases of the design cycle, from ideation to presentation and iteration.",
+      "credits_toward": [
+        "Coding",
+        "Design Thinking",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "engineering-for-robotics",
+      "name": "Engineering for Robotics",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "This course satisfies the coding and Design Thinking requirement. Also cross-listed in Science.",
+      "description": "This inquiry-based course will explore the Science, Technology, Engineering and pure Mathematics that undergirds the field of Robotics. Throughout this hands-on course, students will learn and experiment with electrical wiring, mechanical design and, programming to design and prototype working robots. Students will learn through videos, in-class demonstrations, and hands-on practice. Students will use the principles they learn in this course to solve and prototype solutions to real-world problems.",
+      "credits_toward": [
+        "Coding",
+        "Design Thinking",
+        "Mathematics",
+        "Science"
+      ]
+    },
+    {
+      "id": "programming-for-robotics",
+      "name": "Programming for Robotics",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "This course satisfies the coding and Design Thinking requirement. Also cross-listed in Science.",
+      "description": "Robotics immerses students in the incredible innovation around the world in robotics and artificial intelligence. Students will learn the fundamentals of computer programming through the lens of robotics to solve real-world problems. This project-based course uses a combination of videos, in-class demonstrations and hands-on trial and error. Students will learn and implement computational thinking, the engineering design process and effective problem solving by programming robots using VEX simulation software in Python.",
+      "credits_toward": [
+        "Coding",
+        "Design Thinking",
+        "Mathematics",
+        "Science"
+      ]
+    },
+    {
+      "id": "statistics-data-display",
+      "name": "Statistics: Data and Display",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Algebra II",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students examine data on two fronts: how to analyze data using scatterplots and regression calculations, and how to display data to show relationships between variables. These displays will include dot plots, bar charts, stem and leaf diagrams, box plots and histograms. Students further learn when to use each of these displays optimally. This hands-on, project-based course will expose students to real uses of statistics and the role data plays in our fact-hungry culture. In addition to learning how to use tables and display data, students will learn and apply standardization and the normal curve.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "statistics-probability",
+      "name": "Statistics: Probability",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Algebra II",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course centers on the rules and applications of probability. Students will explore many facets of probability from games of chance to simulation to applications in fields as diverse as the internet and medicine. In addition to learning probability rules, permutations and combinations, students will use Venn diagrams, two-way tables and tree diagrams. Students will learn about conditional probabilities and independence. This hands-on, project-based course will expose students to the real uses of probability.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Statistics: Data & Display or Computer Science I",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course is designed to introduce students to the growing discipline of Data Science. This class will extend the topics learned in Data Science and use digital tools to collect, present, and analyze data. This course uses a project-based approach using real-world data with a focus on practical applications and analysis. There will be a focus on finding and communicating meaning in data and thinking critically about arguments based on data.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "advanced-statistics",
+      "name": "Advanced Statistics",
+      "department": "mathematics",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Extended Algebra II, or Precalculus, or department approval.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course introduces students to the major concepts about and tools for collecting and analyzing data. Particular focus on how statistics can be used to gain insight into relevant, real-world issues and be a tool to help solve problems in society. The course begins with a thorough examination of descriptive statistics including graphical and numeric methods for describing data, and observational study vs. experimental design. The next topics include probability, random variables and probability distributions. The course then moves into inferential statistics, covering sampling distributions, confidence intervals and hypothesis testing for single samples and two populations or treatments. Finally, homogeneity, linear regression and inferences about correlation are examined.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "applied-math-personal-finance",
+      "name": "Applied Mathematics: Personal Finance",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Algebra II",
+      "coreqs": "None",
+      "notes": "Meets Design Thinking credit.",
+      "description": "In this course students will look at the mathematics of personal finance including budgeting, mortgages and taxation. In learning the mathematics of personal finance students will explore mathematical concepts such as exponential functions, sequences and series, and statistics.",
+      "credits_toward": [
+        "Design Thinking",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "applied-math-financial-mathematics",
+      "name": "Applied Mathematics: Financial Mathematics",
+      "department": "mathematics",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Algebra II",
+      "coreqs": "None",
+      "notes": "Meets Design Thinking credit.",
+      "description": "Investing. In this course students will look at the mathematics of personal finance including savings accounts, stocks, bonds, and other financial savings instruments. In learning the mathematics of personal finance students will explore mathematical concepts such as exponential functions, sequences and series, and statistics.",
+      "credits_toward": [
+        "Design Thinking",
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "robotics-team",
+      "name": "Robotics (Evening)",
+      "department": "mathematics",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "E-block activities do not meet the D block activity requirements. E Block activities will receive Credit or No Credit. Students on Varsity teams (Field Hockey, Basketball, Volleyball, Swim, Tennis, Swim, and Diving) should not sign up for Robotics as the time requirements overlap. Meets Design Thinking credit.",
+      "description": "Robo Escargot is Madeira's VEX V5 competitive team. Students who join the team will build both engineering and programming skills before primarily specializing in either the build or auton division. The build division specializes in designing, iterating, and building the physical robot body, while the auton division specializes in programming the robot to run self-directed on competition courses. In addition to weekly meetings, the team competes regularly in regional tournaments and competitions. Students who have taken Programming for Robotics or Engineering for Robotics are automatically considered for leadership positions within the team.",
+      "credits_toward": [
+        "Design Thinking",
+        "Mathematics"
+      ],
+      "schedule": "E-Block Activity. Tuesdays from 5:45-6:45 p.m., Mods 1-7. Additional hours required for weekend build days and competition weeks."
+    }
+  ],
+  "english": [
+    {
+      "id": "english-i",
+      "name": "English I",
+      "department": "english",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "During the first year of required English, students are introduced to fundamental texts from widely different cultures and time periods to shape and explore questions essential to the study of literature in English. To build multidisciplinary literacy, English I also tasks students with learning how the arts and sociohistorical contexts inform their texts. Students learn the process of crafting expository writing, moving from invention strategies to revision. Throughout the year, vocabulary building and grammar work help lay a foundation for clear, effective writing.",
+      "credits_toward": [
+        "English"
+      ],
+      "modules": [
+        {
+          "name": "Introduction to Literary Studies",
+          "description": "The focus of this course is on discovering critical approaches to literature, practicing the conventions of analytical writing, honing close reading and annotation skills, and exploring grammar concepts important to the production of high-quality written work. Students will read several complex texts and observe how the form and background of each work reveal strategies for their interpretation. Students can expect to read longer heroic journey narratives like Homer's Odyssey or Richard Adams's Watership Down, and smaller works like Salman Rushdie's Haroun and the Sea of Stories to understand how each text explores the physical and spiritual journeys of our core selves. Students will focus on building strong arguments and supporting them with rich textual support in a series of small analytical pieces that make use of a variety of critical lenses before crafting a full-length, critical essay on a topic of their choosing."
+        },
+        {
+          "name": "Narrative and Argumentation",
+          "prereqs": "Introduction to Literary Studies",
+          "description": "Students will read small-form prose (short stories, micro-memoir, etc.), poetry from a variety of authors and time periods, and a selection of dramatic work by William Shakespeare as part of their exploration of how writers use their chosen forms in unique ways to communicate rich stories of self-discovery and social commentary. They will shape and challenge their interpretations of these varied texts through performance exercises, collaborative critical writing exercises, and the production of their own creative work."
+        },
+        {
+          "name": "Portfolio",
+          "prereqs": "Introduction to Literary Studies and Narrative and Argumentation",
+          "description": "This is the culminating section of the English I course of study. Students will bring the skills and knowledge they gained (as well as several pieces of writing) from the previous two sections of English I to bear on the creation of a portfolio of critical and creative work that focuses on contrastive analysis, adaptation, and literary criticism. Texts for this section will include Martha Wells' All Systems Red and exemplars from a variety of sources to guide student composition and revision."
+        }
+      ]
+    },
+    {
+      "id": "english-ii",
+      "name": "English II: Literature in the World",
+      "department": "english",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10
+      ],
+      "prereqs": "English I",
+      "coreqs": "None",
+      "notes": null,
+      "description": "During the second year of required English, students explore our literary heritage in English from the Middle Ages to the present post-colonial world. Students learn how to write analytical essays that connect form to meaning. Building knowledge of literary terms and increasing general vocabulary lay a foundation for the practice of clear, effective writing.",
+      "credits_toward": [
+        "English"
+      ],
+      "modules": [
+        {
+          "name": "Writing Mechanics and Global Literature",
+          "required": true,
+          "description": "This course pairs intensive grammar instruction with reading and analyzing Chimamanda Ngozi Adichie's Purple Hibiscus (summer text) and selected short stories. Students will learn to write with greater grammatical correctness so that they can express ideas more precisely in their academic and future professional careers. Reading the novel and short stories will provide contemporary cultural topics for the students to write about. These students conduct biographical research on individual authors."
+        },
+        {
+          "name": "Writing with Style About Global Literature",
+          "description": "Students who test out of Writing Mechanics cultivate their prose style in this workshop-style course where they read and respond to each other's writing, in addition to receiving feedback from their teacher. Reading Chimamanda Ngozi Adichie's Purple Hibiscus (summer text) and selected short stories will provide contemporary cultural topics for student writing. These students conduct biographical research on individual authors. Can substitute for Writing Mechanics and Global Literature—required."
+        },
+        {
+          "name": "Shakespeare Through Performance II",
+          "required": true,
+          "description": "Students will study one of Shakespeare's plays through reading and writing and through performances presented to the wider school community. Through analytical and imaginative pieces, they will examine Shakespeare's use of language and dramatic conventions. They will gain a fuller appreciation of Shakespeare's meaning through rehearsing and performing selected monologues and sonnets."
+        },
+        {
+          "name": "Literary Masterpieces: Jane Eyre",
+          "prereqs": "Writing Mechanics and Global Literature",
+          "description": "Students will study Charlotte Brontë's novel Jane Eyre. Close reading of the text, vocabulary building, and learning about the social history of Britain will enhance students' understanding of this work. Students will demonstrate their understanding primarily through analytical essays."
+        },
+        {
+          "name": "Literary Masterpieces: Satire in Chaucer and Austen",
+          "prereqs": "Writing Mechanics and Global Literature",
+          "description": "Students will study the social satire of Chaucer's Canterbury Tales and Austen's Pride and Prejudice. Close reading of the texts, vocabulary building, and researching social history will enhance students' understanding of these two works and the function of satire. Students will demonstrate their understanding primarily through analytical essays."
+        },
+        {
+          "name": "Literary Masterpieces: Poetry",
+          "prereqs": "Writing Mechanics and Global Literature",
+          "description": "Students will read works by John Keats and Elizabeth Barrett Browning, two prominent 19th-century English poets. Students will learn strategies for discovering meaning in the selected poems through close attention to literary devices and through the viewing of two feature films, Bright Star (2009) and The Barretts of Wimpole Street (1934), that dramatize these two poets' famous life stories. Students will demonstrate their understanding through expressive recitation and analytical essays."
+        }
+      ]
+    },
+    {
+      "id": "english-iii",
+      "name": "English III: American Literature",
+      "department": "english",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11
+      ],
+      "prereqs": "English I & English II",
+      "coreqs": "None",
+      "notes": null,
+      "description": "English III offers a thematic approach to American Literature, introducing students to a variety of texts from major literary movements and historical periods. In both their writing and in-class discussions, students practice close textual analysis that develops increased skill in the interpretation of literary techniques and rhetorical strategies. Students conduct research on American authors and poets to synthesize literary criticism and other sources with their own original arguments. Some students may choose to take the AP English Language and Composition exam in May of their junior year.",
+      "credits_toward": [
+        "English"
+      ],
+      "modules": [
+        {
+          "name": "Feminist Perspectives",
+          "description": "This course will focus on fiction that depicts the changing role of women spanning the seventeenth to the mid-twentieth century. It will explore the obstacles, both internal and external, women faced in defining their own lives. Students will read Nathaniel Hawthorne's The Scarlet Letter, Toni Morrison's Sula, and selected short stories from Charlotte Perkins Gilman. Since the American Gothic tradition is a common element among these texts, students will explore how it arose to navigate and challenge social limitations. Student writing will focus on literary analysis presenting an original interpretive argument."
+        },
+        {
+          "name": "American Modernism",
+          "description": "In this course students will examine how Modernist writers questioned or outright denied assurances provided by religion, politics, social norms, and traditional forms of art. The course will also examine how these writers processed World Wars I and II and how Modern art intersects with literature. Texts include poetry of the Harlem Renaissance, F. Scott Fitzgerald's The Great Gatsby, stories from Hemingway's In Our Time, and Kate Chopin's The Awakening. Student writing will focus on literary analysis presenting an original interpretive argument."
+        },
+        {
+          "name": "The Literary Memoir",
+          "description": "In this course, students will interrogate the American experience through the lenses of memoir and personal essay. Texts include Maxine Hong Kingston's Woman Warrior along with contributions from writers like Leslie Marmon Silko, Joan Didion, Jhumpa Lahiri, Jamaica Kincaid, and James Baldwin. Students will learn to write analytically and creatively about identity formation from a multicultural perspective. In addition to analytical writing, students will develop a creative nonfiction essay that parlays into their college application essay process."
+        },
+        {
+          "name": "The Rhetoric of Equality",
+          "required": true,
+          "prereqs": "Any two of the modules below",
+          "description": "(Required): Students will read and analyze Frederick Douglass' Narrative of the Life of Frederick Douglass (summer text), a novel from writers such as Toni Morrison, Ralph Ellison and Percival Everett and essays and speeches representing a range of voices in the struggle for civil rights in the United States. Along with close study of language and narrative techniques in the text themselves, students will learn their historical contexts by exploring related media. Students will learn how to defend an argument and use rhetorical devices and how to integrate literary criticism and other sources into their writing as part of a larger research paper."
+        }
+      ]
+    },
+    {
+      "id": "english-iv",
+      "name": "English IV",
+      "department": "english",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "English I, English II, and English III",
+      "coreqs": "None",
+      "notes": null,
+      "description": "During the fourth year of required English, all students take three modules drawn from a broad range of offerings, including AP English Literature and Composition. Building upon the close, scholarly relationships with their peers and teachers during prior study, students flex and advance their skills in critical thinking and analytical and creative writing.",
+      "credits_toward": [
+        "English"
+      ],
+      "modules": [
+        {
+          "name": "Expatriates in Paris",
+          "description": "Paris in the early 20th century was a center of literary and artistic innovation, drawing many Americans and other foreigners who delighted in the beautiful surroundings and the creative environment. This course focuses on writers, painters, dancers, and musicians, many of whom we now call \"modernist.\" We begin with Hollywood's dreamy version of this world depicted in the 1951 film An American in Paris. We will then compare this romanticized version of expatriate writers' work to the reality by reading short stories from Ernest Hemingway's In Our Time and selections from Gertrude Stein's memoir The Autobiography of Alice B. Toklas, in addition to short selections by other authors. Through documentary films, art images, and video recordings, we will explore our responses to modernism in the visual and performing arts, with a special focus on Diaghilev's Ballets Russes. Finally, we end with the play Our Town, a modernist classic by Thornton Wilder, who was deeply influenced by the Parisian avant-garde."
+        },
+        {
+          "name": "Getting Medieval",
+          "description": "In this module we will look closely at how medieval life has been constructed in various literary modes: romance, epic, travelogue, and historiography. We will consider the social and historical contexts of life in the Middle Ages and examine how medievalism continues to influence artistic production. Our means of investigation will be diverse: close reading, lively discussion, study of history and art, and creative and analytical writing. This course will challenge the student to develop an even richer, more precise vocabulary, and to stretch and synthesize the student's knowledge of history, religion, art, and philosophy. Texts may include, but are not limited to: Beowulf, The Book of Margery Kempe, The Travels of Ibn Battutah, the Scivias of Hildegard von Bingen, and Sir Gawain and the Green Knight."
+        },
+        {
+          "name": "Mother, May I?",
+          "description": "People have always told stories in order to explain or make sense of the world around them. Science, in some way, has often sought to prove or disprove those same stories. In Mary Shelley's Frankenstein, the collision between the stories we tell ourselves about the mystery of life and the science behind its creation is both sublime and terrifying. This course will approach one of the most famous horror stories of all time from a literary, psychological, and scientific perspective. Students will also consider the influence of Shelley's cadre of literary friends and family on her own work. Throughout, students will hone their research, analytical, and creative writing skills. Texts include Mary Shelley's Frankenstein and selections from Mary Wollstonecraft's A Vindication of the Rights of Woman. Students will also explore the work of William Blake, Percy Bysshe Shelley, Samuel Taylor Coleridge, Anna Laetitia Barbauld, and George Gordon, Lord Byron."
+        },
+        {
+          "name": "Female Friendships",
+          "description": "In Virginia Woolf's literary essay, A Room of One's Own, a simple phrase strikes the author: \"Chloe liked Olivia,\" and Woolf notes that \"perhaps for the first time in literature,\" a relationship between two women occupies the central arc of a novel. Nearly fifty years later, Toni Morrison ponders a similar ideal, when she asks in her foreword to Sula, \"What is friendship between women when unmediated by men?\" This course will attempt to answer Morrison's question by exploring how female friendships are represented in works by women writers. Are female protagonists and their subsequent relationships portrayed through the \"sad girl\"/\"mean girl\" trope, or do they act as mentors, confidantes, and spiritual leaders for one another? Ultimately, how do female friendships help shape identity? Students will read, analyze, and discourse on works from authors such as Virginia Woolf, Nella Larsen, Toni Morrison, Shirley Jackson, Elena Ferrante, Jane Austen, and Miriam Toews. Students will also investigate the portrayal of female friendships in contemporary media such as film and journalism, with the course culminating in their own self-reflective narrative on friendship and identity."
+        },
+        {
+          "name": "AI: Alternative Intelligences",
+          "description": "What is sentience? We talk about these things in terms of cognitive, social, or emotional intelligence, but in this course, we will be more forthcoming about its core: the boundaries of personhood. So many of our stories exploring these concepts are precisely about intelligences that are inhuman (curiously often they are inhumane as well) that it is worth considering why. We will explore alternative intelligences: organic, inorganic, supernatural, and several things in between, and the role such entities play in our determination of what makes a person a person. Expect to see animals with opinions, killer computers, exasperated aliens, cyborgs with issues, plants bent on world domination, and maybe even some Endless beings that need to grow up a little. Possible texts might include Semiosis (Burke), Solaris (Lem), Speaker for the Dead (Card), Dawn (Butler), Binti (Okorafor) in addition to movies and other media like Ex Machina (2014), The Lego Movie (2014), and Neil Gaiman's Sandman series."
+        },
+        {
+          "name": "Poetry Writing Workshop",
+          "description": "This course is structured as a workshop and focuses on poetry created by the class. Students will write a variety of poems—from formal sonnets and villanelles to pantoums and free verse poems—and participate in regular discussion of each other's work. Based on feedback from the class and teacher, and their own expanding expertise, they will then revise their work and compile it in a final portfolio. Students will also read and analyze a diverse selection of poems to broaden their knowledge and understanding of the vast array of poetic voices that exist throughout the world and across time. As a culmination of the course, students will have the opportunity to share their poetry with the Madeira community."
+        }
+      ]
+    },
+    {
+      "id": "ap-english-lit",
+      "name": "AP English Literature and Composition",
+      "department": "english",
+      "blocks": "2",
+      "blocks_min": 2,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "Department approval",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course offers students an introductory college-level curriculum and prepares them to take the AP English Literature exam in May. Students develop their skills in critical thinking, analytical writing, and close reading through daily discussion, diverse writing assignments, and AP exam practice. Texts will be drawn from a range of genres, including poetry, fiction and drama, and will represent major artistic statements of the periods ranging from the Renaissance to the Twentieth Century. For the third block of senior English, AP students will be enrolled in an English IV elective.",
+      "credits_toward": [
+        "English"
+      ]
+    },
+    {
+      "id": "ise-1",
+      "name": "International Student English Year One (ISE 1)",
+      "department": "english",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10
+      ],
+      "prereqs": "None",
+      "coreqs": "ISE1 I: Introduction to Madeira Scholarship must be completed prior to taking English I courses.",
+      "notes": null,
+      "description": "This class is required for all first-year students in the International Student English Program. The course helps students acclimate to The Madeira School and to academic standards and practices in the United States. Students develop their familiarity with the tools available to them for their studies in English: dictionaries (bound and online), library reference and research databases, grammar resources, and course-management, word-processing, and presentation software. Throughout the course, students build their vocabulary and increase their oral communication skills through public speaking practice, interviews, group presentations, and frequent discussion of readings. The course also offers intensive instruction in writing, with a special focus on learning the process of composing the expository essay. Students practice prewriting, thesis construction, paragraph development, drafting, and revision. Additionally, students are taught to apply U.S. conventions of language and grammar outside the expository essay, in email, letters, resumes, creative writing, and presentations.",
+      "credits_toward": [
+        "English"
+      ],
+      "modules": [
+        {
+          "name": "ISE1 I: Working with Literature"
+        },
+        {
+          "name": "ISE1 II: The Modes of Writing"
+        },
+        {
+          "name": "ISE1 III: Working with Research"
+        }
+      ]
+    },
+    {
+      "id": "ise-2",
+      "name": "International Student English Year Two (ISE 2)",
+      "department": "english",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10,
+        11
+      ],
+      "prereqs": "ISE 1",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This class is required for all second-year ISE students. Year Two allows students more time and instructor attention to develop grade-appropriate English reading and writing skills across the Madeira curriculum. The course emphasizes the development of composition skills through writing exercises that hone the use of correct grammar and punctuation. Additionally, students explore ways to craft more substantive thesis statements and build cohesive arguments as they use examples from their texts, employ correct citations, and frame conclusions that are more discovery than mere summary. They work closely with the instructor in drafting, editing, and rewriting assignments. Throughout the course, students further improve their reading comprehension by practicing annotation techniques and identifying significant passages in their texts for discussion. In the second block, rigorous attention is paid to the development of public speaking skills. Each module has a different content focus, though reading, writing, speaking and listening skills are developed and honed in each module.",
+      "credits_toward": [
+        "English"
+      ],
+      "modules": [
+        {
+          "name": "ISE2 I: Madeira's School Values"
+        },
+        {
+          "name": "ISE2 II: Public Speaking"
+        },
+        {
+          "name": "ISE2 III: Literary Analysis: A Masterwork in English"
+        }
+      ]
+    }
+  ],
+  "science": [
+    {
+      "id": "biology",
+      "name": "Biology",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Biology at Madeira is a foundational course that introduces the science skills that students will develop and use throughout high school. Students will study the process of science and will survey the study of life. Laboratory exercises will be performed to reinforce concepts, and current events will be used to supplement discussions of biological issues. Topics may include (but are not limited to) chemistry and biochemistry, cell types, cellular structure and function, cell division, genetics, DNA/RNA/protein synthesis, biotechnology, evolution, diversity of life, and ecology.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "applied-chemistry",
+      "name": "Applied Chemistry",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Biology.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Applied Chemistry includes one mod of Chemistry I plus two mods that expand on the foundation of chemistry concepts by connecting to real-world applications. The scientific, economic, and societal aspects of each topic will be investigated. Students will have the opportunity to explore their own areas of interest through research and presentations.",
+      "credits_toward": [
+        "Science"
+      ],
+      "modules": [
+        {
+          "name": "Chemistry I: Introduction to Chemistry",
+          "required": true,
+          "description": "Topics will include atomic structure, elements, the periodic table and trends, bonding, molecular structures, kinetic theory, phases of matter, equilibrium, and writing and balancing reactions."
+        },
+        {
+          "name": "Applied Chemistry: Global Challenges",
+          "description": "This course focuses on the chemistry of major global challenges of the past, present, and future. Topics covered may include, introductory organic chemistry, pesticides, infectious diseases, food and nutrition, dyes, pharmaceuticals, and more. May also be taken as a 1 block elective during Senior year."
+        },
+        {
+          "name": "Applied Chemistry: Modern Materials",
+          "description": "This course focuses on the chemistry related to the development of significant modern materials and how they impacted world events. Topics covered may include introductory organic chemistry, dyes, textiles, pharmaceuticals, polymers, explosives, and more. May also be taken as a 1 block elective during Senior year."
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Biology and B+ or Higher in Geometry or Applied Physics.",
+      "coreqs": "Algebra II, or recommendation from the teacher.",
+      "notes": null,
+      "description": "This course is intended to familiarize students with the fundamental concepts of chemistry as a physical science and includes chemical investigation through experimentation. This course requires the student to work with abstract concepts and requires considerable mathematical problem-solving skill. Topics covered in this course include organization of the periodic table, development of atomic theory and atomic structure, chemical bonding, writing and naming chemical compounds, classifying, balancing, and predicting products for chemical reactions, calculations with chemical quantities, intermolecular forces, the behavior of solids, liquids, gases, and solutions, chemical kinetics, chemical equilibrium, acid-base chemistry, and electrochemistry.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "applied-physics",
+      "name": "Applied Physics",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Biology.",
+      "coreqs": "Geometry.",
+      "notes": "This course may be used to meet the Physics requirement for AP Biology but may not be used to meet the Physics requirement for AP Chemistry or AP Physics C.",
+      "description": "This project-based course is an introduction to the fundamental ideas of physics including applications to everyday experiences using concepts, mathematical calculations, and frequent hands-on applications. In their study of the physical universe, students will delve into many branches of physics, including matter and its motion, the nature of light, sound phenomena, electricity and magnetism. Mathematical calculations are used to enhance and describe ideas that are initially presented at a conceptual level.",
+      "credits_toward": [
+        "Science"
+      ],
+      "modules": [
+        {
+          "name": "Applied Physics 1: Forces and Motion",
+          "description": "Topics include vectors, linear motion, projectiles, and Newton's Laws of Motion."
+        },
+        {
+          "name": "Applied Physics 2: Energy",
+          "description": "Topics may include the study of uniform circular motion, universal gravitation, electricity and magnetism, conservation of energy and conservation of momentum."
+        },
+        {
+          "name": "Applied Physics 3: Simple Harmonic Motion and Waves",
+          "description": "Topics may include simple harmonic motion, springs and spring forces, mechanical waves, sound, standing waves, and geometric optics."
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Biology, Chemistry with a B– or higher.",
+      "coreqs": "Advanced Precalculus (or higher). If in Precalculus, permission required from Academic Dean and chair of the science department.",
+      "notes": null,
+      "description": "The focus of Physics is to examine, explain, and analyze physical phenomena that occur in the world around us. New concepts are developed primarily through class discussion and laboratory work, and solving problems related to this material refines the understanding of these concepts. Students are expected to take responsibility for their own learning, both by working independently as well as with other students.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "ap-biology",
+      "name": "AP Biology",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Applied Chemistry or Chemistry, B- or Higher in Biology.",
+      "coreqs": "Physics",
+      "notes": null,
+      "description": "AP Biology is a college-level, comprehensive study of biology for students with a background in basic biology and chemistry and a strong interest in biology. This course covers topics introduced in a standard Biology course with greater complexity and at a faster pace. Topics include biochemistry, cell structure and function, cellular energetics, cell cycle, genetics, evolution, and ecology. Skills practiced include textbook reading at the college level, collaboration, research, data analysis, statistical methods, and experimental design. Learning activities during class include lectures, class discussions, laboratory demonstrations, and laboratory investigations. There will be independent and group work and students are expected to take responsibility for their own learning. AP Biology students are prepared to take the AP Biology exam in May.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "ap-chemistry",
+      "name": "AP Chemistry",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Biology, A- (or higher) in Chemistry, B+ (or higher) in Physics.",
+      "coreqs": "Physics",
+      "notes": null,
+      "description": "AP Chemistry is a college-level, comprehensive study of chemistry for students with advanced mathematical skills, a background in basic biology, chemistry, and physics, and a strong interest in chemistry. This course covers topics introduced in Chemistry with greater depth and sophistication and focuses on the more complex topics of thermodynamics, chemical kinetics, chemical equilibria, electrochemistry, and the behavior of matter at the molecular level. Lectures, class discussions, mathematical problem solving, demonstrations, and laboratory investigations are the primary methods of developing these and other topics. This course is taught like a college course and requires the students to take responsibility for their own learning. The course work includes abstract material, involves complex problem solving, and demands explanations of phenomena rather than simple statements of theories, trends, or observations. AP Chemistry students are prepared to take the AP Chemistry exam in May.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "ap-physics-c",
+      "name": "AP Physics C: Mechanics",
+      "department": "science",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Biology, Chemistry and Physics",
+      "coreqs": "AP Calculus BC or AB.",
+      "notes": null,
+      "description": "Designed to prepare students for the AP Physics C exam, this is a calculus-based course in Mechanics. We will explore the concepts of kinematics, dynamics, energy, rotational motion, momentum and other applications of calculus to the physical world. New concepts will be developed through class, lab work, and experimental design. Students will work independently and in groups but are responsible for their own learning. AP Physics C students will be prepared to take the AP Physics C: Mechanics exam in May.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "environmental-science-field-ecology",
+      "name": "Environmental Science: Field Ecology",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will apply hands-on field methods to address an environmental proposal in this lab-based course and should expect to be outside in the field (on campus) multiple times per week.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "environmental-science-citizen-science",
+      "name": "Environmental Science: Citizen Science",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will learn the background, methodology, and skills needed to participate in ongoing citizen science projects with the result of contributing data to the scientific community in this lab-based course. Students should expect to be outside in the field (on- and/or off-campus) multiple times per week.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "environmental-science-contemporary-issues",
+      "name": "Environmental Science: Contemporary Issues",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "In this course, students will study the history, science, and policy issues related to current environmental matters. Topics covered will include a selection of the following: biodiversity; food, agriculture, and soil; water resource and pollution issues; solid waste disposal; fossil fuels; alternative energy resources; the atmosphere and air pollution; acid deposition; ozone depletion; and climate change. Students will play a role in determining which topics are covered during the module. The coursework will be supported by laboratory work. Students should expect to be outside (on campus) one time per week.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "forensic-science",
+      "name": "Forensic Science",
+      "department": "science",
+      "blocks": "1-2",
+      "blocks_min": 1,
+      "blocks_max": 2,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course is designed to give students the opportunity to learn how scientific principles are applied to fields such as law enforcement and anthropology. From fingerprints to DNA, bite marks to shoe prints, and blood spatter to trace evidence, forensic science requires the knowledge of biology, geology, botany, chemistry, and physics. Using a multidisciplinary and hands-on approach, students will learn the fundamentals of forensic science and develop logical problem-solving skills through both case studies and laboratory experiments.",
+      "credits_toward": [
+        "Science"
+      ],
+      "modules": [
+        {
+          "name": "Forensics: Biological Evidence",
+          "description": "Topics may include hair and DNA analysis, blood spatter patterns, bones and bite marks, and toxicology."
+        },
+        {
+          "name": "Forensics: Physical Evidence",
+          "description": "Topics may include crime scene analysis, police line-ups, types of evidence, microscopy, patterns & impressions of evidence, trace evidence, and handwriting analysis."
+        }
+      ]
+    },
+    {
+      "id": "kinesiology",
+      "name": "Kinesiology: Functional Human Movement",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Biology.",
+      "coreqs": "None",
+      "notes": "Meets Design Thinking credit.",
+      "description": "This course will introduce students to the fundamentals of human movement. Students will be able to identify major skeletal structures along with related articulations (joints) and landmarks of that system. Students will also gain an understanding of the muscular system related to movement and be able to comprehend concepts such as origin/insertion, agonist/antagonist, and concentric/eccentric movements.",
+      "credits_toward": [
+        "Design Thinking",
+        "Science"
+      ]
+    },
+    {
+      "id": "marine-ecology",
+      "name": "Marine Ecology",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Biology",
+      "coreqs": "None",
+      "notes": "Offered on a rotating basis with Marine Environmental Issues. Includes a required 3-day weekend field trip to the Chincoteague Bay Field Station occurring during the mod. Required field trip fee.",
+      "description": "Students will examine the taxonomy of life in the oceans, the characteristics that make marine organisms successful in this unique environment and will explore the varying ecologies of the world ocean.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "marine-environmental-issues",
+      "name": "Marine Environmental Issues",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Offered on a rotating basis with Marine Ecology. Includes a required 3-day weekend field trip to the Chincoteague Bay Field Station occurring during the mod. Required field trip fee.",
+      "description": "Students will investigate the current environmental issues that plague the marine habitat and its biodiversity in this project-based course.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "bioorganic-chemistry",
+      "name": "Bioorganic Chemistry",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Biology and Chemistry",
+      "coreqs": "None",
+      "notes": null,
+      "description": "In this laboratory-based course, students will learn foundational organic chemistry including bond-line drawings, functional groups, and reaction mechanisms. Building on this knowledge, students will explore the structural, chemical, and functional properties of the major types of biomolecules, such as carbohydrates, proteins, nucleic acids, and lipids. As time allows, students may examine the mechanisms of major cellular processes, how drugs affect the body, and environmental implications of common organic molecules.",
+      "credits_toward": [
+        "Science"
+      ]
+    },
+    {
+      "id": "psychology-of-sport",
+      "name": "Psychology of Sport",
+      "department": "science",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Must be competing/practicing on a Junior Varsity or Varsity athletic team at Madeira.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course is designed to engage students in critical thinking as it applies to the study of human behavior in sport. Students will explore factors related to success and skill development in human performance, basic principles of confidence, motivation, and goal setting, as well as the prominent theories related to happiness and positive mood and how they relate to human performance and exercise. This course will also reference and apply the theoretical and empirical research pertaining to the psychological structure of performance.",
+      "credits_toward": [
+        "Science"
+      ]
+    }
+  ],
+  "history": [
+    {
+      "id": "comparative-global-studies-i",
+      "name": "Comparative Global Studies I",
+      "department": "history",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "The Comparative Global Studies I course invites students to consider what it means to be a member of our global community. Students will explore their place in the world through a skills-intensive and multi-disciplinary regional studies curriculum. Course work will draw from the histories of Africa, Asia, Latin America, and the Middle East and will focus on regional interactions as well as the origins of cultural foundations. Students will be introduced to research, analytical writing, and source evaluation. This course is committed to global citizenship and excellence in the humanities, which asks students to think critically and independently and form a deeper awareness of self and others in the world.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "comparative-global-studies-ii",
+      "name": "Comparative Global Studies II",
+      "department": "history",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10
+      ],
+      "prereqs": "Comparative Global Studies I. New 10th graders: an equivalent 9th grade history course.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Comparative Global Studies II continues the regional study of Africa, Asia, Latin America, and the Middle East through the lens of global politics, revolution, and human rights. Students will explore the historical patterns and political foundations that shape our world today in order to become confident, informed, and active participants in the 21st-century. Students will refine a repertoire of academic skills including critical reading, analytical writing, and source evaluation. The course concludes with a comparative research seminar, for which students will write an analytical paper based on their independent study and research.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "us-history",
+      "name": "U.S. History",
+      "department": "history",
+      "blocks": "4",
+      "blocks_min": 4,
+      "blocks_max": 4,
+      "grade_levels": [
+        11
+      ],
+      "prereqs": "Comparative Global Studies II. New 11th graders: an equivalent 10th grade history course.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Since a large part of understanding who we are and what we aspire to be requires an awareness of what has come before us, this course will provide the material to help Madeira students identify their place in the narrative of United States history. Students will continue to develop the skills established during their history coursework from 9th and 10th grade, including critical analysis of primary and secondary sources; oral expression in the form of classroom discussion, debates, and role playing in historical simulations; analysis and expression in essays and short answer questions; and in-depth historical research techniques. The first module will provide students with a working knowledge of how the U.S. government functions and what role Capitol Hill plays. One module will provide Juniors with the skills necessary to thrive in a congressional office, including oral and written skills, awareness of current events, and the research skills necessary for completing the Co-Curriculum Capstone Project.",
+      "credits_toward": [
+        "History"
+      ],
+      "modules": [
+        {
+          "name": "US History: American Revolution and U.S. Constitution",
+          "description": "Students will examine the causes of American independence and the formation of a new nation. In addition, students will learn the workings of the current U.S. government, with particular emphasis on the role of Congress. Students will also practice the writing and historical skills they learned in Comparative Global Studies II."
+        },
+        {
+          "name": "US History: American Empire",
+          "prereqs": "American Revolution and the Constitution",
+          "description": "Students will examine how the United States went from a small, isolationist nation to a major world power by looking at diplomacy and wars. The course will cover dispossession of Indigenous lands, continental and overseas expansion, U.S. involvement in World Wars I + II, and the Cold War."
+        },
+        {
+          "name": "U.S. History: Race in America",
+          "prereqs": "American Revolution and the Constitution",
+          "description": "Students will look at the development of the American slave system and its impact on American society. Students also will examine the causes of the Civil War and its impact. Finally, students will evaluate the continuing efforts of people of color seeking equality in the United States."
+        },
+        {
+          "name": "US History: Class, Labor, and Political Economy",
+          "prereqs": "American Revolution and the Constitution",
+          "description": "Students trace the economic developments in the United States, including the First and Second Industrial Revolutions, the Great Depression, and the Affluent Society. The capstone project will focus on a current question of U.S. economic policy."
+        }
+      ]
+    },
+    {
+      "id": "capstone-chocolate-city",
+      "name": "Capstone Seminar: Chocolate City — DC History",
+      "department": "history",
+      "blocks": "2",
+      "blocks_min": 2,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "Capstone Research Seminar",
+      "notes": "History Capstone Seminar: 2-block course + Capstone Research Seminar. 3-block course total. Open to 12th graders.",
+      "description": "Ever wondered why DC is the city we know and love? In this class we will explore Washington, D.C. beyond the monuments and politics to learn about the people and movements that shaped the city. From the Indigenous communities who first called this land home to the fight for DC statehood today, we'll dive deep into the city's struggles and triumphs. Together we will unpack how race, culture, and power have defined DC's neighborhoods, experience its vibrant history firsthand on field trips to the city, and unravel how life in DC affects those who live in the shadow of the federal government. We will finish with student-led classes where you become the expert, tackling modern issues like gentrification, housing, political activism, and more. This is a microhistory—your opportunity to see how one city reflects and contradicts your current understanding of American history, through the lenses of identity and sociology. As a Capstone Seminar, students can expect discussion, potential field trips, and college-level workloads.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "capstone-global-justice",
+      "name": "Capstone Seminar: Global Justice in a World of Difference",
+      "department": "history",
+      "blocks": "2",
+      "blocks_min": 2,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "Capstone Research Seminar",
+      "notes": "History Capstone Seminar: 2-block course + Capstone Research Seminar. 3-block course total. Open to 12th graders.",
+      "description": "Explores the question \"What do we owe to others in a world of difference?\" Beginning with philosophies of justice from around the world, starting with pre-modern philosophers such as Aristotle, Mencius, and African ethicists. Moving to a study of 20th century philosophers such as John Rawls, Brooke Ackerly, and Audre Lorde. Ending the first Mod with an exploration of intersectional feminist philosophy from South Asia, East Asia, Central America, and Africa. Building on philosophies of justice and intersectional feminisms, we explore a case study where we apply theories of justice to a student-selected \"hardest case of injustice.\" Central to our journey will be discussions of the following core concepts: philosophical concepts of duty, transnational feminisms, cultural identity, racism, global structures of power, and resistance. Students develop the skills to become confident, informed, and active participants in the 21st century and will read from a variety of college-level sources (in addition to art, poetry, and music). As a Capstone seminar, students can expect discussion and college-level workloads with emphasis on habits of \"head, hand, and heart.\"",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "capstone-middle-east",
+      "name": "Capstone Seminar: Middle East in Modern Memory",
+      "department": "history",
+      "blocks": "2",
+      "blocks_min": 2,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "Capstone Research Seminar",
+      "notes": "History Capstone Seminar: 2-block course + Capstone Research Seminar. 3-block course total. Open to 12th graders.",
+      "description": "The Middle East in Modern Memory begins from a point of disagreement, namely localized intersectoral conflicts that arise due to global pressures. We will begin by outlining the major sociological points of conflict in west Asia in contemporary times and trace their points of disconnection and disruption to understand the region's beauty and complexity. Our work together will include in-depth exploration of the Israeli/Palestinian conflict, the Armenian Conflict with both Turkey and Azerbaijan, the Kurdish issue over statehood, and the Iranian conflict with the west. In each case students will seek to understand the complexities of the topic as well as how the tensions affect ordinary people and their identities. The Middle East in Modern Memory will provide a college-level introduction to the Modern Middle East while at the same time allowing students to explore the nature and evolution of personal, religious, gender, and cultural identity. Students can expect to read a variety of sources, watch films, and write expository essays. As a Capstone seminar, discussion and college-level workloads as well as exposure to thought leaders, peers from the region, and policy practitioners will be central to the course.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "senior-history-capitalism",
+      "name": "Senior History: Capitalism and Its Critics",
+      "department": "history",
+      "blocks": "1-2",
+      "blocks_min": 1,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "None",
+      "notes": "Students can elect to take any 1-mod History course as a standalone Senior History Course or with the History Research Seminar.",
+      "description": "Capitalism shapes our world and worldview so completely that it has become as omnipresent as air. This course explores the evolution of capitalism as an economic system and provides a chance to study historical critiques of capitalism from the \"right\" and the \"left.\" As Robert Heilbroner (the author of the book we will read) stated: \"If socialism failed, it was for political, more than economic, reasons; and if capitalism is to succeed it will be because it finds the political will and means to tame its economic forces.\" Additionally, we will explore some of the major works of economic philosophy. The course culminates with each student completing a small research project exploring a current issue related to the application of capitalism.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "senior-history-genocide",
+      "name": "Senior History: Genocide and Moral Duty",
+      "department": "history",
+      "blocks": "1-2",
+      "blocks_min": 1,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "None",
+      "notes": "Students can elect to take any 1-mod History course as a standalone Senior History Course or with the History Research Seminar.",
+      "description": "Genocide and Moral Duty explores student-selected historical & ongoing case studies while analyzing the moral responsibilities of individuals, nations, and international institutions. Through primary sources, philosophical texts, and contemporary debates, the course challenges students to consider the limits of justice, memory, and intervention. We will also devote significant time to recent efforts to anticipate and prevent mass atrocities globally. Ultimately, students will develop a deeper understanding of how history informs our ethical obligations in the face of crimes against humanity.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "senior-history-gender",
+      "name": "Senior History: Gender, Sex, and Activism",
+      "department": "history",
+      "blocks": "1-2",
+      "blocks_min": 1,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "None",
+      "notes": "Students can elect to take any 1-mod History course as a standalone Senior History Course or with the History Research Seminar.",
+      "description": "When questions of equality, safety, belonging, and opportunity arise, shared identities can act as either unifying or dividing factors. This course will examine the ways in which gender and sex brought groups together and highlighted their differences during the 20th Century. With a particular focus on women's and LGBTQ activist groups examined through primary sources, this course will explore activism organizations including NOW, the Lavender Menace, Gay Liberation Front, ACT UP, and the more than 100-year-old dispute between pro and anti-Equal Rights Amendment groups. Why is the ERA still unratified? Was the Michigan Womyns Music Festival a place of affirmation or exclusion? How did the AIDS crisis bring gay, addiction, and chronic illness communities together?",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "senior-history-women-sports",
+      "name": "Senior History: Women, Sports, and American Popular Culture",
+      "department": "history",
+      "blocks": "1-2",
+      "blocks_min": 1,
+      "blocks_max": 2,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "U.S. History",
+      "coreqs": "None",
+      "notes": "Students can elect to take any 1-mod History course as a standalone Senior History Course or with the History Research Seminar.",
+      "description": "Simone Biles. Caitlin Clark. Aja Wilson. Kate Ledecky. Megan Rapinoe. Breanna Stewart. Over the past few years, these women have become household names. However, that wasn't always the case. In 2024, both the National Women's Soccer League (NWSL) and Women's National Basketball Association (WNBA) had record breaking seasons regarding attendance, sponsorships, viewership, and impact. In fact, if American women were their own country, they would have ranked third in the medal count of the 2024 Paris Olympics. This jump in statistics did not occur in a vacuum. This class will explore the historical, current, and future path of women's sports and how it has impacted our culture, from the Liberty's \"Ellie the Elephant\" dancing in Barclay's Center, to fashion-tunnel walks, and discussions on trans athletes in sports.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "research-seminar",
+      "name": "Research Seminar",
+      "department": "history",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "1-block course; Open to Seniors.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "capstone-research-seminar",
+      "name": "Capstone Research Seminar",
+      "department": "history",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "Capstone Seminar course",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Required research course to follow Capstone Seminar course.",
+      "credits_toward": [
+        "History"
+      ]
+    },
+    {
+      "id": "global-youth-leadership-board",
+      "name": "Global Youth Leadership Board (Evening)",
+      "department": "history",
+      "blocks": "1 per section",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Global Studies II",
+      "coreqs": "None",
+      "notes": "E block activities do not meet the D block activity requirements. E Block activities will receive Credit or No Credit.",
+      "description": "This evening workshop invites students to learn, reflect, and create as they explore global leadership and sustainable development. Students will engage with theories of development, intersectional and decentered feminist leadership models, and the concept of \"just responsibility\" in global justice. They will also learn how to design and sustain an NGO that reflects ethical, community-centered values. Through thoughtful reflection, students will examine decentered approaches to working with communities in the global south and consider how to use their educational privilege to foster mindful, equitable partnerships. They will participate in discussions on current events, development, travel, tourism, cultural geography, and global fragility, all while working toward the creation of a singular, sustainable NGO. Students can expect occasional readings featuring inspiring global change-makers and opportunities to engage with local and international activists, as well as a handful of Madeira educators.",
+      "credits_toward": [
+        "History"
+      ],
+      "schedule": "E-Block Activity. Open to grades 11-12. On Mondays, from 6:30-8:30 p.m. Mods 1-6."
+    }
+  ],
+  "language": [
+    {
+      "id": "french-i",
+      "name": "French I",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "No previous acquisition of French or by placement process",
+      "coreqs": "None",
+      "notes": null,
+      "description": "The course is designed for students who have not studied French or have acquired very limited basic knowledge of French. It focuses on the acquisition of basic grammatical structures and vocabulary in culturally authentic contexts through speaking, reading, writing, and listening comprehension. The students will explore the cultures and traditions in the French-speaking world. After the completion of the course, students will be able to describe people and things, talk about past times, weekend activities and sports, express possession, narrate in the present and make plans. This course is conducted mostly in French with limited usage of English.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "french-ii",
+      "name": "French II",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—French I. New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students build vocabulary and grammar skills from Level I. Most verb tenses and moods are covered such as passé composé, imperfect, present conditional, future simple, and subjunctive. At the end, students will be able to describe health and medical conditions, talk about jobs and daily life, discuss the environment, express their beliefs and opinions about technology, narrate past experiences, and consider future plans.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "french-iii",
+      "name": "French III",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—French II. New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course further develops students' communication and literacy skills. Students enhance their language proficiency while improving their cultural competency using a variety of authentic texts (articles, interviews, literary texts and video). Students are immersed in the target language through conversations about daily life and current events and discussions and debates in which they offer opinions and exchange ideas. Through an interdisciplinary approach, students learn about the life, people and history of Francophone countries, while building cultural awareness and understanding.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "french-advanced-topics",
+      "name": "Advanced Topics in French: Theatre and Cinema",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—French III. New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course consists of two parts. The first part (2 modules) introduces students to the history of western theatre and classic French plays. Selected classic and contemporary texts will be used in the class to help students gain a basic understanding of the historical evolution of French and Francophone theatre. Students will create a glossary of both technical and literary terms to utilize when analyzing the works of great playwrights. The second part of the course (1 module) focuses on the conversations between French cinema and American cinema. Students will gain knowledge of the origin of the cinematographic art, the impact of Hollywood film noir on France's film productions, and the French New Wave Movement.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "ap-french",
+      "name": "AP French Language & Culture",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Returning students—French III with an A– and department approval. New students—by placement test and departmental approval",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course follows the guidelines of the College Board AP French Language and Culture course and provides opportunities for students to build their proficiency in the modes of communication from the Intermediate to the Advanced range according to ACTFL standards. The three modes of communication (Interpretive, Interpersonal, and Presentational) defined in the Standards for Foreign Language Learning in the 21st Century are foundational to the AP French Language and Culture course. The AP French Language and Culture course takes an interdisciplinary approach to language proficiency. The course engages students in an exploration of culture, socio-economy, and politics, in both contemporary and historical contexts. When communicating, students in the AP French Language and Culture course demonstrate an understanding of the cultures, make comparisons between the native language and the target language and between cultures, and use the target language in real-life settings. Students study the six Curricular Themes: Families and Communities, Personal and Public Identities, Contemporary Life, Beauty and Aesthetics, Global Challenges and Science and Technology. Students are prepared to sit for the AP French Language and Culture exam in May.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "french-elective-north-africa",
+      "name": "Advanced French Elective: Culture and Society of Francophone North Africa",
+      "department": "language",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Completion of AP French Language & Culture or Advanced Topics in French",
+      "coreqs": "None",
+      "notes": "The language of the classroom is French.",
+      "description": "In this one-module course, students will delve into the societies of Francophone North Africa, also known as the Maghreb, encompassing Morocco, Algeria, and Tunisia. These countries, as we will discover together, have wonderfully rich histories. We will navigate themes related to French colonialism and neocolonialism, the struggle for independence, and pressing contemporary issues in each of these countries. The latter will include topics such as women in society, youth unemployment, and life under authoritarian regimes. This course aims to not only bolster students' French language skills but also to deepen their understanding of a significant and vibrant region of the Francophone world. Through an engaging mix of historical background, cultural perspective, and contemporary analysis, this participatory class promises a rich, immersive learning experience.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "latin-i",
+      "name": "Latin I",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Latin I introduces students to the fundamentals of Latin grammar and vocabulary through the reading-based approach of the Cambridge Latin Course. Students learn to translate Latin through stories that follow a Roman family from Pompeii to Roman Britain and Alexandria while illustrating important aspects of Roman history, culture and daily life. Students explore the language and culture of the Roman Empire through projects and examine the relationship between Latin and English including English words derived from Latin and Latin phrases and abbreviations that we use to this day.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "latin-ii",
+      "name": "Latin II",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Latin I. New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Latin II continues to develop students' ability to read texts in the context of the culture and society of ancient Rome with the goal of reading extended, authentic Latin texts. Readings and projects expand students' knowledge of Roman culture and history with a focus on the Roman military, Roman philosophy and the ins and outs of life in Rome.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "latin-iii",
+      "name": "Latin III",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Latin II. New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Latin III reinforces the work students have done in Latin II and introduces them to the translation and interpretation of authentic Latin texts. Students become familiar with a variety of styles and genres as they read and analyze representative samples of the most famous Latin authors and study the works in their cultural context. Readings include excerpts from Pliny's Letters, the epigrams of Martial, the poems of Horace and Catullus, Ovid's Metamorphoses, Vergil's Aeneid, and Tacitus's Annals.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "latin-iv",
+      "name": "Latin IV",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Latin III. New students—by placement test and departmental approval",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students read selected letters of Pliny the Younger, along with supplementary readings from contemporary literature and history, to develop their ability to comprehend, translate, and analyze authentic Latin texts, to place Pliny's letters in the context of a life and successful career under the Roman emperors, to understand the letters in terms of the epistolary genre, and to develop persuasive arguments regarding key, recurring themes in the letters. Students examine how Pliny portrays himself and others and touches on subjects as varied as the destruction of Pompeii, the existence of ghosts, happy relationships, and accusations under informers. Projects allow students to delve more deeply into the life of Pliny and history of the times. This course will help students develop the familiarity with Pliny, understanding of Latin, and skills they will need to succeed in AP Latin or pursue Latin at a higher level.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "ap-latin",
+      "name": "AP Latin",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Latin IV students with an A–. Seniors with an A in Latin III and departmental approval",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students read selections from the entirety of Vergil's Aeneid and selected letters of Pliny the Younger, along with supplementary readings in Latin literature and history, to develop their ability to comprehend, translate, and analyze authentic Latin texts, to place them in the context of Augustan Rome and the Roman Empire and Latin literature more broadly, to interpret these works in terms of epic poetry and the epistolary genre, and to develop persuasive arguments about key, recurring themes in the texts. Projects and presentations allow students to deepen into the works and understand them from different perspectives. This course is designed to prepare students to demonstrate their understanding successfully on the AP Latin exam.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "etymology-classical-mythology",
+      "name": "Etymology: Classical Mythology",
+      "department": "language",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Both the language we speak and the stories we tell reflect the influence of ancient Greece and Rome. This course explores the roots of Greek and Latin in English as well as the roots of ancient myth in modern narratives. Students engage with the most famous versions of the myths in antiquity and explore how adapted versions of the myths reflect the interests and concerns of the societies that adapt them. We discuss excerpts of poems, novels, and films and focus on mythical depictions in ancient and modern paintings, which students learn to decipher for their mythological content. Topics include Greek and Roman gods, constellations, the Greek alphabet, story structure and genre, the history of the English language, and important concepts in historical linguistics.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "ancient-medicine-medical-terminology",
+      "name": "Ancient Medicine and Medical Terminology",
+      "department": "language",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "The origins of western medicine intersect with the history of scientific thought and the culture and society of ancient Greece, Egypt, and Rome; the language of modern medicine reflects its roots in the Greek and Roman worlds. Through an examination of the development of Hippocratic medicine from its religious roots, Alexandrian anatomical developments, Roman Medicine, and the contributions of Galen, students learn about medicine as it was practiced in the ancient world. They trace subsequent developments to investigate the factors that encouraged progress and those that stood in its way. Students simultaneously develop a working knowledge of basic medical terminology.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "spanish-i",
+      "name": "Spanish I",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "No previous acquisition of Spanish or by placement process",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course introduces students to some basic communicative functions in speaking, reading, writing, and listening. Students learn vocabulary and structures of the Spanish language in culturally authentic contexts while exploring traditions and cultures in the Spanish-speaking world. At the end of this course, students will be able to describe people and things, to talk about past times, weekend activities and sports, to express possession, to narrate in the present and to make plans.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "spanish-ii",
+      "name": "Spanish II",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Spanish I. New students—by placement test",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course reinforces and expands the student's knowledge of the basic communicative functions, vocabulary and structures learned in Spanish I. Students continue to develop their linguistic skills (listening, reading, speaking and writing) using authentic materials and discuss cultural aspects of Spanish-speaking countries. At the end of this course, students will be able to describe health and medical conditions, talk about jobs and daily life, discuss the environment, express their beliefs and opinions about technology, narrate past experiences, and consider future plans.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "spanish-iii",
+      "name": "Spanish III",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Spanish II. New students—by placement test and departmental approval",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course further develops the communication and literacy skills introduced in the first two years of our Spanish program. Through a variety of authentic texts (articles, interviews, literary texts and video) students enhance their language proficiency while improving their cultural competency. Through an interdisciplinary approach, students explore the life, people and history of different Spanish-speaking countries to strengthen their awareness of other cultures and to think more critically about their own.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "spanish-advanced-topics",
+      "name": "Advanced Topics in Spanish: Literature and Arts",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Returning students—Spanish III. New students—by placement test and departmental approval",
+      "coreqs": "None",
+      "notes": "Students are expected to speak solely in the target language.",
+      "description": "This advanced course takes a fresh approach to the Spanish language. Through the study of Spanish and Latin American literature and the arts, students will learn about identities, practices and perspectives in the Spanish speaking world. The course will incorporate literary texts of notable Spanish and Latin American authors, along with a study of key works of art and architectural sites. Developing critical thinking and written textual analysis at an advanced level will underscore the course content.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "ap-spanish",
+      "name": "AP Spanish Language and Culture",
+      "department": "language",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Advanced Topics in Spanish, or Spanish III with an A and department approval. New students—by placement test and departmental approval",
+      "coreqs": "None",
+      "notes": "The course is conducted exclusively in Spanish. Students are prepared to take the AP Spanish Language and Culture exam in May.",
+      "description": "This course follows the guidelines of the College Board AP Spanish Language and Culture course and provides opportunities for students to build their proficiency in the modes of communication from the Intermediate to the Advanced range according to ACTFL standards. The three modes of communication (Interpretive, Interpersonal, and Presentational) defined in the Standards for Foreign Language Learning in the 21st Century are foundational to the AP Spanish Language and Culture course. When communicating, students demonstrate an understanding of the target cultures, incorporate interdisciplinary topics, make comparisons between their communities and Spanish-speaking communities, and use Spanish in real-life settings. Students study the six Curricular Themes: Families and Communities, Personal and Public Identities, Contemporary Life, Beauty and Aesthetics, Global Challenges and Science and Technology.",
+      "credits_toward": [
+        "World Languages"
+      ]
+    },
+    {
+      "id": "spanish-elective-mestizaje",
+      "name": "Advanced Spanish Elective: Exploring \"El Mestizaje\" Through History, Gastronomy and Identity",
+      "department": "language",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        11,
+        12
+      ],
+      "prereqs": "Completion of AP Spanish Language and Culture or Advanced Topics in Spanish",
+      "coreqs": "None",
+      "notes": "The language of the classroom is Spanish.",
+      "description": "In this one-module course, students will explore the \"mestizaje\" in Latin American communities, with a focus on the gastronomy of Spanish speaking countries, exploring the historical and geographical influences of colonization and twentieth century social movements and activism. Essential questions will guide our exploration: What is the impact of la \"convivencia\" of the Al-Andalus period of the Middle Ages on contemporary Hispanic American society and culture? How has the mestizaje of the colonial era through independence defined and created 21st century Hispanic American communities? How does a community define and evolve its values and identity through food, history, and culture, particularly Afro-Latino and indigenous communities in the Americas?",
+      "credits_toward": [
+        "World Languages"
+      ]
+    }
+  ],
+  "art": [
+    {
+      "id": "studio-art-drawing",
+      "name": "Studio Art: Drawing",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Drawing is the foundation course for students interested in visual arts and eager to expand their creative abilities. Students will be instructed in the use of the design elements and principles through projects such as mark making, perspective drawing, and still-life composition.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "studio-art-3d-design",
+      "name": "Studio Art: 3D Design",
+      "department": "art",
+      "blocks": "1-3",
+      "blocks_min": 1,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "3D Design is a course for students eager to advance their understanding of 3-dimensional art across a variety of media. Students will use various materials and techniques such as ceramic handbuilding, carving, modeling, fibers, textiles, and armature building to create 3-dimensional works of art.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "programming-visual-arts",
+      "name": "Programming for the Visual Arts",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "This course satisfies the Coding and Interdisciplinary requirement.",
+      "description": "This course is an introduction to computer programming within the context of the visual arts. Utilizing the Processing language, students will learn basic coding techniques, explore the fundamentals of computer graphics and create interactive drawing programs.",
+      "credits_toward": [
+        "Art",
+        "Coding",
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "design-arts-mediums",
+      "name": "Design Arts & Mediums",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "This course satisfies the Design Thinking requirement.",
+      "description": "Digital Arts & Design is for students interested in developing skills using digital tools for artistic creation and visual communication. Students will learn a variety of software, including Adobe Design Suite, TinkerCad, Fusion360, and more, used in creating animation, digital illustration, graphic design and branding, 3D modeling, and industrial and package design. Projects will be student-centered, emphasizing creative problem-solving and real-world applications.",
+      "credits_toward": [
+        "Art",
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "studio-art-painting",
+      "name": "Studio Art: Painting",
+      "department": "art",
+      "blocks": "1-3",
+      "blocks_min": 1,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Studio Art: Drawing",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Painting is for students who are eager to advance their painting skills and develop greater understanding of selected painting styles and mediums. Students will learn to create using acrylics, watercolors, gouache, and mixed media.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "studio-art-printmaking",
+      "name": "Studio Art: Printmaking",
+      "department": "art",
+      "blocks": "1-3",
+      "blocks_min": 1,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Studio Art: Drawing",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Printmaking is a course intended for students who are interested in advancing their understanding of the elements and principles of design through the medium of printmaking. Students will work with a wide range of materials and processes such as collagraph, linoleum cut, drypoint, and relief printing.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "studio-art-fashion-design",
+      "name": "Studio Art: Fashion Design & Fabrication",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Studio Art: 3D Design OR Studio Art: Drawing",
+      "coreqs": "None",
+      "notes": "Meets Design Thinking credit and art credit.",
+      "description": "This class will focus on creating a fashion collection from start to finish. In this class students will use multiple art mediums such collaging, color theory, textile making, repeat pattern and fashion rendering to create a fashion collection. Students will create a mood board, color plates, fabric designs, fashion renderings and a final portfolio. Students will leave class knowing how to read a pattern, make a flat pattern and create a garment using hand sewing and machine sewing skills.",
+      "credits_toward": [
+        "Art",
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "studio-art-ceramics",
+      "name": "Studio Art: Ceramics",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Studio Art: 3D Design or Studio Art: Drawing",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This course will introduce students to building and exploring clay, the basic techniques involved in ceramic construction, and the chemistry involved in the firing process. Various glaze and decoration techniques for finishing work will also be introduced. Emphasis will be placed on the design elements and principles. Focus will be on the various techniques: pinch, coil and slabs and throwing on the wheel. Functional as well as sculptural applications based on form will be also explored.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "studio-art-seminar",
+      "name": "Studio Art Seminar",
+      "department": "art",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "At least three blocks of Studio Art and/or Photography classes.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "In this advanced level course, students will work towards expanding their artistic practice, developing breadth across various mediums, and depth within a specific artistic medium of their choice. Students will develop skills in presenting their work through gallery displays, portfolios, and an online presence. Finally, students will work towards building an artist's resume and CV.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "photography-darkroom",
+      "name": "Photography: Darkroom",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Meets Design Thinking and Art credit.",
+      "description": "Students will learn how to use and control a school-supplied 35mm SLR film camera, develop negatives, create contact sheets and print photographs. In the process, they will learn how cameras work as well as the fundamentals of composition.",
+      "credits_toward": [
+        "Art",
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "photography-digital",
+      "name": "Photography: Digital",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Students must supply their own DSLR camera that is capable of being used in Manual mode.",
+      "description": "Students will further their photography skills by learning how to use their own digital camera (see special note) in Manual mode. The course includes a variety of compositional techniques, Photoshop editing skills, and beginning portfolio development.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "photography-alternative-processes",
+      "name": "Photography: Alternative Processes",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Darkroom or Digital Photography",
+      "coreqs": "None",
+      "notes": "Meets Design Thinking and art credit.",
+      "description": "This course introduces students to the fundamentals of non-silver alternative photographic processes with emphasis on technical skills, and critique of photographic work. Among the processes studied: Caffenol development, and medium and large format photographic processes. Students will learn skills related to safe chemistry usage, scanning, Photoshop manipulation to create and print digital negatives, paper coating and contact printing techniques.",
+      "credits_toward": [
+        "Art",
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "acting-i",
+      "name": "Acting I: Acting Skills",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will learn techniques and develop acting skills through ensemble work, monologues, scene work, and a mock audition experience. In this class students will focus on script analysis, character development, and voice and body awareness.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "acting-ii",
+      "name": "Acting II: Acting Styles",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Acting I, participation in a theatre D block, or permission of the instructor",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Building on skills learned in Acting I, students will explore various theatrical styles including Shakespeare, Restoration, and farce. Through warm-ups, voice and movement exercises, script analysis, and monologue and scene work, actors will apply acting techniques to each style.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "public-speaking",
+      "name": "Public Speaking",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "From casual announcements to formal presentations, we are tasked with public speaking daily. Students will learn techniques for harnessing their authentic presentation style to engage an audience including projection, articulation, body language, vocal tone, and eye contact. Focusing on the link between public speaking and storytelling, the class will culminate in students giving a speech in the Ignite style.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "audition-techniques",
+      "name": "Audition Techniques",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Whether training to be a professional actor, prepping for a job interview, or for college interviews, this course will help you develop the skills of commanding the room. Through text analysis, monologues and cold reads, actors will gain an understanding of character development, storytelling, vocal technique and body awareness which will serve them well in any audition room as well as any interview. This class will culminate in a mock audition experience.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "directing",
+      "name": "Directing",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will learn techniques and develop skills in Directing through the examination of open scenes, contemporary scenes and play planning. Students will gain an understanding of directing through research, text analysis and collaborative exploration.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "actors-voice",
+      "name": "The Actor's Voice",
+      "department": "art",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Acting I, participation in a theatre D block, or permission of the instructor",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Building on the vocal technique learned in Acting I, students will expand their vocal skills and usage into a variety of voiceover techniques, character voices, and more. Students will engage with the international phonetic alphabet to learn how to accurately identify sound changes to capture different dialects and accents with care.",
+      "credits_toward": [
+        "Art"
+      ]
+    },
+    {
+      "id": "stagecraft",
+      "name": "Stagecraft (Evening)",
+      "department": "art",
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Earns three academic credits. Course may be repeated. Enrollment is limited to 25 students. Meets Design Thinking and Art credits.",
+      "description": "Stagecraft is a year-long, hands-on course in technical theatre and production design. Students will have the opportunity to learn scenic construction, scenic painting, properties and costume construction, lighting and sound engineering principles, technical drawing, and the production design process for theatre. Students will experience a variety of projects from sketches to building to deconstruction and along the way will learn to solve problems in creative and collaborative ways.",
+      "credits_toward": [
+        "Art",
+        "Design Thinking"
+      ],
+      "schedule": "Open to grades 9–12, Mods 1 through 6 on Wednesdays, 6:30–9:00 pm. Additional hours required for play and musical set builds and tech weeks."
+    },
+    {
+      "id": "madeira-chorus",
+      "name": "Madeira Chorus (Evening)",
+      "department": "art",
+      "blocks": "1 per section",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Earns one academic credit per section taken. Course may be repeated. Students on Varsity teams (Field Hockey, Basketball, Volleyball, Swim, Tennis) should not sign up for Madeira Chorus during that season, as the time requirements overlap.",
+      "description": "This large vocal ensemble class provides both beginner and advanced singers the opportunity to develop their choral and solo singing in a group experience, exploring a broad repertoire of music – from classical to contemporary, both accompanied and a cappella. Students prepare for two-to-three concerts and/or festivals per year. Students will also develop new or build upon existing music theory, ear training, and sight singing skills. Mods 1 & 2 will focus on classical repertoire, Mods 3 & 4 will focus on contemporary & pop, while Mods 5 & 6 will focus on Musical Theatre. Students must participate in all dress rehearsals and performances.",
+      "credits_toward": [
+        "Art"
+      ],
+      "schedule": "Open to grades 9-12 Mods 1 & 2, Mods 3 & 4, Mods 5 & 6 on Mondays and Thursdays, 6:30pm–8 p.m."
+    },
+    {
+      "id": "chamber-orchestra",
+      "name": "Chamber Orchestra (Evening)",
+      "department": "art",
+      "blocks": "1 per section",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Earns one academic credit per section taken. Course may be repeated. Students on Varsity teams (Field Hockey, Basketball, Volleyball, Swim, Tennis, Swim and Diving) should not sign up for Chamber Orchestra during that season, as the time requirements overlap.",
+      "description": "Chamber Orchestra is open to all instrumental musicians including but not limited to strings, winds, brass, percussion, piano, and non-traditional instruments with approval. The group prepares both large and small ensembles for four to six concerts per year while exploring and learning a wide range of musical styles, idioms, and historical contexts. Required in class rehearsal time is not to exceed four hours most weeks. Students must participate in all dress rehearsals and performances.",
+      "credits_toward": [
+        "Art"
+      ],
+      "schedule": "Open to grades 9-12, Mods 1 & 2, Mods 3 & 4, Mods 5 & 6 on Tuesdays and Thursdays, 6:30-8:30 p.m."
+    },
+    {
+      "id": "tech-events-crew",
+      "name": "Tech Events Crew (Evening)",
+      "department": "art",
+      "blocks": "Yearlong",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Does not meet D-block requirement.",
+      "description": "Tech Events Crew is a hands-on introduction to basic theatre technology focusing on stage crew and booth operations. Students of every level gain a working knowledge of theatre terminology and handle all operations involved in running special events and All School Meetings throughout the school year. In addition to crew/booth responsibilities, students will learn specialized carpentry, painting, lighting, and sound skills through monthly workshops and seminars. Includes teaching workshops and staffing events.",
+      "credits_toward": [
+        "Art"
+      ],
+      "schedule": "Yearlong non-D Block activity."
+    }
+  ],
+  "other": [
+    {
+      "id": "student-life",
+      "name": "Student Life",
+      "department": "other",
+      "blocks": "2",
+      "blocks_min": 2,
+      "blocks_max": 2,
+      "grade_levels": [
+        9
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Required of all ninth graders.",
+      "description": "The Student Life ninth grade curriculum focuses on knowledge and skills Madeira students will need as community members and into their future. We engage students in the examination of who they are as individuals, how they influence and are influenced by others, and how they can care for themselves and cultivate healthy and inclusive communities. Each student will develop and apply essential life skills as she builds a deeper understanding of herself and of those around her. Students will be assessed through experiential activities, inquiry-based projects, presentations, journal entries, papers, and class participation. This course is taught by faculty and staff members from various departments, giving students the opportunity to learn from community members not usually found in the classroom. These faculty and staff members bring their unique, professional perspectives to the curriculum.",
+      "credits_toward": [
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "design-thinking-lab",
+      "name": "Design Thinking Lab",
+      "department": "other",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Required for all 9th and new 10th graders. Starting with the Class of 2028, all new, incoming 10th graders enroll in the Design Thinking Lab.",
+      "description": "In this transdisciplinary, inquiry-based course, students study real-world topics as they learn about and employ design thinking concepts. Students will gain knowledge of and employ the Elements and Principles of Design, the Design Engineering Process, 3D Printing, Laser cutting, and technical drawing throughout their project work.",
+      "credits_toward": [
+        "Design Thinking"
+      ]
+    },
+    {
+      "id": "mindfulness-and-the-brain",
+      "name": "Mindfulness and the Brain",
+      "department": "other",
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Mindfulness practice involves paying attention to the present moment in a specific and deliberate way without judgment. Research shows that mindfulness can have a profound impact on the way neurons fire in the brain and subsequently the way different regions in the brain, most notably the prefrontal cortex, communicate with each other. In other words, mindfulness practice can permanently influence how we think. Through examination of the work of Daniel Siegel, Jon Kabat-Zinn, and others, students will investigate the anatomy, functions, and interconnectedness of the brain, how the brain continues to change over the lifespan, and how mindfulness practice impacts the brain's functions and by extension, one's ability to make decisions, regulate emotions, and interact with others. This course will provide each student the opportunity to explore the basic tenets of mindfulness, experience different ways to focus attention and increase awareness, and develop her own unique daily mindfulness practice.",
+      "credits_toward": [
+        "Design Thinking"
+      ]
+    }
+  ],
+  "d_blocks": [
+    {
+      "id": "dance",
+      "name": "Dance",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "No prior dance experience required.",
+      "coreqs": "None",
+      "notes": "Madeira Dance Company (formally Select) requires an audition which takes place at the end of the Spring Season of the previous year for all returning students. For 11th and 12th graders, if you are a Madeira Dancer, you must attend D block during the season you are on Co-Curriculum (though not the mod in which you have your internship, unless your hours allow). All Madeira Dance Company members must be enrolled in at least 2 seasons of dance.",
+      "description": "Genres studied: Modern, hip hop, ballet, lyrical, jazz, and contemporary. 2 masterclasses offered each season in an even broader range of genre. During the first week evaluation classes will take place to assess which level the dancer will participate in.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": true
+    },
+    {
+      "id": "play",
+      "name": "Play (Fall Production)",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Auditions are held during student orientation for actors. Students interested in stage management and assistant directing must seek prior approval from the Arts Department.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "The fall play offers students of various skill levels and experience the opportunity to participate in a fully-staged play as an actor or part of the stage management team.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "musical",
+      "name": "Musical (Winter Production)",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Audition required for actors. Students interested in stage management and assistant directing must seek prior approval from the Arts Department.",
+      "coreqs": "None",
+      "notes": null,
+      "description": "The winter musical is for students of all levels of skill and experience in musical theatre and stage managing. Students work as a collaborative ensemble with theatre professionals to rehearse and perform a musical theatre production.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Winter",
+      "movement": true
+    },
+    {
+      "id": "theater-showcase",
+      "name": "Theater Showcase",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Theatre Showcase is open to all levels of experience. This D block is a unique opportunity for students to participate in a performance-based class without the pressure of auditions. The Theater Showcase gives students the chance to explore a variety of theatrical styles and develop their performance skills and technique. Topics covered include improvisation, physical theatre, scene study, stage combat and audition technique.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "student-publications-spectator",
+      "name": "Student Publications: The Spectator",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will learn core principles of journalism including accuracy, accountability, fairness verification, and independence. Along the way, students will acquire practical skills in interviewing, reporting, and composing a variety of story types (such as news, feature, and editorial). Students can also expect to practice photography and arranging layouts using publishing programs like InDesign. Throughout each season, Spectator students will also explore case studies to build awareness of journalistic ethics. This is a hands-on educational experience where students learn to work as a newsroom team.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": false
+    },
+    {
+      "id": "student-publications-gate",
+      "name": "Student Publications: GATE",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will acquire practical skills in design and layout (using programs like InDesign) and in learning the editorial process. They will also exercise their creativity in organizing Gate contributions according to theme, genre, concept, and/or style—in addition to serving as contributors themselves, should they wish. Gate staff will gain technical know-how and learn about the philosophical and ethical issues of publishing like censorship, anonymity, and managing the relationship between authors and editors. Students will also be responsible for marketing and outreach, and for identifying innovative ways of showcasing the publication such as podcasting, performance, and online publishing.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": false
+    },
+    {
+      "id": "yearbook",
+      "name": "Yearbook",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Yearbook exposes students to the variety of skills necessary for producing quality school publications. Participants are introduced to a variety of visual arts, including digital photography, the use of photo editors, and principles of layout design. In addition, students learn the basics of copywriting and journalism, including conducting interviews, and writing news stories, reviews and features. This is a hands-on educational experience, where students learn by doing. Students are given the responsibility of producing their own pages in the yearbook.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter",
+      "movement": false
+    },
+    {
+      "id": "esports",
+      "name": "Esports",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Maximum of 10 students.",
+      "description": "The Madeira esports team fuses passion and opportunity to ensure students succeed in a competitive digital world. During this activity students will explore careers in digital industries, learn the fundamentals of live video streaming, and explore ethics and contemporary issues through a variety of different digital experiences and game styles. Students will develop skills in teamwork and problem solving helping to foster self-confidence and independent critical thinking while maintaining a healthy environment for competition through digital game play.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": false
+    },
+    {
+      "id": "math-team",
+      "name": "Math Team",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students participate in math related challenges, activities, and competitions. No prior math or computer science knowledge is required, only an interest in learning and participating. Students may participate in math competitions.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": false
+    },
+    {
+      "id": "model-un",
+      "name": "Model United Nations",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "For students who elect to participate in outside conferences, there are additional fees not covered by Madeira.",
+      "description": "During their participation, Madeira students learn the basics of United Nations parliamentary procedure, how to write position and background papers, and how to advance committee agendas during active conference sessions. Madeira students may elect—as part of the Model UN experience—to participate in a high-school conference for Model United Nations.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Winter",
+      "movement": false
+    },
+    {
+      "id": "nature-hikes",
+      "name": "Nature Hikes",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "This activity takes advantage of our idyllic setting on the edge of the Potomac River. Students will explore a variety of trails on campus through the forest and down by Black Pond. There will be periodic trips to nearby parks including Scotts Run and Riverbend Park. Students will increase their knowledge about the natural species on our campus and beyond.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "open-art-studio",
+      "name": "Open Art Studio",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Open Art Studio is an experience that allows students to explore a variety of media including drawing, painting, ceramics, sculpture, digital drawing, and more. Students will learn new techniques through workshops in different mediums and complete multiple larger projects. This D block is ideal for the student looking to further their visual art practice or just explore new techniques.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": false
+    },
+    {
+      "id": "space-mission-exploration",
+      "name": "Space Mission Exploration",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students will design their own space mission through an interdisciplinary lens. Students will consider the science, engineering, management, budget, and geopolitical requirements for the design and execution of a successful space mission. The D Block will be based on a simulation of the NASA project mission design process, from conceptual study, preliminary analysis, and definition to the design, development, and operational phases of a space mission.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": false
+    },
+    {
+      "id": "global-activism",
+      "name": "Global Activism",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "Students in Global Activism will discuss theories of change, explore the architecture and toolkit of protests around the world, meet with activists locally and globally, and, ultimately, design (from start to finish) a piece of activism related to art, justice, anti-poverty, anti-racism, immigration, indigenous land rights, the sex-gender system, planetary health, community change, or a topic of choice.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": false
+    },
+    {
+      "id": "intro-fitness-strength",
+      "name": "Intro to Fitness & Strength Training",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 4, Roster Maximum: 12.",
+      "description": "Students will be introduced to the basics of circuit training, weight training, and cardio training. Students will learn proper form and techniques that will allow them to develop independent workouts.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": true
+    },
+    {
+      "id": "advanced-weight-training",
+      "name": "Advanced Weight Training",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Students must complete Intro to Fitness & Strength Training or Compete on a Varsity Team",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 4, Roster Maximum: 12.",
+      "description": "Advanced Weight Training aims to illustrate our athletic philosophy by developing strong women who succeed at life. Strength builds confidence. Students will engage in free-weight training led by our Strength and Conditioning Coach using barbell, dumbbell, kettlebell, and medicine ball movements. Students will learn the value of consistent work to reach their maximum potential through the techniques of strength training.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": true
+    },
+    {
+      "id": "pilates",
+      "name": "Pilates",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 6, Roster Maximum: 14.",
+      "description": "Mat-based Pilates class focuses on strength, stability, posture, proper breath control, and flexibility. Each class will work to balance all muscle groups' strength and flexibility, with an emphasis on challenging the core muscles with each movement. Classes will be taught using slow, controlled movements.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": true
+    },
+    {
+      "id": "yoga",
+      "name": "Yoga",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 6, Roster Maximum: 14.",
+      "description": "A mat-based exercise class that uses a system of physical postures, breathing techniques, and meditation derived from Yoga to promote physical and emotional well-being.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": true
+    },
+    {
+      "id": "self-defense-karate",
+      "name": "Self-Defense/Karate",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": null,
+      "description": "While learning the skills necessary for self-protection, students will experience the benefits of increased physical fitness, better mental focus, enhanced self-confidence, and a more placid state of mind. They learn karate techniques utilizing the upper and lower body and learn to strike vital areas with elbows, knees, hands, and feet. Students will also learn how to fall and how to throw others in self-defense situations. The traditions of bowing, wearing the karate uniform (gi), and using special terminology will be practiced in the school (dojo) to create an atmosphere that promotes safety and respect for oneself, for one's classmates, and for the teacher (sensei).",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Winter",
+      "movement": true
+    },
+    {
+      "id": "cross-country",
+      "name": "Cross Country",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Interscholastic team sport. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "field-hockey",
+      "name": "Field Hockey",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body. Practice times: JV 3:00–4:30 pm, Varsity 4:00–6:00 pm, subject to change.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "soccer",
+      "name": "Soccer",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "volleyball",
+      "name": "Volleyball",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "tennis-fall",
+      "name": "Tennis (Fall)",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "basketball",
+      "name": "Basketball",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Winter",
+      "movement": true
+    },
+    {
+      "id": "rock-climbing",
+      "name": "Rock Climbing",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity team. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Winter",
+      "movement": true
+    },
+    {
+      "id": "swimming-diving",
+      "name": "Swimming and Diving",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity team. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Winter",
+      "movement": true
+    },
+    {
+      "id": "lacrosse",
+      "name": "Lacrosse",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "softball",
+      "name": "Softball",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity team. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "tennis-spring",
+      "name": "Tennis (Spring)",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity team. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "track-field",
+      "name": "Track and Field",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Varsity team. Tryouts open to the entire student body.",
+      "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "riding",
+      "name": "Riding",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Meets Teams requirement. Students are scheduled for two lessons per week between the hours of 3:00 and 6:00. Students are required to provide their own helmet, boots and riding pants. There is an extra fee charged for the program. Students may enroll in riding during their Co-Curriculum placement but must attend riding lessons during their placement and meet all other attendance requirements. Typically, the school's horses have the capacity to safely carry up to 185 pounds. Boarding for student's horse is available. Applications are due May 1st. For 11th and 12th graders, if you are a rider and horse owner, you must attend D block during the season you are on Co-Curriculum. Riding has a maximum capacity of 35 riders per season.",
+      "description": "Based on the American Forward Riding System, the program goal is to develop confidence, riding skill, and knowledge of horse care. Supportive instruction is offered to students of all experience levels including those new to the sport. A robust calendar of competitions (including IEA, USEF and schooling shows), clinics and other activities are offered year-round.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": true
+    },
+    {
+      "id": "swimming-conditioning",
+      "name": "Swimming for Conditioning",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Geared towards students that are advanced level swimmers or have completed one year on the varsity swim team.",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 6, Roster Maximum: 20. This activity requires a student to be able to be in the pool each day (Mon–Fri) of the season.",
+      "description": "This course will cover the four main competitive strokes, turns, and will contain a rigorous workout.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall",
+      "movement": true
+    },
+    {
+      "id": "mad-aquatics",
+      "name": "Mad Aquatics",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Geared toward Varsity level swimmers.",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 4, Roster Maximum: 12. This activity requires a student to be able to be in the pool each day (Mon-Fri) of the season and participate in 2-3 weekend competitions in the spring.",
+      "description": "This course is geared toward Varsity level swimmers. This course will be similar in training to our varsity season.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "tennis-101",
+      "name": "Tennis 101",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 4, Roster Maximum: 12. Players are required to supply their own racquets and shoes appropriate for tennis courts.",
+      "description": "This course introduces and develops the basic skill required to play tennis including the serve, forehand, backhand, volley, overhead and other specialty shots. Students will learn proper tennis etiquette, tennis specific warmup exercises, tennis match scoring, match warm up routines, and basic game strategies designed for recreational tennis match play.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "advanced-tennis",
+      "name": "Advanced Tennis",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "Students must have a basic knowledge of the game and perform the basic strokes required for match play.",
+      "coreqs": "None",
+      "notes": "Roster Minimum: 4, Roster Maximum: 12. Players are required to supply their own racquets and shoes appropriate for tennis courts.",
+      "description": "This course develops higher level tennis skills and techniques and assumes players already possess the basic skill sets required for recreational tennis match play. After a review of basic skills, instruction will transition to the mental and physical attributes required to execute winning offensive and defensive strategies for both singles and doubles play. Drills and practice match play for singles will explore baseline, aggressive baseline, serve and volley, and all-court styles of play. Drills and practice match play for doubles will explore traditional one up/one back, the \"I\" formation, poaching, and both back styles of play.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Spring",
+      "movement": true
+    },
+    {
+      "id": "athletic-student-assistant",
+      "name": "Athletic Student Assistant",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Maximum of 3 students for Varsity. Maximum of 2 students for JV.",
+      "description": "Athletic Team Student Assistant (SA) report to the designated sport specific practice location Monday–Friday for the duration of practice (potentially Saturday for ISL Play Days and Invitationals). SA will assist their team/coaching staff with the following tasks: taking attendance, game and event support, updating social media and filming competitions. SA must complete all scheduled team workouts each week.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": false
+    },
+    {
+      "id": "athletic-sports-information-assistant",
+      "name": "Athletic Team Sports Information Assistant",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Maximum of 3–4 students per season. SIA must complete at least 2–3 Breakaway workouts each week.",
+      "description": "To receive D-block credit the Athletic Team Sports Information Assistants (SIA) reports to the Athletic Director or Associate Athletic Director Monday–Friday for the duration of practice (potentially Saturday for ISL Play Days and Invitationals). SIA will assist the athletic department with the following tasks: creating social media content, creating pre and post-game graphics, running in-game livestream, updating social media and filming competitions, and posting game results.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": false
+    },
+    {
+      "id": "athletic-training-assistant",
+      "name": "Athletic Training Student Assistant",
+      "department": "d_blocks",
+      "blocks": "1 per season",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "Maximum of 1 student per season. For students with an expressed interest in a sports medicine related field.",
+      "description": "The Athletic Training Student Assistant (ATSA) works with the Madeira Athletic Trainer daily with an expectation to observe and participate in duties connected with injury management. ATSA will learn basic anatomy and common mechanisms of injury. At the completion of each season, students are expected to demonstrate specific competencies based on areas of focus.",
+      "credits_toward": [
+        "Activities"
+      ],
+      "season": "Fall, Winter, Spring",
+      "movement": false
+    }
+  ],
+  "co_curriculum": [
+    {
+      "id": "sophomore-co-curriculum",
+      "name": "Sophomore Co-Curriculum: Serving Others and the Local Community",
+      "department": "co_curriculum",
+      "blocks": "1 mod",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        10
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "1 Mod, Required for 10th Graders. Sophomores will complete Co-Curriculum in either Mod 1, 3, 5, or 7. The name of the placement and the letter grade earned will appear on the final transcript, but the grade is not a part of a student's overall grade point average.",
+      "description": "Service is one of the pillars of Madeira's founding and is the foundation for sophomore Co-Curriculum. Students will explore the concepts of social responsibility and civic engagement by serving organizations Madeira has partnered with in the local community. Students serve at these partner organizations in teams of three to ten students. About four times a mod, students remain on campus to participate in Learning to Serve Discussions and Guided Team Meetings, to reflect on their volunteer experiences and practice the skills they need to best serve others. Once a mod, students build their team skills at Calleva, the outdoor leadership program on Madeira's campus. The sophomore Co-Curriculum program helps students examine three essential questions: What is our responsibility to others? How do we best serve others? How do we develop the character and skills needed to serve others as individuals and as a team? Students are assessed on their ability to work as a member of a team, think creatively about local community challenges, demonstrate an understanding of those they serve, and persuasively present their ideas.",
+      "credits_toward": [
+        "Co-Curriculum"
+      ],
+      "auto_populate": true,
+      "required_grade": 10
+    },
+    {
+      "id": "junior-co-curriculum",
+      "name": "Junior Co-Curriculum: Effecting Change in a Democracy",
+      "department": "co_curriculum",
+      "blocks": "1 mod",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        11
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "1 Mod, Required for 11th Graders. Juniors have Co-Curriculum in Mods 2, 3, 4, 5, and 6. In some rare occasions due to scheduling conflicts, juniors may have Co-Curriculum in Mod 7. Junior Co-Curriculum is completed in the same year a student completes U.S. History, typically the junior year. The name of the placement and the letter grade earned will appear on the final transcript, but the grade is not a part of a student's overall grade point average.",
+      "description": "Junior Co-Curriculum and the U.S. History course are an integrated program. In their U.S. History courses, students will develop knowledge and practice skills that will help them in their internship on Capitol Hill. During the internship, students will have hands-on experience that will inform their final research project for U.S. History. Because of its unique connection to the Capitol Hill internship program, U.S. History is a four-mod course. All students will complete the first mod of U.S. History course before going to their internship on Capitol Hill. During their first mod of U.S. History, students will develop a working knowledge of how the U.S. government functions and what role Capitol Hill plays. In addition, students will work with their history teacher to practice the oral and written skills, awareness of current events, and the research skills necessary to work in a Congressional Office. Students also will identify a national policy issue that is important to them. During their Congressional internship, students will submit a variety of assignments to the Co-Curriculum Office that will help them reflect upon their experience and their national policy issue. This policy issue will be the focus of their Co-Curriculum capstone project, the research-based culmination of their internship experience, as well as the final research project in U.S. History. In addition to their daily duties as Congressional interns, the Co-Curriculum Capstone project gives students the opportunity to apply skills learned in the classroom – quantitative and analytical reasoning skills, oral and written communication skills, and research and tech skills – to effect change.",
+      "credits_toward": [
+        "Co-Curriculum"
+      ],
+      "auto_populate": true,
+      "required_grade": 11
+    },
+    {
+      "id": "senior-co-curriculum",
+      "name": "Senior Co-Curriculum: Pursuing a Passion or Curiosity",
+      "department": "co_curriculum",
+      "blocks": "1 mod",
+      "blocks_min": null,
+      "blocks_max": null,
+      "grade_levels": [
+        12
+      ],
+      "prereqs": "None",
+      "coreqs": "None",
+      "notes": "1 Mod, Required for 12th Graders. Seniors have Co-Curriculum in Mods 2, 3, 4, 5, and 6. In some rare occasions due to scheduling conflicts, seniors may have Co-Curriculum in Mod 7. Seniors are eligible to apply for a Global Internship outside of the immediate Washington, DC area or a Summer Internship. A separate application is required for each. The name of the placement and the letter grade earned will appear on the final transcript, but the grade is not a part of a student's overall grade point average.",
+      "description": "The Senior Co-Curriculum experience, by allowing students to participate in an internship of their choosing, provides an opportunity to pursue a passion or area of interest and to check their ideal vision against reality. Throughout their internships, students will submit reflections and various research assignments based on their experiences. Students will be challenged to investigate the internship's industry or field of study, focusing on the trends and issues facing the field and the opportunities that exist within it as a career path. Additionally, students consider the ways that they might be a leader in the field or industry, reflecting on how their placement site is meeting its goals and thinking of the ways it might improve.",
+      "credits_toward": [
+        "Co-Curriculum"
+      ],
+      "auto_populate": true,
+      "required_grade": 12
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.course-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px;
+  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}

@@ -23,7 +23,7 @@ const departmentNames = {
 // When the blocks variable has letters like "1 per season"
 function formatBlocks(blocks) {
   if (blocks.includes('per') || blocks.includes('mod') || blocks === 'Yearlong') {
-    return 'varies'
+    return '-'
   }
   return `${blocks} block(s)`
 }
@@ -47,6 +47,11 @@ function renderDepartment(department, courses) {
     const rule = document.createElement('hr')
     catalog.appendChild(rule)
 
+    // grid to all cards for this department
+    const grid = document.createElement('div')
+    grid.className = 'course-grid'
+    catalog.appendChild(grid)
+
     // looping over every course object in the array to add them as HTML elements
     courses.forEach(course => {
         const card = document.createElement('div')
@@ -58,6 +63,6 @@ function renderDepartment(department, courses) {
           <p>${formatBlocks(course.blocks)}</p>
           <p>Prereq: ${formatPrereqs(course.prereqs)}</p>
         `
-        catalog.appendChild(card)
+        grid.appendChild(card)
     })
 }

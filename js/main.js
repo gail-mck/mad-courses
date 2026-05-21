@@ -63,6 +63,17 @@ function renderDepartment(department, courses) {
           <p>${formatBlocks(course.blocks)}</p>
           <p>Prereq: ${formatPrereqs(course.prereqs)}</p>
         `
+        
+        card.setAttribute('draggable', 'true')
+        
+        // dragstart the moment the user starts dragging
+        card.addEventListener('dragstart', (event) => {
+        event.dataTransfer.setData('courseId', course.id)
+        event.dataTransfer.setData('course', 'true')
+        event.dataTransfer.effectAllowed = 'copy'
+        })
+        
         grid.appendChild(card)
+
     })
 }

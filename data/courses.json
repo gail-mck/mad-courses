@@ -669,7 +669,7 @@
       "name": "English IV",
       "department": "english",
       "blocks": "3",
-      "blocks_min": 3,
+      "blocks_min": 1,
       "blocks_max": 3,
       "grade_levels": [
         12

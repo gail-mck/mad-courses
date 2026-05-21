@@ -9,8 +9,24 @@
   <!-- two columns side by side -->
   <div id="app">
 
-    <!-- left: the course catalog -->
-    <div id="catalog">
+    <div id="catalog-wrapper">
+      <div id="catalog-header">
+        <div id="dept-nav">
+          <button data-dept="mathematics">Math</button>
+          <button data-dept="english">English</button>
+          <button data-dept="science">Science</button>
+          <button data-dept="history">History</button>
+          <button data-dept="language">Language</button>
+          <button data-dept="art">Art</button>
+          <button data-dept="other">Other</button>
+          <button data-dept="d_blocks">D-Blocks</button>
+          <button data-dept="co_curriculum">Co-Curriculum</button>
+        </div>
+        <input type="search" id="search" placeholder="Search course names...">
+      </div>
+
+      <!-- left: the course catalog -->
+      <div id="catalog"></div>
       <!-- course cards get put here by JS -->
     </div>
 

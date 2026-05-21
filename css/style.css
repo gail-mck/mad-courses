@@ -2,6 +2,7 @@
 #app {
   display: flex;
   height: 100vh;
+  font-family: Palatino, 'Palatino Linotype', serif;
 }
 
 #catalog {
@@ -16,7 +17,34 @@
   overflow-y: scroll;
   padding: 16px;
   min-width: 250px;
-  background-color: #f0ece4;
+  background-color: #f7f5f5;
+}
+
+/* department headers */
+h2 {
+  color: #B90124;
+}
+
+/* divider between departments */
+hr {
+  border: none;
+  border-top: 1px solid #f0e8e8;
+  margin-bottom: 12px;
+}
+
+/* grade column boxes in the plan */
+.grade-column {
+  border: 1px solid #e8d8d8;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #ffffff;
+}
+
+/* grade headings */
+.grade-column h3 {
+  color: #B90124;
+  margin-top: 0;
 }
 
 /* each grade drop zone */

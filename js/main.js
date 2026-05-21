@@ -1,3 +1,15 @@
+
+// stores every course by id so i can look it up when a card is dropped
+const courseMap = {}
+
+// will track which course ids have been dropped into each grade year
+const planState = {
+  9:  new Set(),
+  10: new Set(),
+  11: new Set(),
+  12: new Set(),
+}
+
 fetch('data/courses.json')
     .then(response => response.json())
     .then(data => {
@@ -42,8 +54,11 @@ function renderDepartment(department, courses) {
     // create a header for this department
     const header = document.createElement('h2')
     header.textContent = departmentNames[department]
+    // each department section gets an id so i can scroll to it
+    header.id = `dept-${department}`
     catalog.appendChild(header)
     
+    // add a horizontal line to separate
     const rule = document.createElement('hr')
     catalog.appendChild(rule)
 
@@ -55,6 +70,9 @@ function renderDepartment(department, courses) {
     // looping over every course object in the array to add them as HTML elements
     courses.forEach(course => {
         const card = document.createElement('div')
+        // store course in lookup with id as key
+        courseMap[course.id] = course
+        card.dataset.courseId = course.id
         card.className = 'course-card'
 
         // Sets the HTML content inside the card, the text that will actually be on it
@@ -77,3 +95,83 @@ function renderDepartment(department, courses) {
 
     })
 }
+
+// short department names for the mini-card
+const deptShortNames = {
+  mathematics:   'Math',
+  english:       'English',
+  science:       'Science',
+  history:       'History',
+  language:      'Language',
+  art:           'Art',
+  other:         'Other',
+  d_blocks:      'D-Block',
+  co_curriculum: 'Co-Curriculum',
+}
+
+const gradeColumns = document.querySelectorAll('.grade-column')
+
+gradeColumns.forEach(column => {
+
+  // dragover to allow drop anywhere in the column
+  column.addEventListener('dragover', (event) => {
+    if (event.dataTransfer.types.includes('course')) {
+      event.preventDefault()
+    }
+  })
+
+  column.addEventListener('drop', (event) => {
+    event.preventDefault()
+
+    const courseId = event.dataTransfer.getData('courseId')
+    const course = courseMap[courseId]
+
+    // grade is the number stored on the grade-column div in HTML
+    const grade = parseInt(column.dataset.grade)
+
+    // if this course is already in this year, do nothing
+    if (planState[grade].has(courseId)) return
+
+    // mark it as added
+    planState[grade].add(courseId)
+
+    // mark the original catalog card as selected
+    const originalCard = document.querySelector(`[data-course-id="${courseId}"]`)
+    if (originalCard) originalCard.classList.add('course-card--selected')
+
+    // build the mini-card
+    // ?? means use the left side if it exists, otherwise use the right side.
+    const blocks = course.blocks_min ?? course.blocks
+    // || means use the regular name if there isn't a short name, error handling
+    const dept = deptShortNames[course.department] || course.department
+
+    const item = document.createElement('li')
+    item.className = 'plan-card'
+    item.innerHTML = `
+      <strong>${course.name}</strong>
+      <span>${blocks} · ${dept}</span>
+    `
+
+    // append to the drop-zone ul inside this column
+    column.querySelector('.drop-zone').appendChild(item)
+  })
+})
+
+// input event every time the user types a character
+document.getElementById('search').addEventListener('input', (event) => {
+  const query = event.target.value.toLowerCase()
+
+  // loop over every course card and show/hide based on whether name matches
+  document.querySelectorAll('.course-card').forEach(card => {
+    const name = card.querySelector('strong').textContent.toLowerCase()
+    card.style.display = name.includes(query) ? 'block' : 'none'
+  })
+})
+
+// clicking a nav button scrolls to that department's header
+document.querySelectorAll('#dept-nav button').forEach(button => {
+  button.addEventListener('click', () => {
+    const id = `dept-${button.dataset.dept}`
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+  })
+})

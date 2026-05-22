@@ -10,16 +10,6 @@ const planState = {
   12: new Set(),
 }
 
-fetch('data/courses.json')
-    .then(response => response.json())
-    .then(data => {
-
-        // Turning the departments object into an array of arrays so we can loop over all of them at once
-        Object.entries(data).forEach(([department, courses]) => {
-            renderDepartment(department, courses)
-        })
-    })
-
 const departmentNames = {
   mathematics: 'Mathematics',
   english:     'English',
@@ -82,6 +72,8 @@ function renderDepartment(department, courses) {
           <p>Prereq: ${formatPrereqs(course.prereqs)}</p>
         `
         
+        card.addEventListener('click', () => openModal(course))
+        
         card.setAttribute('draggable', 'true')
         
         // dragstart the moment the user starts dragging
@@ -95,6 +87,62 @@ function renderDepartment(department, courses) {
 
     })
 }
+
+function openModal(course) {
+  document.getElementById('modal-name').textContent = course.name
+
+  document.getElementById('modal-description').textContent = course.description || 'No description available.'
+
+  const rows = []
+
+  if (course.blocks_min != null) { 
+    rows.push(['Blocks', course.blocks_min === course.blocks_max 
+        ? `${course.blocks_min}` 
+        : `${course.blocks_min}–${course.blocks_max}`
+    ]); 
+}
+
+  rows.push(['Grade Levels', course.grade_levels.join(', ')])
+  rows.push(['Prerequisites', course.prereqs])
+  rows.push(['Credits Toward', course.credits_toward.join(', ')])
+
+  if (course.coreqs && course.coreqs !== 'None') {
+    rows.push(['Co-requisites', course.coreqs])
+  }
+  if (course.notes) {
+    rows.push(['Notes', course.notes])
+  }
+
+  const tbody = document.querySelector('#modal-stats tbody')
+  tbody.innerHTML = ''
+  rows.forEach(([label, value]) => {
+    const tr = document.createElement('tr')
+    tr.innerHTML = `<td>${label}</td><td>${value}</td>`
+    tbody.appendChild(tr)
+  })
+
+  document.getElementById('modal-overlay').classList.remove('hidden')
+}
+
+document.getElementById('modal-close').addEventListener('click', () => {
+  document.getElementById('modal-overlay').classList.add('hidden')
+})
+
+document.getElementById('modal-overlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal-overlay')) {
+    document.getElementById('modal-overlay').classList.add('hidden')
+  }
+})
+
+fetch('data/courses.json')
+    .then(response => response.json())
+    .then(data => {
+
+        // turning the departments object into an list of lists so I can loop over all of them at once
+        Object.entries(data).forEach(([department, courses]) => {
+            renderDepartment(department, courses)
+        })
+    })
 
 // short department names for the mini-card
 const deptShortNames = {
@@ -141,7 +189,7 @@ gradeColumns.forEach(column => {
 
     // build the mini-card
     // ?? means use the left side if it exists, otherwise use the right side.
-    const blocks = course.blocks_min ?? course.blocks
+    const blocks = course.blocks_min || course.blocks
     // || means use the regular name if there isn't a short name, error handling
     const dept = deptShortNames[course.department] || course.department
 
@@ -151,10 +199,42 @@ gradeColumns.forEach(column => {
       <strong>${course.name}</strong>
       <span>${blocks} · ${dept}</span>
     `
+    // make the plan-card draggable back to the catalog
+    item.draggable = true
+    item.dataset.courseId = courseId
 
-    // append to the drop-zone ul inside this column
+    item.addEventListener('dragstart', (event) => {
+      event.dataTransfer.setData('plan-course', courseId)
+      event.dataTransfer.setData('fromGrade', String(grade))
+      event.dataTransfer.effectAllowed = 'move'
+    })
+    // append to the drop-zone inside this column
     column.querySelector('.drop-zone').appendChild(item)
   })
+})
+
+const catalogWrapper = document.getElementById('catalog-wrapper')
+
+catalogWrapper.addEventListener('dragover', (event) => {
+  if (event.dataTransfer.types.includes('plan-course')) {
+    event.preventDefault()
+  }
+})
+
+catalogWrapper.addEventListener('drop', (event) => {
+  if (!event.dataTransfer.types.includes('plan-course')) return
+  event.preventDefault()
+
+  const courseId = event.dataTransfer.getData('plan-course')
+  const grade = parseInt(event.dataTransfer.getData('fromGrade'))
+
+  planState[grade].delete(courseId)
+
+  const planCard = document.querySelector(`.plan-card[data-course-id="${courseId}"]`)
+  if (planCard) planCard.remove()
+
+  const originalCard = document.querySelector(`[data-course-id="${courseId}"]`)
+  if (originalCard) originalCard.classList.remove('course-card--selected')
 })
 
 // input event every time the user types a character

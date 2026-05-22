@@ -1,3 +1,7 @@
+:root {
+  --font: Tahoma, sans-serif;
+}
+
 /* setting up two panels side by side */
 body {
   margin: 0;
@@ -8,7 +12,7 @@ body {
   display: flex;
   height: 100vh;
   width: 100%;
-  font-family: Palatino, 'Palatino Linotype', serif;
+  font-family: var(--font)
 }
 
 #site-title {
@@ -52,7 +56,7 @@ body {
   border: 1px solid #e8d8d8;
   border-radius: 20px;
   padding: 4px 12px;
-  font-family: Palatino, 'Palatino Linotype', serif;
+  font-family: var(--font);
   font-size: 0.85rem;
   cursor: pointer;
   color: #333;
@@ -68,7 +72,7 @@ body {
   padding: 8px 12px;
   border: 1px solid #e8d8d8;
   border-radius: 8px;
-  font-family: Palatino, 'Palatino Linotype', serif;
+  font-family: var(--font);
   max-width: 500px;
   font-size: 0.95rem;
   outline: none;
@@ -83,6 +87,67 @@ body {
   overflow-y: scroll;
   padding: 16px;
   background-color: #f7f5f5;
+}
+
+#modal-overlay {
+  position: fixed;
+  inset:0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+#modal-overlay.hidden {
+  display: none;
+}
+
+#modal-box {
+  background: white;
+  border-radius: 10px;
+  padding: 3rem; 
+  max-width: 560px;
+  width: 90%;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+#modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+/* stats table */
+#modal-stats tbody tr td:first-child {
+  color: #888;
+  font-size: 1rem;
+  padding-right: 16px;
+  padding-bottom: 6px;
+  white-space: nowrap;
+}
+
+#modal-name {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+#modal-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+#modal-stats td {
+  font-size: 1.2rem;
+  padding-bottom: 8px;
 }
 
 /* department headers */

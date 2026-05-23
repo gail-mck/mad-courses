@@ -82,6 +82,17 @@ body {
   border-color: #B90124;
 }
 
+#resize-handle {
+  width: 5px;
+  cursor: col-resize;
+  background: #f0e8e8;
+  flex-shrink: 0;
+}
+
+#resize-handle:hover, #resize-handle.dragging {
+  background: #B90124;
+}
+
 #plan {
   flex: 1;
   overflow-y: scroll;
@@ -168,6 +179,12 @@ hr {
   border-radius: 8px;
   padding: 12px;
   margin: 8px;
+  position: relative;
+}
+
+/* kill browser default margins on the p but keep a small top gap so it doesn't look crushed */
+.course-card p {
+  margin: 5px 0 0 0;
 }
 
 .course-grid {
@@ -202,8 +219,18 @@ hr {
   padding: 0;
   min-height: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 6px;
+}
+
+/* placeholder text shown when a drop zone has no cards yet */
+.drop-zone:empty::before {
+  content: 'Drag courses here';
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  padding: 14px 0;
 }
 
 /* mini card inside the plan */
@@ -215,9 +242,208 @@ hr {
   font-size: 0.85rem;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* + button on mini cards to add a note */
+.note-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: none;
+  border: 1px solid #e8d8d8;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  color: #aaa;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.note-btn:hover {
+  border-color: #B90124;
+  color: #B90124;
+}
+
+/* text input that appears when you click the + */
+.note-input {
+  margin-top: 6px;
+  border: 1px solid #e8d8d8;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-family: var(--font);
+  font-size: 0.78rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.note-input:focus {
+  border-color: #B90124;
+}
+
+/* saved note displayed on the card */
+.note-text {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #888;
+  font-family: Georgia, serif;
+}
+
+.hidden {
+  display: none;
+}
+
+.plan-card strong {
+  padding-right: 26px;
 }
 
 .plan-card span {
   color: #888;
   font-size: 0.78rem;
+}
+
+/* row at the top of each catalog card: grade badge left, ⋮ button right */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 18px;
+  margin-bottom: 2px;
+}
+
+/* shows which grade year a course has been added to (e.g. "9th") */
+.grade-badge {
+  font-size: 0.68rem;
+  color: #B90124;
+  font-weight: bold;
+  background: #fdf0f2;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+
+/* ⋮ button on catalog cards for setting a status */
+.status-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 0 2px;
+  line-height: 1;
+  margin-left: auto;
+}
+
+.status-btn:hover {
+  opacity: 0.7;
+}
+
+
+/* dropdown that appears under the ⋮ button */
+.status-dropdown {
+  position: absolute;
+  top: 34px;
+  right: 6px;
+  background: white;
+  border: 1px solid #e8d8d8;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  z-index: 10;
+  min-width: 148px;
+}
+
+.status-dropdown button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.status-dropdown button:hover {
+  background: #fdf0f2;
+  color: #B90124;
+}
+
+/* green tint when a course is marked as taken previously */
+.course-card--taken {
+  border-color: #2e7d32;
+  background-color: #f0f7f0;
+}
+
+/* "Remove status" option at the bottom of the dropdown */
+.status-dropdown button[data-status="none"] {
+  color: #aaa;
+  font-style: italic;
+  border-top: 1px solid #f0e8e8;
+}
+
+/* brief popup at the bottom of the screen for prereq warnings */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: var(--font);
+  z-index: 200;
+  max-width: 620px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* plan header: title on the left, print button on the right */
+#plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+#plan-header h2 {
+  margin: 0;
+}
+
+#print-btn {
+  background: none;
+  border: 1px solid #e8d8d8;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #555;
+}
+
+#print-btn:hover {
+  border-color: #B90124;
+  color: #B90124;
+}
+
+/* print / save as pdf: hide catalog, show plan full-width */
+@media print {
+  #catalog-wrapper { display: none; }
+  #app { display: block; }
+  #plan {
+    overflow: visible;
+    width: 100%;
+    padding: 8px;
+  }
+  .note-btn, .status-btn, #print-btn { display: none !important; }
+  .grade-column { box-sizing: border-box; }
+
+  .plan-card { margin-bottom: 6px; break-inside: avoid; }
 }

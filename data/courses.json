@@ -522,7 +522,7 @@
       "id": "robotics-team",
       "name": "Robotics (Evening)",
       "department": "mathematics",
-      "blocks": "1 per season",
+      "blocks": "Yearlong",
       "blocks_min": null,
       "blocks_max": null,
       "grade_levels": [
@@ -1408,7 +1408,7 @@
       "id": "global-youth-leadership-board",
       "name": "Global Youth Leadership Board (Evening)",
       "department": "history",
-      "blocks": "1 per section",
+      "blocks": "Yearlong",
       "blocks_min": null,
       "blocks_max": null,
       "grade_levels": [
@@ -2203,9 +2203,9 @@
       "id": "stagecraft",
       "name": "Stagecraft (Evening)",
       "department": "art",
-      "blocks": "3",
-      "blocks_min": 3,
-      "blocks_max": 3,
+      "blocks": "Yearlong",
+      "blocks_min": null,
+      "blocks_max": null,
       "grade_levels": [
         9,
         10,
@@ -2226,7 +2226,7 @@
       "id": "madeira-chorus",
       "name": "Madeira Chorus (Evening)",
       "department": "art",
-      "blocks": "1 per section",
+      "blocks": "Yearlong",
       "blocks_min": null,
       "blocks_max": null,
       "grade_levels": [
@@ -2248,7 +2248,7 @@
       "id": "chamber-orchestra",
       "name": "Chamber Orchestra (Evening)",
       "department": "art",
-      "blocks": "1 per section",
+      "blocks": "Yearlong",
       "blocks_min": null,
       "blocks_max": null,
       "grade_levels": [
@@ -3252,7 +3252,7 @@
       "id": "sophomore-co-curriculum",
       "name": "Sophomore Co-Curriculum: Serving Others and the Local Community",
       "department": "co_curriculum",
-      "blocks": "1 mod",
+      "blocks": null,
       "blocks_min": null,
       "blocks_max": null,
       "grade_levels": [
@@ -3266,13 +3266,14 @@
         "Co-Curriculum"
       ],
       "auto_populate": true,
-      "required_grade": 10
+      "required_grade": 10,
+      "mods_offered": [1,3,5,7]
     },
     {
       "id": "junior-co-curriculum",
       "name": "Junior Co-Curriculum: Effecting Change in a Democracy",
       "department": "co_curriculum",
-      "blocks": "1 mod",
+      "blocks": null,
       "blocks_min": null,
       "blocks_max": null,
       "grade_levels": [
@@ -3286,7 +3287,8 @@
         "Co-Curriculum"
       ],
       "auto_populate": true,
-      "required_grade": 11
+      "required_grade": 11,
+      "mods_offered": [2,3,4,5,6]
     },
     {
       "id": "senior-co-curriculum",
@@ -3306,7 +3308,8 @@
         "Co-Curriculum"
       ],
       "auto_populate": true,
-      "required_grade": 12
+      "required_grade": 12,
+      "mods_offered": [2,3,4,5,6]
     }
   ]
 }

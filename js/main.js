@@ -1,4 +1,3 @@
-
 // stores every course by id so i can look it up when a card is dropped
 const courseMap = {}
 
@@ -22,12 +21,21 @@ const departmentNames = {
   co_curriculum: 'Co-Curriculum',
 }
 
-// When the blocks variable has letters like "1 per season"
+// When the blocks variable has letters
 function formatBlocks(blocks) {
-  if (blocks.includes('per') || blocks.includes('mod') || blocks === 'Yearlong') {
-    return '-'
+  if (!blocks) return '—'
+  if (blocks.includes('per') || blocks.includes('mod')) {
+    return '—'
   }
-  return `${blocks} block(s)`
+  if (blocks === 'Yearlong') {
+    return 'Yearlong'
+  }
+  if (blocks === '1') {
+    return '1 block'
+  }
+  else {
+    return `${blocks} blocks`
+  }
 }
 
 // Truncate long pre-reqs
@@ -65,11 +73,20 @@ function renderDepartment(department, courses) {
         card.dataset.courseId = course.id
         card.className = 'course-card'
 
+        // d-blocks and co-curriculum have their own labels instead of block counts
+        let blockLabel
+        if (course.department === 'd_blocks') {
+          blockLabel = course.season
+        } else if (course.department === 'co_curriculum') {
+          blockLabel = 'Mods ' + course.mods_offered.join(', ') + ' offered'
+        } else {
+          blockLabel = formatBlocks(course.blocks)
+        }
+
         // Sets the HTML content inside the card, the text that will actually be on it
         card.innerHTML = `
           <strong>${course.name}</strong>
-          <p>${formatBlocks(course.blocks)}</p>
-          <p>Prereq: ${formatPrereqs(course.prereqs)}</p>
+          <p>${blockLabel}</p>
         `
         
         card.addEventListener('click', () => openModal(course))
@@ -78,13 +95,12 @@ function renderDepartment(department, courses) {
         
         // dragstart the moment the user starts dragging
         card.addEventListener('dragstart', (event) => {
-        event.dataTransfer.setData('courseId', course.id)
-        event.dataTransfer.setData('course', 'true')
-        event.dataTransfer.effectAllowed = 'copy'
+          event.dataTransfer.setData('courseId', course.id)
+          event.dataTransfer.setData('course', 'true')
+          event.dataTransfer.effectAllowed = 'copy'
         })
         
         grid.appendChild(card)
-
     })
 }
 
@@ -100,11 +116,23 @@ function openModal(course) {
         ? `${course.blocks_min}` 
         : `${course.blocks_min}–${course.blocks_max}`
     ]); 
-}
+  }
 
   rows.push(['Grade Levels', course.grade_levels.join(', ')])
   rows.push(['Prerequisites', course.prereqs])
   rows.push(['Credits Toward', course.credits_toward.join(', ')])
+
+  if (course.modules && course.modules.length) {
+    rows.push(['Modules', course.modules.map(m => m.name).join(', ')])
+  }
+
+  if (course.department === 'd_blocks' && course.season) {
+    rows.push(['Season(s)', course.season])
+  }
+
+  if (course.department === 'co_curriculum' && course.mods_offered?.length) {
+    rows.push(['Offered in Mods', course.mods_offered.join(', ')])
+  }
 
   if (course.coreqs && course.coreqs !== 'None') {
     rows.push(['Co-requisites', course.coreqs])
@@ -187,9 +215,16 @@ gradeColumns.forEach(column => {
     const originalCard = document.querySelector(`[data-course-id="${courseId}"]`)
     if (originalCard) originalCard.classList.add('course-card--selected')
 
-    // build the mini-card
-    // ?? means use the left side if it exists, otherwise use the right side.
-    const blocks = course.blocks_min || course.blocks
+    // build the mini-card display for blocks. d-blocks show season, co-curriculum shows which mods it's offered in, everything else shows the block count
+    let blocksDisplay
+    if (course.department === 'd_blocks') {
+      blocksDisplay = course.season
+    } else if (course.department === 'co_curriculum') {
+      blocksDisplay = 'Offered', course.mods_offered.join(', ')
+    } else {
+      blocksDisplay = course.blocks_min != null ? String(course.blocks_min) : (course.blocks || '—')
+    }
+
     // || means use the regular name if there isn't a short name, error handling
     const dept = deptShortNames[course.department] || course.department
 
@@ -197,7 +232,7 @@ gradeColumns.forEach(column => {
     item.className = 'plan-card'
     item.innerHTML = `
       <strong>${course.name}</strong>
-      <span>${blocks} · ${dept}</span>
+      <span>${blocksDisplay} · ${dept}</span>
     `
     // make the plan-card draggable back to the catalog
     item.draggable = true

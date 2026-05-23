@@ -1,5 +1,5 @@
 :root {
-  --font: Tahoma, sans-serif;
+  --font: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
 }
 
 /* setting up two panels side by side */
@@ -174,7 +174,6 @@ hr {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 8px;
-  margin-bottom: 24px;
 }
 
 /* selected state on catalog card */

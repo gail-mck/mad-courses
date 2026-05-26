@@ -1456,9 +1456,9 @@
       "id": "senior-history-capitalism",
       "name": "Senior History: Capitalism and Its Critics",
       "department": "history",
-      "blocks": "1-2",
+      "blocks": "1",
       "blocks_min": 1,
-      "blocks_max": 2,
+      "blocks_max": 1,
       "grade_levels": [
         12
       ],
@@ -1519,9 +1519,9 @@
       "id": "senior-history-women-sports",
       "name": "Senior History: Women, Sports, and American Popular Culture",
       "department": "history",
-      "blocks": "1-2",
+      "blocks": "1",
       "blocks_min": 1,
-      "blocks_max": 2,
+      "blocks_max": 1,
       "grade_levels": [
         12
       ],

@@ -2,112 +2,71 @@
   <meta charset="UTF-8">
   <title>Madeira Course Catalog</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f7f5f5;
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+    }
+
+    #welcome-box {
+      background: white;
+      border-radius: 12px;
+      padding: 3.5rem 4rem;
+      max-width: 520px;
+      width: 90%;
+      text-align: center;
+      border: 1px solid #f0e8e8;
+    }
+
+    #welcome-box h1 {
+      color: #B90124;
+      font-size: 2rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    #welcome-box h2 {
+      color: #333;
+      font-size: 1.1rem;
+      font-weight: normal;
+      margin: 0 0 2rem 0;
+    }
+
+    #welcome-box p {
+      color: #666;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 0 0 2.5rem 0;
+    }
+
+    #enter-btn {
+      display: inline-block;
+      background: none;
+      border: 1px solid #B90124;
+      border-radius: 8px;
+      padding: 10px 28px;
+      font-family: Palatino, 'Palatino Linotype', 'Book Antiqua', serif;
+      font-size: 1rem;
+      color: #B90124;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #enter-btn:hover {
+      background-color: #fdf0f2;
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- two columns side by side -->
-  <div id="app">
-
-    <div id="catalog-wrapper">
-      <div id="catalog-header">
-        <h1 id="site-title">Madeira Course Catalog</h1>
-        <div id="dept-nav">
-          <button data-dept="mathematics">Math</button>
-          <button data-dept="english">English</button>
-          <button data-dept="science">Science</button>
-          <button data-dept="history">History</button>
-          <button data-dept="language">Language</button>
-          <button data-dept="art">Art</button>
-          <button data-dept="other">Other</button>
-          <button data-dept="d_blocks">D-Blocks</button>
-          <button data-dept="co_curriculum">Co-Curriculum</button>
-        </div>
-        <input type="search" id="search" placeholder="Search course names...">
-      </div>
-
-      <!-- left: the course catalog -->
-      <div id="catalog"></div>
-      <!-- course cards get put in catalog by JS -->
-    </div>
-
-    <div id="resize-handle"></div>
-
-    <!-- right: the full plan — starts collapsed, expands on toggle -->
-    <div id="plan" class="collapsed">
-      <button id="plan-toggle" title="Open plan">‹</button>
-      <span id="plan-collapsed-label">My Course Plan</span>
-
-      <div id="plan-header">
-        <h2>My Course Plan</h2>
-        <button id="print-btn">Print / Save PDF</button>
-      </div>
-
-      <!-- selector so requirements adjust for students who entered in 10th or 11th grade -->
-      <div id="entry-grade-selector">
-        <span>Select first year at Madeira:</span>
-        <button class="entry-btn active" data-entry="9">9th grade</button>
-        <button class="entry-btn" data-entry="10">10th grade</button>
-        <button class="entry-btn" data-entry="11">11th grade</button>
-      </div>
-
-      <!-- one drop zone per grade year -->
-      <!-- class="drop-zone" marks these as valid drop targets -->
-      <!-- each h3 has a block-counter span that JS updates -->
-      <div class="grade-column" data-grade="9">
-        <h3>9th Grade <span class="block-counter" id="counter-9">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <div class="grade-column" data-grade="10">
-        <h3>10th Grade <span class="block-counter" id="counter-10">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <div class="grade-column" data-grade="11">
-        <h3>11th Grade <span class="block-counter" id="counter-11">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <div class="grade-column" data-grade="12">
-        <h3>12th Grade <span class="block-counter" id="counter-12">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <!-- distribution requirements tracker: updates live as courses are added -->
-      <!-- starts collapsed so the ui isn't overwhelming — click the header to expand -->
-      <div id="dist-tracker">
-        <button id="dist-toggle">Distribution Requirements <span id="dist-arrow">▸</span></button>
-        <div id="dist-table-wrap" class="hidden">
-          <table id="dist-table"><tbody></tbody></table>
-        </div>
-      </div>
-
-      <!-- tucked away at the bottom so it's not accidentally clicked -->
-      <button id="clear-btn">Clear Plan</button>
-
-    </div>
-    <div id="modal-overlay" class="hidden">
-      <div id="modal-box">
-        <button id="modal-close">✕</button>
-        <h2 id="modal-name"></h2>
-        <p id="modal-description"></p>
-        <table id="modal-stats">
-          <tbody></tbody>
-        </table>
-      </div>
-    </div>
+  <div id="welcome-box">
+    <h1>Madeira Course Catalog</h1>
+    <h2>2025–2026</h2>
+    <p>Browse all courses offered at Madeira and build your personalized academic plan. Drag courses into each grade year, track graduation requirements, and download your plan, all in one place!</p>
+    <a href="main.html" id="enter-btn">Get started →</a>
   </div>
-
-  <!-- confirmation dialog used for prereq warnings and clearing the plan -->
-  <!-- <dialog> is part of the DOM so Chrome Translate can reach it, unlike confirm() -->
-  <dialog id="confirm-dialog">
-    <p id="confirm-message"></p>
-    <div id="confirm-buttons">
-      <button id="confirm-cancel">Cancel</button>
-      <button id="confirm-ok">OK</button>
-    </div>
-  </dialog>
-
-  <script src="js/main.js"></script>
 </body>

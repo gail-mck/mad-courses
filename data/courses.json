@@ -819,7 +819,7 @@
     },
     {
       "id": "ise-1",
-      "name": "International Student English Year One (ISE 1)",
+      "name": "International Student English Year One",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,
@@ -850,7 +850,7 @@
     },
     {
       "id": "ise-2",
-      "name": "International Student English Year Two (ISE 2)",
+      "name": "International Student English Year Two",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,
@@ -1721,7 +1721,7 @@
     },
     {
       "id": "french-elective-north-africa",
-      "name": "Advanced French Elective: Culture and Society of Francophone North Africa",
+      "name": "Advanced French Elective",
       "department": "language",
       "blocks": "1",
       "blocks_min": 1,
@@ -2022,7 +2022,7 @@
     },
     {
       "id": "spanish-elective-mestizaje",
-      "name": "Advanced Spanish Elective: Exploring \"El Mestizaje\" Through History, Gastronomy and Identity",
+      "name": "Advanced Spanish Elective",
       "department": "language",
       "blocks": "1",
       "blocks_min": 1,
@@ -3565,7 +3565,7 @@
   "co_curriculum": [
     {
       "id": "sophomore-co-curriculum",
-      "name": "Sophomore Co-Curriculum: Serving Others and the Local Community",
+      "name": "10th Grade Co-Curriculum",
       "department": "co_curriculum",
       "blocks": null,
       "blocks_min": null,
@@ -3592,7 +3592,7 @@
     },
     {
       "id": "junior-co-curriculum",
-      "name": "Junior Co-Curriculum: Effecting Change in a Democracy",
+      "name": "11th Grade Co-Curriculum",
       "department": "co_curriculum",
       "blocks": null,
       "blocks_min": null,
@@ -3620,7 +3620,7 @@
     },
     {
       "id": "senior-co-curriculum",
-      "name": "Senior Co-Curriculum: Pursuing a Passion or Curiosity",
+      "name": "12th Grade Co-Curriculum",
       "department": "co_curriculum",
       "blocks": "1 mod",
       "blocks_min": null,

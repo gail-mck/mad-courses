@@ -222,6 +222,8 @@
       "id": "multivariable-calculus",
       "name": "Multivariable Calculus",
       "department": "mathematics",
+      "rotation_cycle": true,
+      "rotation_year": 2025,
       "blocks": "3",
       "blocks_min": 3,
       "blocks_max": 3,
@@ -247,6 +249,8 @@
       "id": "linear-algebra",
       "name": "Linear Algebra",
       "department": "mathematics",
+      "rotation_cycle": true,
+      "rotation_year": 2026,
       "blocks": "3",
       "blocks_min": 3,
       "blocks_max": 3,
@@ -272,6 +276,8 @@
       "id": "differential-equations",
       "name": "Differential Equations",
       "department": "mathematics",
+      "rotation_cycle": true,
+      "rotation_year": 2027,
       "blocks": "3",
       "blocks_min": 3,
       "blocks_max": 3,
@@ -850,7 +856,6 @@
     },
     {
       "id": "ise-2",
-      "name": "International Student English Year Two",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,
@@ -1721,7 +1726,7 @@
     },
     {
       "id": "french-elective-north-africa",
-      "name": "Advanced French Elective",
+      "name": "Advanced French Elective: Culture and Society of Francophone North Africa",
       "department": "language",
       "blocks": "1",
       "blocks_min": 1,
@@ -2022,7 +2027,7 @@
     },
     {
       "id": "spanish-elective-mestizaje",
-      "name": "Advanced Spanish Elective",
+      "name": "Advanced Spanish Elective: Exploring \"El Mestizaje\" Through History, Gastronomy and Identity",
       "department": "language",
       "blocks": "1",
       "blocks_min": 1,
@@ -2561,6 +2566,7 @@
       "id": "student-life",
       "name": "Student Life",
       "department": "other",
+      "locked": true,
       "blocks": "2",
       "blocks_min": 2,
       "blocks_max": 2,
@@ -2580,6 +2586,7 @@
       "id": "design-thinking-lab",
       "name": "Design Thinking Lab",
       "department": "other",
+      "locked": true,
       "blocks": "1",
       "blocks_min": 1,
       "blocks_max": 1,
@@ -3565,11 +3572,12 @@
   "co_curriculum": [
     {
       "id": "sophomore-co-curriculum",
-      "name": "10th Grade Co-Curriculum",
+      "name": "10th Grade Co-Curriculum: Serving Others and the Local Community",
       "department": "co_curriculum",
-      "blocks": null,
-      "blocks_min": null,
-      "blocks_max": null,
+      "locked": true,
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
       "grade_levels": [
         10
       ],
@@ -3592,11 +3600,12 @@
     },
     {
       "id": "junior-co-curriculum",
-      "name": "11th Grade Co-Curriculum",
+      "name": "11th Grade Co-Curriculum: Effecting Change in a Democracy",
       "department": "co_curriculum",
-      "blocks": null,
-      "blocks_min": null,
-      "blocks_max": null,
+      "locked": true,
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
       "grade_levels": [
         11
       ],
@@ -3620,11 +3629,12 @@
     },
     {
       "id": "senior-co-curriculum",
-      "name": "12th Grade Co-Curriculum",
+      "name": "12th Grade Co-Curriculum: Pursuing a Passion or Curiosity",
       "department": "co_curriculum",
-      "blocks": "1 mod",
-      "blocks_min": null,
-      "blocks_max": null,
+      "locked": true,
+      "blocks": "1",
+      "blocks_min": 1,
+      "blocks_max": 1,
       "grade_levels": [
         12
       ],

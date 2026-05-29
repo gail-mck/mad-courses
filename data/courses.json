@@ -825,7 +825,7 @@
     },
     {
       "id": "ise-1",
-      "name": "International Student English Year One (ISE 1)",
+      "name": "International Student English Year One",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,
@@ -856,7 +856,7 @@
     },
     {
       "id": "ise-2",
-      "name": "International Student English Year Two (ISE 2)",
+      "name": "International Student English Year Two",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,

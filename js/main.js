@@ -22,6 +22,16 @@ const blocksSelectionMap = {}
 // grade the student entered Madeira — changes which graduation requirements are shown
 let entryGrade = 9
 
+// tracks which distribution rows were already met so we only toast on the flip from unmet → met
+const prevMetState = {}
+
+// set to true while restoring a saved plan so we don't toast every requirement at once on load
+let isRestoringPlan = false
+
+// locked required courses that the student has intentionally removed (e.g. medical exemption)
+// persisted to localStorage so the removal survives page reloads
+const lockedOverrides = new Set()
+
 // grade level of whatever card is currently being dragged
 // dragover reads this to show the no-drop cursor before a drop fires
 let draggingGradeLevels = []
@@ -96,13 +106,13 @@ function formatBlocks(blocks) {
   else return `${blocks} blocks`
 }
 
-// returns the number of academic blocks a course counts for in a given grade year
-// used by the per-grade counter and the distribution tracker
+// returns the number of schedule BLOCKS a course occupies in a given grade year
+// yearlong evening courses (Chorus, Orchestra, Stagecraft, GYLB) count as credits but NOT blocks
+// d_blocks and co_curriculum are excluded at the call site
 function getBlocksCount(courseId, grade) {
   const course = courseMap[courseId]
   if (!course) return 0
-  // yearlong evening classes (Chorus, Orchestra, Stagecraft) earn 3 credits per year
-  if (course.blocks === 'Yearlong') return 3
+  if (course.blocks === 'Yearlong') return 0  // evening courses don't occupy daytime blocks
   if (course.blocks_min == null) return 0
   // for range courses use whatever the student picked, defaulting to the minimum
   if (course.blocks_min !== course.blocks_max) {
@@ -111,19 +121,31 @@ function getBlocksCount(courseId, grade) {
   return course.blocks_min
 }
 
+// returns the number of CREDITS a course earns — same as blocks except evening courses earn 3
+// used for the distribution tracker and the minimum-credit check (≥ 18 credits/year)
+function getCreditsCount(courseId, grade) {
+  const course = courseMap[courseId]
+  if (!course) return 0
+  if (course.blocks === 'Yearlong') return 3  // evening courses earn 3 credits per year
+  return getBlocksCount(courseId, grade)
+}
+
 // saves the entire plan (state, notes, statuses, block selections, entry grade) to localStorage
+// locked required courses are excluded — they get re-added automatically on every load
 function savePlan() {
   const data = {
     entryGrade,
     plan: {
-      9:  Array.from(planState[9]),
-      10: Array.from(planState[10]),
-      11: Array.from(planState[11]),
-      12: Array.from(planState[12]),
+      9:  Array.from(planState[9]).filter(id => !courseMap[id]?.locked),
+      10: Array.from(planState[10]).filter(id => !courseMap[id]?.locked),
+      11: Array.from(planState[11]).filter(id => !courseMap[id]?.locked),
+      12: Array.from(planState[12]).filter(id => !courseMap[id]?.locked),
     },
     notes:           notesMap,
     statuses:        statusMap,
     blocksSelection: blocksSelectionMap,
+    // save which locked courses the student intentionally removed
+    lockedOverrides: Array.from(lockedOverrides),
   }
   localStorage.setItem('madeiraPlan', JSON.stringify(data))
 }
@@ -203,28 +225,36 @@ function updatePlanCard(courseId) {
   }
 }
 
-// recalculates and displays the academic block total for one grade column
-// d_blocks and co_curriculum don't count toward the 18–21 academic block target
+// recalculates and displays block and credit totals for one grade column
+// blocks = daytime schedule slots (max 21, excludes evening/d_blocks/co_curriculum)
+// credits = blocks + evening courses (min 18, still excludes d_blocks/co_curriculum)
 function updateGradeCounter(grade) {
-  let total = 0
+  let blocks  = 0
+  let credits = 0
   planState[grade].forEach(courseId => {
     const course = courseMap[courseId]
     if (!course) return
     if (course.department === 'd_blocks' || course.department === 'co_curriculum') return
-    total += getBlocksCount(courseId, grade)
+    blocks  += getBlocksCount(courseId, grade)
+    credits += getCreditsCount(courseId, grade)
   })
   const counter = document.getElementById(`counter-${grade}`)
   if (!counter) return
-  const inRange = total >= 18 && total <= 21
-  if (total === 0) {
+
+  // good = blocks within limit AND enough credits
+  const blocksOk  = blocks <= 21
+  const creditsOk = credits >= 18
+  const allGood   = blocksOk && creditsOk
+
+  if (credits === 0) {
     // nothing added yet — show neutral placeholder
-    counter.textContent = '0/21 blocks'
+    counter.textContent = '0 blocks · 0 credits'
     counter.className = 'block-counter'
-  } else if (inRange) {
-    counter.textContent = `${total}/21 blocks ✓`
+  } else if (allGood) {
+    counter.textContent = `${blocks} blocks · ${credits} credits ✓`
     counter.className = 'block-counter good'
   } else {
-    counter.textContent = `${total}/21 blocks ✗`
+    counter.textContent = `${blocks} blocks · ${credits} credits ✗`
     counter.className = 'block-counter off'
   }
 }
@@ -243,11 +273,23 @@ function updateDistributionTracker() {
       const course = courseMap[courseId]
       if (!course) return
       courseIdsInPlan.add(courseId)
-      const blocks = getBlocksCount(courseId, parseInt(grade))
+      // use credits (not blocks) so evening courses still count toward graduation requirements
+      const credits = getCreditsCount(courseId, parseInt(grade))
       course.credits_toward.forEach(credit => {
-        totals[credit] = (totals[credit] || 0) + blocks
+        totals[credit] = (totals[credit] || 0) + credits
       })
     })
+  })
+
+  // add courses marked "taken previously" to courseIdsInPlan so the boolean checks
+  // (Bio ✓, Chem ✓, Physics ✓, Coding ✓) reflect them — but don't add to credit totals,
+  // since the graduation requirements already account for time not at Madeira
+  Object.entries(statusMap).forEach(([courseId, status]) => {
+    if (status !== 'taken') return
+    const course = courseMap[courseId]
+    if (!course) return
+    if (courseIdsInPlan.has(courseId)) return  // already counted via planState
+    courseIdsInPlan.add(courseId)
   })
 
   // co-curriculum counts as one internship per course, not by block total
@@ -269,8 +311,14 @@ function updateDistributionTracker() {
   tbody.innerHTML = ''
 
   // adds a main requirement row: category name | current/required | ✓ or ✗
+  // also toasts when a row flips from unmet to met for the first time this session
   function addRow(label, current, required) {
     const met = current >= required
+    const wasMet = prevMetState[label]
+    // only toast when a requirement is newly met — not during the initial page-load restore
+    if (met && !wasMet && !isRestoringPlan) showToast(`✓ ${label} requirement met!`)
+    prevMetState[label] = met
+
     const tr = document.createElement('tr')
     tr.innerHTML = `
       <td>${label}</td>
@@ -333,6 +381,16 @@ function updateDistributionTracker() {
   if (entryGrade <= 10) {
     addSubRow(`Design Thinking Lab ${check(courseIdsInPlan.has('design-thinking-lab'))}`)
   }
+}
+
+// shows a simple info dialog when a student clicks a locked required course card
+function showLockedAlert(courseName, grade) {
+  const labels  = { 9: '9th', 10: '10th', 11: '11th', 12: '12th' }
+  const dialog  = document.getElementById('locked-dialog')
+  document.getElementById('locked-message').textContent =
+    `All ${labels[grade]} grade students take ${courseName}. For questions specific to your situation, speak with the academic dean.`
+  dialog.showModal()
+  document.getElementById('locked-ok').onclick = () => dialog.close()
 }
 
 // shows the <dialog> with a message and calls onOk if the user clicks OK
@@ -517,27 +575,55 @@ function addCourseToGrade(course, grade, savedNote = '') {
     savePlan()
   })
 
-  // clicking the plan card opens the same modal as the catalog card
-  // item.dataset.dragging guards against the click that fires at the end of a drag
-  item.addEventListener('click', () => {
-    if (item.dataset.dragging === 'true') {
-      delete item.dataset.dragging
-      return
-    }
-    openModal(course)
-  })
-
-  item.draggable = true
   item.dataset.courseId = courseId
+  // compound key so we can find exactly this card (course + grade) without hitting a sibling grade's copy
+  item.dataset.gradeKey = `${courseId}_${grade}`
 
-  item.addEventListener('dragstart', (event) => {
-    item.dataset.dragging = 'true'
-    draggingGradeLevels = course.grade_levels
-    event.dataTransfer.setData('plan-course', courseId)
-    // read grade from the DOM so it's correct even after the card has been moved
-    event.dataTransfer.setData('fromGrade', item.closest('.grade-column').dataset.grade)
-    event.dataTransfer.effectAllowed = 'move'
-  })
+  if (course.locked) {
+    // locked required courses: draggable (so they can be removed if needed) but
+    // can't be moved between grades — drag back to catalog triggers a confirm dialog
+    item.classList.add('plan-card--locked')
+
+    item.draggable = true
+    item.addEventListener('dragstart', (event) => {
+      item.dataset.dragging = 'true'
+      draggingGradeLevels = course.grade_levels
+      event.dataTransfer.setData('plan-course', courseId)
+      event.dataTransfer.setData('fromGrade', item.closest('.grade-column').dataset.grade)
+      event.dataTransfer.effectAllowed = 'move'
+    })
+
+    // click shows the info dialog (the drag guard prevents it firing at end of drag)
+    item.addEventListener('click', () => {
+      if (item.dataset.dragging === 'true') {
+        delete item.dataset.dragging
+        return
+      }
+      showLockedAlert(course.name, grade)
+    })
+  } else {
+    // regular courses: draggable and open modal on click
+    item.draggable = true
+
+    item.addEventListener('dragstart', (event) => {
+      item.dataset.dragging = 'true'
+      draggingGradeLevels = course.grade_levels
+      event.dataTransfer.setData('plan-course', courseId)
+      // read grade from the DOM so it's correct even after the card has been moved
+      event.dataTransfer.setData('fromGrade', item.closest('.grade-column').dataset.grade)
+      event.dataTransfer.effectAllowed = 'move'
+    })
+
+    // clicking the plan card opens the same modal as the catalog card
+    // item.dataset.dragging guards against the click that fires at the end of a drag
+    item.addEventListener('click', () => {
+      if (item.dataset.dragging === 'true') {
+        delete item.dataset.dragging
+        return
+      }
+      openModal(course)
+    })
+  }
 
   // append to the correct grade column's drop-zone, then sort by department
   const column   = document.querySelector(`.grade-column[data-grade="${grade}"]`)
@@ -547,6 +633,39 @@ function addCourseToGrade(course, grade, savedNote = '') {
   updateCatalogCard(courseId)
   updateGradeCounter(grade)
   updateDistributionTracker()
+}
+
+// adds the required locked courses for the current entry grade automatically
+// called on page load and whenever the entry grade changes
+// each course checks planState first so duplicates are never added
+function autoPopulateRequired() {
+  const required = []
+
+  // student life and design thinking lab are only for students who started in 9th
+  if (entryGrade <= 9) {
+    required.push({ courseId: 'student-life',        grade: 9 })
+    required.push({ courseId: 'design-thinking-lab', grade: 9 })
+  }
+
+  // design thinking lab is also required for students who entered in 10th
+  if (entryGrade === 10) {
+    required.push({ courseId: 'design-thinking-lab', grade: 10 })
+  }
+
+  // co-curriculum courses: add whichever years the student is here for
+  if (entryGrade <= 10) required.push({ courseId: 'sophomore-co-curriculum', grade: 10 })
+  if (entryGrade <= 11) required.push({ courseId: 'junior-co-curriculum',    grade: 11 })
+  required.push({ courseId: 'senior-co-curriculum', grade: 12 })
+
+  required.forEach(({ courseId, grade }) => {
+    // skip if this course doesn't exist in the loaded data
+    if (!courseMap[courseId]) return
+    // skip if already in that grade
+    if (planState[grade].has(courseId)) return
+    // skip if the student intentionally removed this course (special circumstance)
+    if (lockedOverrides.has(courseId)) return
+    addCourseToGrade(courseMap[courseId], grade)
+  })
 }
 
 // reads localStorage and rebuilds the plan after the course catalog has loaded
@@ -566,6 +685,9 @@ function restorePlan() {
 
   // restore block selections before rebuilding cards so the pickers show the right value
   if (data.blocksSelection) Object.assign(blocksSelectionMap, data.blocksSelection)
+
+  // restore any locked-course removals the student intentionally made
+  if (data.lockedOverrides) data.lockedOverrides.forEach(id => lockedOverrides.add(id))
 
   // restore statuses first so updateCatalogCard works correctly when cards are added
   if (data.statuses) Object.assign(statusMap, data.statuses)
@@ -588,6 +710,16 @@ function restorePlan() {
 
 function renderDepartment(department, courses) {
   const catalog = document.getElementById('catalog')
+
+  // d-blocks are sorted by season so it's easier to scan: Fall → Winter → Spring → Year-round
+  if (department === 'd_blocks') {
+    const seasonOrder = ['Fall', 'Winter', 'Spring', 'Fall, Winter, Spring']
+    courses = [...courses].sort((a, b) => {
+      const ai = seasonOrder.findIndex(s => (a.season || '').includes(s.split(',')[0].trim()))
+      const bi = seasonOrder.findIndex(s => (b.season || '').includes(s.split(',')[0].trim()))
+      return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi)
+    })
+  }
 
   // create a header for this department
   const header = document.createElement('h2')
@@ -628,6 +760,28 @@ function renderDepartment(department, courses) {
         : formatBlocks(course.blocks)
     }
 
+    // small "Grades X, Y" note so students can see at a glance if a course fits their year
+    // empty grade_levels means the course is open to everyone, so we skip the label
+    let gradeLevelLabel = ''
+    if (course.grade_levels && course.grade_levels.length > 0) {
+      const gradeNums = course.grade_levels
+      if (gradeNums.length === 1) {
+        gradeLevelLabel = `<span class="card-grade-levels">Grade ${gradeNums[0]} only</span>`
+      } else {
+        gradeLevelLabel = `<span class="card-grade-levels">Grades ${gradeNums.join(', ')}</span>`
+      }
+    }
+
+    // rotating math courses: show the next three school years so students can plan ahead
+    // e.g. "Offered: 2025–26, 2028–29, 2031–32"
+    let rotationLabel = ''
+    if (course.rotation_cycle && course.rotation_year) {
+      const y = course.rotation_year
+      // format each as "YYYY–YY" (e.g. 2025–26)
+      const fmt = yr => `${yr}–${String(yr + 1).slice(-2)}`
+      rotationLabel = `<span class="card-rotation">Offered: ${fmt(y)}, ${fmt(y + 3)}, ${fmt(y + 6)}</span>`
+    }
+
     // card-row: grade badge (left), course name (center, flex:1), ⋮ button (right)
     // putting them all on one row removes the blank top gap from the old layout
     card.innerHTML = `
@@ -637,6 +791,8 @@ function renderDepartment(department, courses) {
         <button class="status-btn" title="Set status">⋮</button>
       </div>
       <p>${blockLabel}</p>
+      ${gradeLevelLabel}
+      ${rotationLabel}
       <div class="status-dropdown hidden">
         <button data-status="interested">★ Interested</button>
         <button data-status="taken">✓ Taken Previously</button>
@@ -666,6 +822,8 @@ function renderDepartment(department, courses) {
         if (btn.dataset.status === 'none') delete statusMap[course.id]
         else statusMap[course.id] = btn.dataset.status
         updateCatalogCard(course.id)
+        // refresh distribution tracker so "taken" courses immediately count toward requirements
+        updateDistributionTracker()
         statusDropdown.classList.add('hidden')
         savePlan()
       })
@@ -713,6 +871,12 @@ function openModal(course) {
 
   if (course.department === 'co_curriculum' && course.mods_offered?.length) {
     rows.push(['Offered in Mods', course.mods_offered.join(', ')])
+  }
+
+  if (course.rotation_cycle && course.rotation_year) {
+    const y = course.rotation_year
+    const fmt = yr => `${yr}–${String(yr + 1).slice(-2)}`
+    rows.push(['Offered', `${fmt(y)}, ${fmt(y + 3)}, ${fmt(y + 6)} (rotates every 3 years)`])
   }
 
   if (course.coreqs && course.coreqs !== 'None') {
@@ -783,7 +947,16 @@ const planToggle = document.getElementById('plan-toggle')
 // hide the resize handle on load since the plan starts collapsed
 document.getElementById('resize-handle').style.display = 'none'
 
-planToggle.addEventListener('click', () => {
+// small bounce animation plays once on load to hint the strip is clickable
+planEl.classList.add('plan-bounce')
+planEl.addEventListener('animationend', () => planEl.classList.remove('plan-bounce'), { once: true })
+
+// ? button pulses once on load so students notice there's a tutorial
+const helpBtn = document.getElementById('help-btn')
+helpBtn.classList.add('help-bounce')
+helpBtn.addEventListener('animationend', () => helpBtn.classList.remove('help-bounce'), { once: true })
+
+function togglePlan() {
   const isCollapsed = planEl.classList.toggle('collapsed')
   planToggle.textContent     = isCollapsed ? '‹' : '›'
   planToggle.title           = isCollapsed ? 'Open plan' : 'Close plan'
@@ -794,6 +967,20 @@ planToggle.addEventListener('click', () => {
     planEl.style.flex = ''
     document.getElementById('catalog-wrapper').style.flex = ''
   }
+}
+
+// the toggle button opens/closes the plan
+planToggle.addEventListener('click', togglePlan)
+
+// clicking anywhere on the collapsed sidebar strip also opens the plan
+// (the toggle button click is already handled above — stopPropagation isn't needed
+//  because togglePlan is idempotent and the button click fires first)
+planEl.addEventListener('click', (event) => {
+  // only act when the plan is currently collapsed
+  if (!planEl.classList.contains('collapsed')) return
+  // avoid double-firing if the click was directly on the toggle button
+  if (event.target === planToggle) return
+  togglePlan()
 })
 
 // entry grade buttons: switch which graduation requirements are shown
@@ -803,6 +990,8 @@ document.querySelectorAll('.entry-btn').forEach(btn => {
     document.querySelectorAll('.entry-btn').forEach(b => b.classList.remove('active'))
     btn.classList.add('active')
     updateGradeVisibility()
+    // re-add required courses for the new entry grade (e.g. design thinking lab moves to 10th)
+    autoPopulateRequired()
     updateDistributionTracker()
     savePlan()
   })
@@ -816,7 +1005,12 @@ fetch('data/courses.json')
       renderDepartment(department, courses)
     })
     // restore any saved plan from localStorage after the catalog is fully built
+    // suppress requirement-met toasts during the restore so you don't get flooded on page load
+    isRestoringPlan = true
     restorePlan()
+    // add required locked courses (they're never saved so they always need to be re-added)
+    autoPopulateRequired()
+    isRestoringPlan = false
   })
 
 const gradeColumns = document.querySelectorAll('.grade-column')
@@ -846,6 +1040,9 @@ gradeColumns.forEach(column => {
       // dropped on the same column, nothing to do
       if (fromGrade === toGrade) return
 
+      // locked required courses stay where they are — they can't be moved
+      if (courseMap[courseId]?.locked) return
+
       // block the move if this grade isn't in the course's allowed grade_levels
       const movedCourse = courseMap[courseId]
       if (movedCourse.grade_levels.length > 0 && !movedCourse.grade_levels.includes(toGrade)) {
@@ -861,9 +1058,13 @@ gradeColumns.forEach(column => {
       planState[toGrade].add(courseId)
 
       // move the existing DOM element so notes are preserved
-      const planCard = document.querySelector(`.plan-card[data-course-id="${courseId}"]`)
+      // use the compound grade key so we move exactly the fromGrade copy, not a sibling grade's card
+      const planCard = document.querySelector(`.plan-card[data-grade-key="${courseId}_${fromGrade}"]`)
       const dropZone = column.querySelector('.drop-zone')
-      if (planCard) dropZone.appendChild(planCard)
+      if (planCard) {
+        planCard.dataset.gradeKey = `${courseId}_${toGrade}`
+        dropZone.appendChild(planCard)
+      }
 
       // update grade badge on the catalog card and sort the new column
       updateCatalogCard(courseId)
@@ -888,6 +1089,21 @@ gradeColumns.forEach(column => {
     // if this course is already in this year, do nothing
     if (planState[targetGrade].has(courseId)) return
 
+    // d-blocks: prevent dropping a season that's already covered in this grade year
+    // season field is a comma-separated string like "Fall" or "Fall, Winter, Spring"
+    if (course.department === 'd_blocks' && course.season) {
+      const incomingSeasons = course.season.split(',').map(s => s.trim())
+      const existingDblocks = Array.from(planState[targetGrade])
+        .filter(id => courseMap[id]?.department === 'd_blocks' && courseMap[id]?.season)
+      const existingSeasons = existingDblocks.flatMap(id => courseMap[id].season.split(',').map(s => s.trim()))
+      const conflict = incomingSeasons.find(s => existingSeasons.includes(s))
+      if (conflict) {
+        const labels = { 9: '9th', 10: '10th', 11: '11th', 12: '12th' }
+        showToast(`You already have a ${conflict} D-block in ${labels[targetGrade]} grade.`)
+        return
+      }
+    }
+
     // show prereq warning if needed — the add only happens inside the callback
     checkPrereqs(course, targetGrade, () => {
       addCourseToGrade(course, targetGrade)
@@ -909,12 +1125,35 @@ catalogWrapper.addEventListener('drop', (event) => {
   const courseId = event.dataTransfer.getData('plan-course')
   const grade    = parseInt(event.dataTransfer.getData('fromGrade'))
 
+  // locked required courses need a confirmation before removal
+  // students with special circumstances (health, summer completion, etc.) can still remove them
+  if (courseMap[courseId]?.locked) {
+    const course = courseMap[courseId]
+    showConfirm(
+      `"${course.name}" is a required course for all students in ${course.grade_levels}th grade.\n\nFor questions, discuss with your academic dean.\n\nAre you sure you want to remove it from your plan?`,
+      () => {
+        // mark as overridden so autoPopulateRequired won't re-add it on next load
+        lockedOverrides.add(courseId)
+        planState[grade].delete(courseId)
+        delete blocksSelectionMap[`${courseId}_${grade}`]
+        const planCard = document.querySelector(`.plan-card[data-grade-key="${courseId}_${grade}"]`)
+        if (planCard) planCard.remove()
+        updateCatalogCard(courseId)
+        updateGradeCounter(grade)
+        updateDistributionTracker()
+        savePlan()
+      }
+    )
+    return
+  }
+
   planState[grade].delete(courseId)
 
   // clean up any saved block selection for this course/grade combo
   delete blocksSelectionMap[`${courseId}_${grade}`]
 
-  const planCard = document.querySelector(`.plan-card[data-course-id="${courseId}"]`)
+  // use the compound grade key so only this grade's copy is removed, not all copies
+  const planCard = document.querySelector(`.plan-card[data-grade-key="${courseId}_${grade}"]`)
   if (planCard) planCard.remove()
 
   // remove grade badge and selected state from the catalog card
@@ -947,6 +1186,22 @@ document.getElementById('print-btn').addEventListener('click', () => {
   window.print()
 })
 
+// ? button opens the tutorial overlay
+document.getElementById('help-btn').addEventListener('click', () => {
+  document.getElementById('help-overlay').classList.remove('hidden')
+})
+
+document.getElementById('help-close').addEventListener('click', () => {
+  document.getElementById('help-overlay').classList.add('hidden')
+})
+
+// clicking the dark backdrop behind the help box also closes it
+document.getElementById('help-overlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('help-overlay')) {
+    document.getElementById('help-overlay').classList.add('hidden')
+  }
+})
+
 // distribution requirements toggle: click the header to show/hide the table
 document.getElementById('dist-toggle').addEventListener('click', () => {
   const wrap  = document.getElementById('dist-table-wrap')
@@ -967,6 +1222,7 @@ document.getElementById('clear-btn').addEventListener('click', () => {
   ;[9, 10, 11, 12].forEach(g => planState[g].clear())
   Object.keys(notesMap).forEach(k => delete notesMap[k])
   Object.keys(blocksSelectionMap).forEach(k => delete blocksSelectionMap[k])
+  lockedOverrides.clear()
 
   // update catalog cards so grade badges and selected styles clear too
   Object.keys(courseMap).forEach(id => updateCatalogCard(id))
@@ -974,6 +1230,10 @@ document.getElementById('clear-btn').addEventListener('click', () => {
   // refresh the counters and tracker
   ;[9, 10, 11, 12].forEach(updateGradeCounter)
   updateDistributionTracker()
+
+  // re-add required locked courses since they were just wiped
+  autoPopulateRequired()
+
   savePlan()
 
   }) // end showConfirm callback

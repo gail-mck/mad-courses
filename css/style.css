@@ -532,7 +532,7 @@ hr {
   color: #B90124;
 }
 
-/* ── responsive layout — stack panels vertically on mobile ──── */
+/* responsive layout, stack panels vertically on mobile */
 
 @media (max-width: 768px) {
   #app {
@@ -552,7 +552,7 @@ hr {
     overflow-y: visible;
   }
 
-  /* hide the drag handle — not useful on mobile */
+  /* hide the drag handle, not useful on mobile */
   #resize-handle {
     display: none !important;
   }
@@ -576,7 +576,7 @@ hr {
     padding: 16px;
   }
 
-  /* hide the toggle arrow and collapsed label on mobile — plan is always open */
+  /* hide the toggle arrow and collapsed label on mobile, plan is always open */
   #plan-toggle,
   #plan-collapsed-label,
   #help-btn {
@@ -644,7 +644,7 @@ hr {
   #dist-toggle { display: none; }
 }
 
-/* ── entry grade selector ───────────────────────────────────── */
+/* entry grade selector */
 
 #entry-grade-selector {
   display: flex;
@@ -678,7 +678,7 @@ hr {
   background-color: #fdf0f2;
 }
 
-/* ── per-grade block counter ────────────────────────────────── */
+/* per-grade block counter */
 
 /* sits inside the grade h3, floated right */
 .block-counter {
@@ -700,9 +700,9 @@ hr {
   color: #B90124;
 }
 
-/* ── block range picker on plan cards ──────────────────────── */
+/* block range picker on plan cards */
 
-/* shows up on cards where the block count is a range (e.g. Algebra II: 3–4) */
+/* shows up on cards where the block count is a range */
 .block-picker {
   display: flex;
   align-items: center;
@@ -740,7 +740,7 @@ hr {
   background-color: #fdf0f2;
 }
 
-/* ── distribution requirements tracker ─────────────────────── */
+/* distribution requirements tracker */
 
 #dist-tracker {
   margin-top: 20px;
@@ -776,7 +776,7 @@ hr {
 }
 
 /* the table gets padding only when it's visible */
-/* wrapper div gets the padding — table elements ignore padding with border-collapse: collapse */
+/* wrapper div gets the padding, table elements ignore padding */
 #dist-table-wrap {
   padding: 20px 16px 24px;
 }
@@ -824,9 +824,9 @@ hr {
 .dist-sub .dist-met   { font-weight: normal; }
 .dist-sub .dist-unmet { font-weight: normal; }
 
-/* ── confirmation dialog (prereq warnings + clear plan) ─────── */
+/* confirmation dialog  */
 
-/* <dialog> is part of the DOM so Chrome Translate can reach it */
+/* Chrome Translate can reach <dialog>  */
 #confirm-dialog {
   border: none;
   border-radius: 10px;
@@ -899,12 +899,12 @@ hr {
 .card-rotation {
   display: block;
   font-size: 0.7rem;
-  color: #e87722;
+  color: #aaa;
   margin-top: 2px;
   font-style: italic;
 }
 
-/* ── startup bounce animations ───────────────────────────────── */
+/* startup bounce animations */
 
 /* plan strip bounces left-right to hint it can be opened */
 @keyframes plan-bounce {
@@ -936,7 +936,7 @@ hr {
   animation: help-bounce 0.8s ease 1.4s 1 both;
 }
 
-/* ── ? help button in the catalog header ───────────────────── */
+/* ? help button in the catalog header */
 
 #help-btn {
   background: none;
@@ -957,7 +957,7 @@ hr {
   color: #B90124;
 }
 
-/* ── help / tutorial overlay ────────────────────────────────── */
+/* help / tutorial overlay */
 
 #help-overlay {
   position: fixed;
@@ -1030,25 +1030,15 @@ hr {
   color: #B90124;
 }
 
-/* ── locked required course plan cards ─────────────────────── */
+/*  locked required course plan cards */
 
-/* locked cards can't be dragged and have a subtle required indicator */
 .plan-card--locked {
   cursor: default;
   border-color: #e8d8d8;
   background-color: #fdfbfb;
 }
 
-/* small "Required" label at the bottom of locked cards */
-.plan-card--locked .locked-label {
-  font-size: 0.65rem;
-  color: #B90124;
-  margin-top: 4px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-/* ── locked-dialog (info popup for required courses) ────────── */
+/* locked-dialog (info popup for required courses) */
 
 #locked-dialog {
   border: none;

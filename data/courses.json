@@ -35,7 +35,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Algebra I; New students\u2014by placement test",
+      "prereqs": "Returning students—Algebra I; New students—by placement test",
       "prereq_ids": [
         "algebra-i"
       ],
@@ -59,7 +59,7 @@
         11,
         12
       ],
-      "prereqs": "Returning Students \u2013 B+ or higher in Geometry leads to 3 Mods of Algebra II. New Students - by placement test.",
+      "prereqs": "Returning Students – B+ or higher in Geometry leads to 3 Mods of Algebra II. New Students - by placement test.",
       "prereq_ids": [
         "geometry"
       ],
@@ -131,7 +131,7 @@
         11,
         12
       ],
-      "prereqs": "Returning Students \u2013 Extended Algebra II with an A and department approval. Algebra II students with an A or above, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "prereqs": "Returning Students – Extended Algebra II with an A and department approval. Algebra II students with an A or above, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
       "prereq_ids": [
         "extended-algebra-ii",
         "algebra-ii"
@@ -188,7 +188,7 @@
       ],
       "coreqs": "None",
       "notes": null,
-      "description": "This course continues the path to higher mathematics and helps to develop the skills and study habits necessary for a rigorous math program. Students explore differential and integral calculus and their applications while learning to approach problems from a variety of perspectives\u2014graphical, analytical, numerical, and verbal. Technology is used to explore the behaviors of functions and to make connections with analytic procedures. Students are prepared to sit for the Advanced Placement Calculus AB exam in the spring.",
+      "description": "This course continues the path to higher mathematics and helps to develop the skills and study habits necessary for a rigorous math program. Students explore differential and integral calculus and their applications while learning to approach problems from a variety of perspectives—graphical, analytical, numerical, and verbal. Technology is used to explore the behaviors of functions and to make connections with analytic procedures. Students are prepared to sit for the Advanced Placement Calculus AB exam in the spring.",
       "credits_toward": [
         "Mathematics"
       ]
@@ -689,7 +689,7 @@
         },
         {
           "name": "Writing with Style About Global Literature",
-          "description": "Students who test out of Writing Mechanics cultivate their prose style in this workshop-style course where they read and respond to each other's writing, in addition to receiving feedback from their teacher. Reading Chimamanda Ngozi Adichie's Purple Hibiscus (summer text) and selected short stories will provide contemporary cultural topics for student writing. These students conduct biographical research on individual authors. Can substitute for Writing Mechanics and Global Literature\u2014required."
+          "description": "Students who test out of Writing Mechanics cultivate their prose style in this workshop-style course where they read and respond to each other's writing, in addition to receiving feedback from their teacher. Reading Chimamanda Ngozi Adichie's Purple Hibiscus (summer text) and selected short stories will provide contemporary cultural topics for student writing. These students conduct biographical research on individual authors. Can substitute for Writing Mechanics and Global Literature—required."
         },
         {
           "name": "Shakespeare Through Performance II",
@@ -699,7 +699,7 @@
         {
           "name": "Literary Masterpieces: Jane Eyre",
           "prereqs": "Writing Mechanics and Global Literature",
-          "description": "Students will study Charlotte Bront\u00eb's novel Jane Eyre. Close reading of the text, vocabulary building, and learning about the social history of Britain will enhance students' understanding of this work. Students will demonstrate their understanding primarily through analytical essays."
+          "description": "Students will study Charlotte Brontë's novel Jane Eyre. Close reading of the text, vocabulary building, and learning about the social history of Britain will enhance students' understanding of this work. Students will demonstrate their understanding primarily through analytical essays."
         },
         {
           "name": "Literary Masterpieces: Satire in Chaucer and Austen",
@@ -800,7 +800,7 @@
         },
         {
           "name": "Poetry Writing Workshop",
-          "description": "This course is structured as a workshop and focuses on poetry created by the class. Students will write a variety of poems\u2014from formal sonnets and villanelles to pantoums and free verse poems\u2014and participate in regular discussion of each other's work. Based on feedback from the class and teacher, and their own expanding expertise, they will then revise their work and compile it in a final portfolio. Students will also read and analyze a diverse selection of poems to broaden their knowledge and understanding of the vast array of poetic voices that exist throughout the world and across time. As a culmination of the course, students will have the opportunity to share their poetry with the Madeira community."
+          "description": "This course is structured as a workshop and focuses on poetry created by the class. Students will write a variety of poems—from formal sonnets and villanelles to pantoums and free verse poems—and participate in regular discussion of each other's work. Based on feedback from the class and teacher, and their own expanding expertise, they will then revise their work and compile it in a final portfolio. Students will also read and analyze a diverse selection of poems to broaden their knowledge and understanding of the vast array of poetic voices that exist throughout the world and across time. As a culmination of the course, students will have the opportunity to share their poetry with the Madeira community."
         }
       ]
     },
@@ -825,7 +825,7 @@
     },
     {
       "id": "ise-1",
-      "name": "International Student English Year One",
+      "name": "International Student English Year One (ISE 1)",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,
@@ -856,6 +856,7 @@
     },
     {
       "id": "ise-2",
+      "name": "International Student English Year Two (ISE 2)",
       "department": "english",
       "blocks": "3",
       "blocks_min": 3,
@@ -1016,7 +1017,7 @@
         11,
         12
       ],
-      "prereqs": "Biology, Chemistry with a B\u2013 or higher.",
+      "prereqs": "Biology, Chemistry with a B– or higher.",
       "prereq_ids": [
         "biology",
         "chemistry"
@@ -1396,7 +1397,7 @@
     },
     {
       "id": "capstone-chocolate-city",
-      "name": "Capstone Seminar: Chocolate City \u2014 DC History",
+      "name": "Capstone Seminar: Chocolate City — DC History",
       "department": "history",
       "blocks": "2",
       "blocks_min": 2,
@@ -1410,7 +1411,7 @@
       ],
       "coreqs": "Capstone Research Seminar",
       "notes": "History Capstone Seminar: 2-block course + Capstone Research Seminar. 3-block course total. Open to 12th graders.",
-      "description": "Ever wondered why DC is the city we know and love? In this class we will explore Washington, D.C. beyond the monuments and politics to learn about the people and movements that shaped the city. From the Indigenous communities who first called this land home to the fight for DC statehood today, we'll dive deep into the city's struggles and triumphs. Together we will unpack how race, culture, and power have defined DC's neighborhoods, experience its vibrant history firsthand on field trips to the city, and unravel how life in DC affects those who live in the shadow of the federal government. We will finish with student-led classes where you become the expert, tackling modern issues like gentrification, housing, political activism, and more. This is a microhistory\u2014your opportunity to see how one city reflects and contradicts your current understanding of American history, through the lenses of identity and sociology. As a Capstone Seminar, students can expect discussion, potential field trips, and college-level workloads.",
+      "description": "Ever wondered why DC is the city we know and love? In this class we will explore Washington, D.C. beyond the monuments and politics to learn about the people and movements that shaped the city. From the Indigenous communities who first called this land home to the fight for DC statehood today, we'll dive deep into the city's struggles and triumphs. Together we will unpack how race, culture, and power have defined DC's neighborhoods, experience its vibrant history firsthand on field trips to the city, and unravel how life in DC affects those who live in the shadow of the federal government. We will finish with student-led classes where you become the expert, tackling modern issues like gentrification, housing, political activism, and more. This is a microhistory—your opportunity to see how one city reflects and contradicts your current understanding of American history, through the lenses of identity and sociology. As a Capstone Seminar, students can expect discussion, potential field trips, and college-level workloads.",
       "credits_toward": [
         "History"
       ]
@@ -1643,13 +1644,13 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014French I. New students\u2014by placement test",
+      "prereqs": "Returning students—French I. New students—by placement test",
       "prereq_ids": [
         "french-i"
       ],
       "coreqs": "None",
       "notes": null,
-      "description": "Students build vocabulary and grammar skills from Level I. Most verb tenses and moods are covered such as pass\u00e9 compos\u00e9, imperfect, present conditional, future simple, and subjunctive. At the end, students will be able to describe health and medical conditions, talk about jobs and daily life, discuss the environment, express their beliefs and opinions about technology, narrate past experiences, and consider future plans.",
+      "description": "Students build vocabulary and grammar skills from Level I. Most verb tenses and moods are covered such as passé composé, imperfect, present conditional, future simple, and subjunctive. At the end, students will be able to describe health and medical conditions, talk about jobs and daily life, discuss the environment, express their beliefs and opinions about technology, narrate past experiences, and consider future plans.",
       "credits_toward": [
         "World Languages"
       ]
@@ -1667,7 +1668,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014French II. New students\u2014by placement test",
+      "prereqs": "Returning students—French II. New students—by placement test",
       "prereq_ids": [
         "french-ii"
       ],
@@ -1691,7 +1692,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014French III. New students\u2014by placement test",
+      "prereqs": "Returning students—French III. New students—by placement test",
       "prereq_ids": [
         "french-iii"
       ],
@@ -1713,7 +1714,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014French III with an A\u2013 and department approval. New students\u2014by placement test and departmental approval",
+      "prereqs": "Returning students—French III with an A– and department approval. New students—by placement test and departmental approval",
       "prereq_ids": [
         "french-iii"
       ],
@@ -1782,7 +1783,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Latin I. New students\u2014by placement test",
+      "prereqs": "Returning students—Latin I. New students—by placement test",
       "prereq_ids": [
         "latin-i"
       ],
@@ -1806,7 +1807,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Latin II. New students\u2014by placement test",
+      "prereqs": "Returning students—Latin II. New students—by placement test",
       "prereq_ids": [
         "latin-ii"
       ],
@@ -1830,7 +1831,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Latin III. New students\u2014by placement test and departmental approval",
+      "prereqs": "Returning students—Latin III. New students—by placement test and departmental approval",
       "prereq_ids": [
         "latin-iii"
       ],
@@ -1852,7 +1853,7 @@
         11,
         12
       ],
-      "prereqs": "Latin IV students with an A\u2013. Seniors with an A in Latin III and departmental approval",
+      "prereqs": "Latin IV students with an A–. Seniors with an A in Latin III and departmental approval",
       "prereq_ids": [
         "latin-iv",
         "latin-iii"
@@ -1943,7 +1944,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Spanish I. New students\u2014by placement test",
+      "prereqs": "Returning students—Spanish I. New students—by placement test",
       "prereq_ids": [
         "spanish-i"
       ],
@@ -1967,7 +1968,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Spanish II. New students\u2014by placement test and departmental approval",
+      "prereqs": "Returning students—Spanish II. New students—by placement test and departmental approval",
       "prereq_ids": [
         "spanish-ii"
       ],
@@ -1991,7 +1992,7 @@
         11,
         12
       ],
-      "prereqs": "Returning students\u2014Spanish III. New students\u2014by placement test and departmental approval",
+      "prereqs": "Returning students—Spanish III. New students—by placement test and departmental approval",
       "prereq_ids": [
         "spanish-iii"
       ],
@@ -2013,7 +2014,7 @@
         11,
         12
       ],
-      "prereqs": "Advanced Topics in Spanish, or Spanish III with an A and department approval. New students\u2014by placement test and departmental approval",
+      "prereqs": "Advanced Topics in Spanish, or Spanish III with an A and department approval. New students—by placement test and departmental approval",
       "prereq_ids": [
         "spanish-advanced-topics",
         "spanish-iii"
@@ -2489,7 +2490,7 @@
         "Art",
         "Design Thinking"
       ],
-      "schedule": "Open to grades 9\u201312, Mods 1 through 6 on Wednesdays, 6:30\u20139:00 pm. Additional hours required for play and musical set builds and tech weeks."
+      "schedule": "Open to grades 9–12, Mods 1 through 6 on Wednesdays, 6:30–9:00 pm. Additional hours required for play and musical set builds and tech weeks."
     },
     {
       "id": "madeira-chorus",
@@ -2508,11 +2509,11 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": "Earns one academic credit per section taken. Course may be repeated. Students on Varsity teams (Field Hockey, Basketball, Volleyball, Swim, Tennis) should not sign up for Madeira Chorus during that season, as the time requirements overlap.",
-      "description": "This large vocal ensemble class provides both beginner and advanced singers the opportunity to develop their choral and solo singing in a group experience, exploring a broad repertoire of music \u2013 from classical to contemporary, both accompanied and a cappella. Students prepare for two-to-three concerts and/or festivals per year. Students will also develop new or build upon existing music theory, ear training, and sight singing skills. Mods 1 & 2 will focus on classical repertoire, Mods 3 & 4 will focus on contemporary & pop, while Mods 5 & 6 will focus on Musical Theatre. Students must participate in all dress rehearsals and performances.",
+      "description": "This large vocal ensemble class provides both beginner and advanced singers the opportunity to develop their choral and solo singing in a group experience, exploring a broad repertoire of music – from classical to contemporary, both accompanied and a cappella. Students prepare for two-to-three concerts and/or festivals per year. Students will also develop new or build upon existing music theory, ear training, and sight singing skills. Mods 1 & 2 will focus on classical repertoire, Mods 3 & 4 will focus on contemporary & pop, while Mods 5 & 6 will focus on Musical Theatre. Students must participate in all dress rehearsals and performances.",
       "credits_toward": [
         "Art"
       ],
-      "schedule": "Open to grades 9-12 Mods 1 & 2, Mods 3 & 4, Mods 5 & 6 on Mondays and Thursdays, 6:30pm\u20138 p.m."
+      "schedule": "Open to grades 9-12 Mods 1 & 2, Mods 3 & 4, Mods 5 & 6 on Mondays and Thursdays, 6:30pm–8 p.m."
     },
     {
       "id": "chamber-orchestra",
@@ -2764,7 +2765,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": null,
-      "description": "Students will acquire practical skills in design and layout (using programs like InDesign) and in learning the editorial process. They will also exercise their creativity in organizing Gate contributions according to theme, genre, concept, and/or style\u2014in addition to serving as contributors themselves, should they wish. Gate staff will gain technical know-how and learn about the philosophical and ethical issues of publishing like censorship, anonymity, and managing the relationship between authors and editors. Students will also be responsible for marketing and outreach, and for identifying innovative ways of showcasing the publication such as podcasting, performance, and online publishing.",
+      "description": "Students will acquire practical skills in design and layout (using programs like InDesign) and in learning the editorial process. They will also exercise their creativity in organizing Gate contributions according to theme, genre, concept, and/or style—in addition to serving as contributors themselves, should they wish. Gate staff will gain technical know-how and learn about the philosophical and ethical issues of publishing like censorship, anonymity, and managing the relationship between authors and editors. Students will also be responsible for marketing and outreach, and for identifying innovative ways of showcasing the publication such as podcasting, performance, and online publishing.",
       "credits_toward": [
         "Activities"
       ],
@@ -2860,7 +2861,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": "For students who elect to participate in outside conferences, there are additional fees not covered by Madeira.",
-      "description": "During their participation, Madeira students learn the basics of United Nations parliamentary procedure, how to write position and background papers, and how to advance committee agendas during active conference sessions. Madeira students may elect\u2014as part of the Model UN experience\u2014to participate in a high-school conference for Model United Nations.",
+      "description": "During their participation, Madeira students learn the basics of United Nations parliamentary procedure, how to write position and background papers, and how to advance committee agendas during active conference sessions. Madeira students may elect—as part of the Model UN experience—to participate in a high-school conference for Model United Nations.",
       "credits_toward": [
         "Activities"
       ],
@@ -3125,7 +3126,7 @@
       "prereqs": "None",
       "prereq_ids": [],
       "coreqs": "None",
-      "notes": "Varsity and JV teams. Tryouts open to the entire student body. Practice times: JV 3:00\u20134:30 pm, Varsity 4:00\u20136:00 pm, subject to change.",
+      "notes": "Varsity and JV teams. Tryouts open to the entire student body. Practice times: JV 3:00–4:30 pm, Varsity 4:00–6:00 pm, subject to change.",
       "description": "Madeira competes locally within the Independent School League (ISL) and regionally against other Independent and Public Schools. Students are expected to attend all games and practices, including weekend events to receive credit.",
       "credits_toward": [
         "Activities"
@@ -3415,7 +3416,7 @@
         "swimming-diving"
       ],
       "coreqs": "None",
-      "notes": "Roster Minimum: 6, Roster Maximum: 20. This activity requires a student to be able to be in the pool each day (Mon\u2013Fri) of the season.",
+      "notes": "Roster Minimum: 6, Roster Maximum: 20. This activity requires a student to be able to be in the pool each day (Mon–Fri) of the season.",
       "description": "This course will cover the four main competitive strokes, turns, and will contain a rigorous workout.",
       "credits_toward": [
         "Activities"
@@ -3513,7 +3514,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": "Maximum of 3 students for Varsity. Maximum of 2 students for JV.",
-      "description": "Athletic Team Student Assistant (SA) report to the designated sport specific practice location Monday\u2013Friday for the duration of practice (potentially Saturday for ISL Play Days and Invitationals). SA will assist their team/coaching staff with the following tasks: taking attendance, game and event support, updating social media and filming competitions. SA must complete all scheduled team workouts each week.",
+      "description": "Athletic Team Student Assistant (SA) report to the designated sport specific practice location Monday–Friday for the duration of practice (potentially Saturday for ISL Play Days and Invitationals). SA will assist their team/coaching staff with the following tasks: taking attendance, game and event support, updating social media and filming competitions. SA must complete all scheduled team workouts each week.",
       "credits_toward": [
         "Activities"
       ],
@@ -3536,8 +3537,8 @@
       "prereqs": "None",
       "prereq_ids": [],
       "coreqs": "None",
-      "notes": "Maximum of 3\u20134 students per season. SIA must complete at least 2\u20133 Breakaway workouts each week.",
-      "description": "To receive D-block credit the Athletic Team Sports Information Assistants (SIA) reports to the Athletic Director or Associate Athletic Director Monday\u2013Friday for the duration of practice (potentially Saturday for ISL Play Days and Invitationals). SIA will assist the athletic department with the following tasks: creating social media content, creating pre and post-game graphics, running in-game livestream, updating social media and filming competitions, and posting game results.",
+      "notes": "Maximum of 3–4 students per season. SIA must complete at least 2–3 Breakaway workouts each week.",
+      "description": "To receive D-block credit the Athletic Team Sports Information Assistants (SIA) reports to the Athletic Director or Associate Athletic Director Monday–Friday for the duration of practice (potentially Saturday for ISL Play Days and Invitationals). SIA will assist the athletic department with the following tasks: creating social media content, creating pre and post-game graphics, running in-game livestream, updating social media and filming competitions, and posting game results.",
       "credits_toward": [
         "Activities"
       ],
@@ -3575,9 +3576,9 @@
       "name": "10th Grade Co-Curriculum: Serving Others and the Local Community",
       "department": "co_curriculum",
       "locked": true,
-      "blocks": "1",
-      "blocks_min": 1,
-      "blocks_max": 1,
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
       "grade_levels": [
         10
       ],
@@ -3603,9 +3604,9 @@
       "name": "11th Grade Co-Curriculum: Effecting Change in a Democracy",
       "department": "co_curriculum",
       "locked": true,
-      "blocks": "1",
-      "blocks_min": 1,
-      "blocks_max": 1,
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
       "grade_levels": [
         11
       ],
@@ -3613,7 +3614,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": "1 Mod, Required for 11th Graders. Juniors have Co-Curriculum in Mods 2, 3, 4, 5, and 6. In some rare occasions due to scheduling conflicts, juniors may have Co-Curriculum in Mod 7. Junior Co-Curriculum is completed in the same year a student completes U.S. History, typically the junior year. The name of the placement and the letter grade earned will appear on the final transcript, but the grade is not a part of a student's overall grade point average.",
-      "description": "Junior Co-Curriculum and the U.S. History course are an integrated program. In their U.S. History courses, students will develop knowledge and practice skills that will help them in their internship on Capitol Hill. During the internship, students will have hands-on experience that will inform their final research project for U.S. History. Because of its unique connection to the Capitol Hill internship program, U.S. History is a four-mod course. All students will complete the first mod of U.S. History course before going to their internship on Capitol Hill. During their first mod of U.S. History, students will develop a working knowledge of how the U.S. government functions and what role Capitol Hill plays. In addition, students will work with their history teacher to practice the oral and written skills, awareness of current events, and the research skills necessary to work in a Congressional Office. Students also will identify a national policy issue that is important to them. During their Congressional internship, students will submit a variety of assignments to the Co-Curriculum Office that will help them reflect upon their experience and their national policy issue. This policy issue will be the focus of their Co-Curriculum capstone project, the research-based culmination of their internship experience, as well as the final research project in U.S. History. In addition to their daily duties as Congressional interns, the Co-Curriculum Capstone project gives students the opportunity to apply skills learned in the classroom \u2013 quantitative and analytical reasoning skills, oral and written communication skills, and research and tech skills \u2013 to effect change.",
+      "description": "Junior Co-Curriculum and the U.S. History course are an integrated program. In their U.S. History courses, students will develop knowledge and practice skills that will help them in their internship on Capitol Hill. During the internship, students will have hands-on experience that will inform their final research project for U.S. History. Because of its unique connection to the Capitol Hill internship program, U.S. History is a four-mod course. All students will complete the first mod of U.S. History course before going to their internship on Capitol Hill. During their first mod of U.S. History, students will develop a working knowledge of how the U.S. government functions and what role Capitol Hill plays. In addition, students will work with their history teacher to practice the oral and written skills, awareness of current events, and the research skills necessary to work in a Congressional Office. Students also will identify a national policy issue that is important to them. During their Congressional internship, students will submit a variety of assignments to the Co-Curriculum Office that will help them reflect upon their experience and their national policy issue. This policy issue will be the focus of their Co-Curriculum capstone project, the research-based culmination of their internship experience, as well as the final research project in U.S. History. In addition to their daily duties as Congressional interns, the Co-Curriculum Capstone project gives students the opportunity to apply skills learned in the classroom – quantitative and analytical reasoning skills, oral and written communication skills, and research and tech skills – to effect change.",
       "credits_toward": [
         "Co-Curriculum"
       ],
@@ -3632,9 +3633,9 @@
       "name": "12th Grade Co-Curriculum: Pursuing a Passion or Curiosity",
       "department": "co_curriculum",
       "locked": true,
-      "blocks": "1",
-      "blocks_min": 1,
-      "blocks_max": 1,
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
       "grade_levels": [
         12
       ],

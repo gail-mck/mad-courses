@@ -101,14 +101,14 @@ body {
   transition: flex 0.25s ease;
 }
 
-/* collapsed: narrow strip — whole thing is clickable to open the plan */
+/* collapsed: narrow strip â€” whole thing is clickable to open the plan */
 #plan.collapsed {
   flex: 0 0 64px;
   overflow: hidden;
   cursor: pointer;
 }
 
-/* toggle arrow — full-width bar at the top of the panel
+/* toggle arrow â€” full-width bar at the top of the panel
    lives outside #plan-inner so padding changes to the scroll area never move it */
 #plan-toggle {
   display: block;
@@ -129,7 +129,7 @@ body {
   background-color: #fdf0f2;
 }
 
-/* the scrollable content area — everything except the toggle and the collapsed label */
+/* the scrollable content area â€” everything except the toggle and the collapsed label */
 #plan-inner {
   flex: 1;
   overflow-y: scroll;
@@ -141,7 +141,7 @@ body {
   display: none;
 }
 
-/* "My Course Plan" rotated — only visible when the panel is collapsed */
+/* "My Course Plan" rotated â€” only visible when the panel is collapsed */
 #plan-collapsed-label {
   display: none;
   writing-mode: vertical-lr;
@@ -373,14 +373,14 @@ hr {
   font-size: 0.78rem;
 }
 
-/* status tag on plan cards — color is set inline by JS to match the catalog card icon */
+/* status tag on plan cards â€” color is set inline by JS to match the catalog card icon */
 .plan-status {
   font-size: 0.72rem;
   margin-top: 3px;
   display: block;
 }
 
-/* card row: badge (left) · course name (fills space) · ⋮ button (right) */
+/* card row: badge (left) Â· course name (fills space) Â· â‹® button (right) */
 .card-row {
   display: flex;
   align-items: center;
@@ -388,7 +388,7 @@ hr {
   margin-bottom: 2px;
 }
 
-/* name fills the space between badge and ⋮ button */
+/* name fills the space between badge and â‹® button */
 .card-row strong {
   flex: 1;
 }
@@ -403,7 +403,7 @@ hr {
   padding: 1px 5px;
 }
 
-/* ⋮ button on catalog cards for setting a status */
+/* â‹® button on catalog cards for setting a status */
 /* bigger padding = easier to click without changing the visual size much */
 .status-btn {
   background: none;
@@ -423,7 +423,7 @@ hr {
 }
 
 
-/* dropdown that appears under the ⋮ button */
+/* dropdown that appears under the â‹® button */
 .status-dropdown {
   position: absolute;
   top: 34px;
@@ -626,7 +626,7 @@ hr {
   /* keep the grade heading glued to its first row of cards */
   .grade-column h3 { break-after: avoid; }
 
-  /* hide empty grade years entirely — no "Drag courses here" on the printout */
+  /* hide empty grade years entirely â€” no "Drag courses here" on the printout */
   .grade-column:has(.drop-zone:empty) { display: none; }
   .drop-zone { min-height: 0; }
   .drop-zone:empty::before { display: none; }
@@ -690,12 +690,12 @@ hr {
   font-family: var(--font);
 }
 
-/* turns green when the total lands in the 18–21 range */
+/* turns green when the total lands in the 18â€“21 range */
 .block-counter.good {
   color: #2e7d32;
 }
 
-/* turns red when blocks are out of the 18–21 range */
+/* turns red when blocks are out of the 18â€“21 range */
 .block-counter.off {
   color: #B90124;
 }
@@ -814,7 +814,7 @@ hr {
 .dist-met   { color: #2e7d32; font-weight: bold; }
 .dist-unmet { color: #B90124; }
 
-/* indented sub-rows (e.g. Biology ✓  Chemistry ✗  Physics ✓) */
+/* indented sub-rows (e.g. Biology âœ“  Chemistry âœ—  Physics âœ“) */
 .dist-sub {
   font-size: 0.78rem;
   color: #888;

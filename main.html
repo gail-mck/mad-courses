@@ -24,6 +24,7 @@
           <button data-dept="co_curriculum">Co-Curriculum</button>
         </div>
         <input type="search" id="search" placeholder="Search course names...">
+        <button id="help-btn" title="How to use this tool">?</button>
       </div>
 
       <!-- left: the course catalog -->
@@ -33,60 +34,106 @@
 
     <div id="resize-handle"></div>
 
-    <!-- right: the full plan — starts collapsed, expands on toggle -->
+    <!-- right: the full plan, starts collapsed, expands -->
     <div id="plan" class="collapsed">
       <button id="plan-toggle" title="Open plan">‹</button>
       <span id="plan-collapsed-label">My Course Plan</span>
 
-      <div id="plan-header">
-        <h2>My Course Plan</h2>
-        <button id="print-btn">Print / Save PDF</button>
-      </div>
+      <!-- plan-inner wraps all the scrollable content so the toggle arrow stays outside
+           the scrollable area and never shifts when padding or content changes -->
+      <div id="plan-inner">
 
-      <!-- selector so requirements adjust for students who entered in 10th or 11th grade -->
-      <div id="entry-grade-selector">
-        <span>Select first year at Madeira:</span>
-        <button class="entry-btn active" data-entry="9">9th grade</button>
-        <button class="entry-btn" data-entry="10">10th grade</button>
-        <button class="entry-btn" data-entry="11">11th grade</button>
-      </div>
-
-      <!-- one drop zone per grade year -->
-      <!-- class="drop-zone" marks these as valid drop targets -->
-      <!-- each h3 has a block-counter span that JS updates -->
-      <div class="grade-column" data-grade="9">
-        <h3>9th Grade <span class="block-counter" id="counter-9">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <div class="grade-column" data-grade="10">
-        <h3>10th Grade <span class="block-counter" id="counter-10">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <div class="grade-column" data-grade="11">
-        <h3>11th Grade <span class="block-counter" id="counter-11">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <div class="grade-column" data-grade="12">
-        <h3>12th Grade <span class="block-counter" id="counter-12">0/21 blocks</span></h3>
-        <ul class="drop-zone"></ul>
-      </div>
-
-      <!-- distribution requirements tracker: updates live as courses are added -->
-      <!-- starts collapsed so the ui isn't overwhelming — click the header to expand -->
-      <div id="dist-tracker">
-        <button id="dist-toggle">Distribution Requirements <span id="dist-arrow">▸</span></button>
-        <div id="dist-table-wrap" class="hidden">
-          <table id="dist-table"><tbody></tbody></table>
+        <div id="plan-header">
+          <h2>My Course Plan</h2>
+          <button id="print-btn">Print / Save PDF</button>
         </div>
-      </div>
 
-      <!-- tucked away at the bottom so it's not accidentally clicked -->
-      <button id="clear-btn">Clear Plan</button>
+        <!-- selector so requirements adjust for students who entered in 10th or 11th grade -->
+        <div id="entry-grade-selector">
+          <span>Select first year at Madeira:</span>
+          <button class="entry-btn active" data-entry="9">9th grade</button>
+          <button class="entry-btn" data-entry="10">10th grade</button>
+          <button class="entry-btn" data-entry="11">11th grade</button>
+        </div>
 
+        <!-- one drop zone per grade year -->
+        <!-- class="drop-zone" marks these as valid drop targets -->
+        <!-- each h3 has a block-counter span that JS updates -->
+        <div class="grade-column" data-grade="9">
+          <h3>9th Grade <span class="block-counter" id="counter-9">0 blocks · 0 credits</span></h3>
+          <ul class="drop-zone"></ul>
+        </div>
+
+        <div class="grade-column" data-grade="10">
+          <h3>10th Grade <span class="block-counter" id="counter-10">0 blocks · 0 credits</span></h3>
+          <ul class="drop-zone"></ul>
+        </div>
+
+        <div class="grade-column" data-grade="11">
+          <h3>11th Grade <span class="block-counter" id="counter-11">0 blocks · 0 credits</span></h3>
+          <ul class="drop-zone"></ul>
+        </div>
+
+        <div class="grade-column" data-grade="12">
+          <h3>12th Grade <span class="block-counter" id="counter-12">0 blocks · 0 credits</span></h3>
+          <ul class="drop-zone"></ul>
+        </div>
+
+        <!-- distribution requirements tracker: updates live as courses are added -->
+        <div id="dist-tracker">
+          <button id="dist-toggle">Distribution Requirements <span id="dist-arrow">▾</span></button>
+          <div id="dist-table-wrap">
+            <table id="dist-table"><tbody></tbody></table>
+          </div>
+        </div>
+
+        <!-- tucked away at the bottom so it's not accidentally clicked -->
+        <button id="clear-btn">Clear Plan</button>
+
+      </div><!-- end #plan-inner -->
     </div>
+    <!-- help / tutorial overlay — opened by the ? button in the header -->
+    <div id="help-overlay" class="hidden">
+      <div id="help-box">
+        <button id="help-close">✕</button>
+        <h2>How to use this planner</h2>
+
+        <h3>Building your plan</h3>
+        <ul>
+          <li><strong>Browse courses</strong> in the course catalog on the left side of the screen. Click the subject buttons at the top to jump to a department, or type in the search bar to find a course by name.</li>
+          <li><strong>Open your plan</strong> by clicking on the collapsed side bar on the far right side of the screen. Use the vertical bar between the catalog and plan to adjust the size they are displayed.</li>
+          <li><strong>Drag a course card</strong> into one of the grade columns on the right to add it to your plan.</li>
+          <li><strong>Move a course</strong> by dragging its mini-card from one grade column to another.</li>
+          <li><strong>Remove a course</strong> by dragging its mini-card back to the left catalog panel.</li>
+          <li>Click any course card (in the catalog or in your plan) to see its full description and details.</li>
+        </ul>
+
+        <h3>Tagging courses</h3>
+        <ul>
+          <li>Click the <strong>⋮</strong> button in the top right of a catalog card to mark a course as <strong>★ Interested</strong>, <strong>✓ Taken Previously</strong>, or <strong>? Asking About</strong>. The tag shows up on the mini-card in your plan too.</li>
+          <li>If you've already taken a prerequisite at a different school, mark it as "Taken Previously" so the planner knows you have it.</li>
+        </ul>
+
+        <h3>Saving &amp; printing</h3>
+        <ul>
+          <li>Your plan is <strong>saved automatically</strong> in your browser. It will still be there if you close the tab and come back.</li>
+          <li>Click <strong>Print / Save PDF</strong> to download a copy of your plan.</li>
+        </ul>
+
+        <h3>About the Madeira schedule</h3>
+        <ul>
+          <li><strong>Blocks</strong> are the main academic schedule slots. Most courses are 3 blocks per year. You must fill 18–21 blocks per year (shown by the ✓/✗ counter next to each grade).</li>
+          <li><strong>D-Blocks</strong> are daily afternoon activity periods. They are not counted toward your academic block total. You choose one activity per season (Fall, Winter, Spring).</li>
+          <li><strong>Co-Curriculum</strong> courses (Student Government, leadership programs, etc.) are separate from your academic schedule and are required each year.</li>
+          <li><strong>Evening courses</strong> like Chorus, Orchestra, Stagecraft, and GYLB meet outside of the regular school day. They count as credits toward graduation but do not take up a daytime block.</li>
+          <li><strong>Rotating courses</strong> — Linear Algebra, Multivariable Calculus, and Differential Equations — are not offered every year. Their catalog cards show which years they are available.</li>
+        </ul>
+
+        <h3>Graduation requirements</h3>
+        <p>Click <strong>Distribution Requirements</strong> at the bottom of your plan to see a live checklist of how many credits you still need in each subject area. This updates automatically as you add courses.</p>
+      </div>
+    </div>
+
     <div id="modal-overlay" class="hidden">
       <div id="modal-box">
         <button id="modal-close">✕</button>
@@ -99,8 +146,15 @@
     </div>
   </div>
 
-  <!-- confirmation dialog used for prereq warnings and clearing the plan -->
-  <!-- <dialog> is part of the DOM so Chrome Translate can reach it, unlike confirm() -->
+  <!-- shown when a student clicks a locked required course card -->
+  <dialog id="locked-dialog">
+    <p id="locked-message"></p>
+    <div id="locked-buttons">
+      <button id="locked-ok">OK</button>
+    </div>
+  </dialog>
+
+  <!-- confirmation used for prereq warnings and clearing the plan -->
   <dialog id="confirm-dialog">
     <p id="confirm-message"></p>
     <div id="confirm-buttons">

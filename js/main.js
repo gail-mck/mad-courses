@@ -52,7 +52,7 @@ const TEAM_DBLOCKS = new Set([
   'tennis-spring', 'track-field', 'riding',
   'dance', 'play', 'musical', 'theater-showcase',
   'student-publications-spectator', 'student-publications-gate', 'yearbook',
-  'model-un', 'math-team', 'esports',
+  'model-un',
   'athletic-student-assistant', 'athletic-sports-information-assistant', 'athletic-training-assistant',
 ])
 
@@ -1187,10 +1187,12 @@ document.getElementById('print-btn').addEventListener('click', () => {
   window.print()
 })
 
-// ? button opens the tutorial overlay
-document.getElementById('help-btn').addEventListener('click', () => {
+// ? button and site title both open the tutorial overlay
+function openHelp() {
   document.getElementById('help-overlay').classList.remove('hidden')
-})
+}
+document.getElementById('help-btn').addEventListener('click', openHelp)
+document.getElementById('site-title').addEventListener('click', openHelp)
 
 document.getElementById('help-close').addEventListener('click', () => {
   document.getElementById('help-overlay').classList.add('hidden')

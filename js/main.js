@@ -39,9 +39,10 @@ let draggingGradeLevels = []
 // graduation requirements by entry grade (source: Madeira Course Catalog 2025-26, pp. 5-13)
 // history totals include the 1 research credit (earned via US History or Research Seminar)
 const REQUIREMENTS = {
-  9:  { English: 12, Mathematics: 12, Science: 9, History: 9, 'World Languages': 9, Art: 3, 'Co-Curriculum': 3 },
-  10: { English: 9,  Mathematics: 9,  Science: 6, History: 6, 'World Languages': 6, Art: 3, 'Co-Curriculum': 3 },
-  11: { English: 6,  Mathematics: 6,  Science: 3, History: 3, 'World Languages': 3, Art: 3, 'Co-Curriculum': 2 },
+  // co-curriculum: 3 required courses × 3 credits each = 9; 11th entry only needs 2 × 3 = 6
+  9:  { English: 12, Mathematics: 12, Science: 9, History: 9, 'World Languages': 9, Art: 3, 'Co-Curriculum': 9 },
+  10: { English: 9,  Mathematics: 9,  Science: 6, History: 6, 'World Languages': 6, Art: 3, 'Co-Curriculum': 9 },
+  11: { English: 6,  Mathematics: 6,  Science: 3, History: 3, 'World Languages': 3, Art: 3, 'Co-Curriculum': 6 },
 }
 
 // d-blocks that count as "team experiences" (source: catalog p. 16 — group/team-based activities)
@@ -226,15 +227,15 @@ function updatePlanCard(courseId) {
 }
 
 // recalculates and displays block and credit totals for one grade column
-// blocks = daytime schedule slots (max 21, excludes evening/d_blocks/co_curriculum)
-// credits = blocks + evening courses (min 18, still excludes d_blocks/co_curriculum)
+// blocks = daytime schedule slots (max 21, excludes d_blocks only)
+// credits = blocks + evening courses (min 18)
 function updateGradeCounter(grade) {
   let blocks  = 0
   let credits = 0
   planState[grade].forEach(courseId => {
     const course = courseMap[courseId]
     if (!course) return
-    if (course.department === 'd_blocks' || course.department === 'co_curriculum') return
+    if (course.department === 'd_blocks') return
     blocks  += getBlocksCount(courseId, grade)
     credits += getCreditsCount(courseId, grade)
   })
@@ -292,9 +293,8 @@ function updateDistributionTracker() {
     courseIdsInPlan.add(courseId)
   })
 
-  // co-curriculum counts as one internship per course, not by block total
-  const cocurriculumCount = Array.from(courseIdsInPlan)
-    .filter(id => courseMap[id]?.department === 'co_curriculum').length
+  // co-curriculum credits are counted by the standard credits loop above (3 per course)
+  // no special case needed here anymore
 
   // science sub-requirements: must include biology, chemistry, and physics specifically
   const hasBio  = courseIdsInPlan.has('biology')   || courseIdsInPlan.has('ap-biology')
@@ -370,7 +370,7 @@ function updateDistributionTracker() {
     }
   })
 
-  addRow('Co-Curriculum', cocurriculumCount, req['Co-Curriculum'])
+  addRow('Co-Curriculum', totals['Co-Curriculum'] || 0, req['Co-Curriculum'])
 
   // student life is only required for students who entered in 9th grade
   if (entryGrade === 9) {
@@ -593,13 +593,14 @@ function addCourseToGrade(course, grade, savedNote = '') {
       event.dataTransfer.effectAllowed = 'move'
     })
 
-    // click shows the info dialog (the drag guard prevents it firing at end of drag)
+    // click opens the course modal, same as regular courses
+    // the drag guard prevents it firing at the end of a drag
     item.addEventListener('click', () => {
       if (item.dataset.dragging === 'true') {
         delete item.dataset.dragging
         return
       }
-      showLockedAlert(course.name, grade)
+      openModal(course)
     })
   } else {
     // regular courses: draggable and open modal on click
@@ -1201,6 +1202,12 @@ document.getElementById('help-overlay').addEventListener('click', (e) => {
     document.getElementById('help-overlay').classList.add('hidden')
   }
 })
+
+// if the page was opened via the "Get started" button on the landing page,
+// the URL has #tutorial — open the help overlay automatically
+if (window.location.hash === '#tutorial') {
+  document.getElementById('help-overlay').classList.remove('hidden')
+}
 
 // distribution requirements toggle: click the header to show/hide the table
 document.getElementById('dist-toggle').addEventListener('click', () => {

@@ -107,7 +107,7 @@
         11,
         12
       ],
-      "prereqs": "Returning Students - Algebra II with a B-. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "prereqs": "Returning Students - Algebra II. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
       "prereq_ids": [
         "algebra-ii"
       ],
@@ -131,7 +131,7 @@
         11,
         12
       ],
-      "prereqs": "Returning Students – Extended Algebra II with an A and department approval. Algebra II students with an A or above, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
+      "prereqs": "Returning Students – Extended Algebra II with an A- and department approval. Algebra II students with an A or above, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
       "prereq_ids": [
         "extended-algebra-ii",
         "algebra-ii"
@@ -180,7 +180,7 @@
         11,
         12
       ],
-      "prereqs": "Extended Precalculus with a B or higher, Precalculus with an A or higher, or Calculus, and department approval.",
+      "prereqs": "Returning Students - Trigonometry, Extended Precalculus with a B or higher, Precalculus with an A or higher, or Calculus, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval.",
       "prereq_ids": [
         "extended-precalculus",
         "precalculus",
@@ -206,7 +206,7 @@
         11,
         12
       ],
-      "prereqs": "Extended Precalculus with an A or higher, AP Calculus AB with a B or higher, and department approval. Students who complete AP Calculus AB prior to taking this course may elect not to take the first block of BC.",
+      "prereqs": "Returning Students - Trigonometry, Extended Precalculus with an A or higher, AP Calculus AB with a B or higher, and department approval. New Students - by placement test and the Academic Dean and Math Department Chair's approval. Students who complete AP Calculus AB prior to taking this course may elect not to take the first block of BC.",
       "prereq_ids": [
         "extended-precalculus",
         "ap-calculus-ab"
@@ -223,7 +223,7 @@
       "name": "Multivariable Calculus",
       "department": "mathematics",
       "rotation_cycle": true,
-      "rotation_year": 2025,
+      "rotation_year": 2027,
       "blocks": "3",
       "blocks_min": 3,
       "blocks_max": 3,
@@ -233,13 +233,12 @@
         11,
         12
       ],
-      "prereqs": "AP Calculus BC or AP Calculus AB with a B+ or higher.",
+      "prereqs": "AP Calculus BC",
       "prereq_ids": [
-        "ap-calculus-bc",
-        "ap-calculus-ab"
+        "ap-calculus-bc"
       ],
       "coreqs": "None",
-      "notes": "Offered on a rotating basis with Linear Algebra and Differential Equations.",
+      "notes": "Offered on a rotating basis with Linear Algebra and Differential Equations. Next offered in 2027–28.",
       "description": "This course provides an introduction to multivariable and vector calculus. The course covers vectors and analytic geometry in three dimensions, partial differentiation, multiple integration, and ends with vector calculus topics that build up to Green's, Stokes', and the Divergence Theorem. Students develop new problem-solving and critical reasoning skills to prepare them for further study in mathematics, the physical sciences, or engineering. Topics include surfaces in three-dimensional space, algebraic and geometric properties of vectors and vector functions in two and three dimensions, dot products and cross products, derivatives and integrals of vector functions, partial derivatives of functions of several variables, directional derivatives and gradients of scalar functions, multiple variable maximum and minimum value problems, double and triple integrals, line integrals, Green's theorem, and Stoke's theorem.",
       "credits_toward": [
         "Mathematics"
@@ -248,6 +247,32 @@
     {
       "id": "linear-algebra",
       "name": "Linear Algebra",
+      "department": "mathematics",
+      "rotation_cycle": true,
+      "rotation_year": 2028,
+      "blocks": "3",
+      "blocks_min": 3,
+      "blocks_max": 3,
+      "grade_levels": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prereqs": "AP Calculus BC",
+      "prereq_ids": [
+        "ap-calculus-bc"
+      ],
+      "coreqs": "None",
+      "notes": "Offered on a rotating basis with Multivariable Calculus and Differential Equations. Next offered in 2028–29.",
+      "description": "This course provides a study of computational and proof techniques of matrix algebra and an introduction to vector spaces. It pushes students to ask questions and communicate mathematical thinking. Topics covered include matrix algebra, systems of linear equations, eigenvalues and eigenvectors, least squares, vector spaces, inner products, and introduction to numerical techniques, and applications of linear algebra. Students also explore linear transformations, matrix representations of a linear transformation, characteristics and minimal polynomials, and diagonalization of a matrix.",
+      "credits_toward": [
+        "Mathematics"
+      ]
+    },
+    {
+      "id": "differential-equations",
+      "name": "Differential Equations",
       "department": "mathematics",
       "rotation_cycle": true,
       "rotation_year": 2026,
@@ -260,40 +285,12 @@
         11,
         12
       ],
-      "prereqs": "AP Calculus BC or AP Calculus AB with a B+ or higher.",
+      "prereqs": "AP Calculus BC",
       "prereq_ids": [
-        "ap-calculus-bc",
-        "ap-calculus-ab"
+        "ap-calculus-bc"
       ],
       "coreqs": "None",
-      "notes": "Offered on a rotating basis with Multivariable Calculus and Differential Equations.",
-      "description": "This course provides a study of computational and proof techniques of matrix algebra and an introduction to vector spaces. It pushes students to ask questions and communicate mathematical thinking. Topics covered include matrix algebra, systems of linear equations, eigenvalues and eigenvectors, least squares, vector spaces, inner products, and introduction to numerical techniques, and applications of linear algebra. Students also explore linear transformations, matrix representations of a linear transformation, characteristics and minimal polynomials, and diagonalization of a matrix.",
-      "credits_toward": [
-        "Mathematics"
-      ]
-    },
-    {
-      "id": "differential-equations",
-      "name": "Differential Equations",
-      "department": "mathematics",
-      "rotation_cycle": true,
-      "rotation_year": 2027,
-      "blocks": "3",
-      "blocks_min": 3,
-      "blocks_max": 3,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "AP Calculus BC or AP Calculus AB with a B+ or higher",
-      "prereq_ids": [
-        "ap-calculus-bc",
-        "ap-calculus-ab"
-      ],
-      "coreqs": "None",
-      "notes": "Offered on a rotating basis with Linear Algebra and Multivariable Calculus.",
+      "notes": "Offered on a rotating basis with Linear Algebra and Multivariable Calculus. Offered in 2026–27.",
       "description": "This course introduces first order differential equations and systems, second and higher order linear equations, solutions by series and Laplace transform, and applications. Students develop new problem-solving and critical reasoning skills preparing them for further study in mathematics, the physical sciences, or engineering. The course covers initial value problems, solution curves, separable and exact equations, linear and nonlinear models of first order ODEs, non/homogeneous linear equations with constant coefficients, the reduction of order, undetermined coefficients, variation of parameters, Cauchy-Euler equations, Green's Functions, Spring/Mass systems, Series circuit analogues, Laplace Transforms, The Transforms of Derivatives, Operational Properties, The Dirac Delta Function, Systems of Linear Differential Equations, Inverse Transforms, Power Series, and Solutions about Ordinary and Singular Points.",
       "credits_toward": [
         "Mathematics"
@@ -904,7 +901,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": null,
-      "description": "Biology at Madeira is a foundational course that introduces the science skills that students will develop and use throughout high school. Students will study the process of science and will survey the study of life. Laboratory exercises will be performed to reinforce concepts, and current events will be used to supplement discussions of biological issues. Topics may include (but are not limited to) chemistry and biochemistry, cell types, cellular structure and function, cell division, genetics, DNA/RNA/protein synthesis, biotechnology, evolution, diversity of life, and ecology.",
+      "description": "Biology at Madeira is a foundational course that introduces science skills that students will develop and use throughout high school. Both written and alternative assessments challenge students to critically apply content to real-world topics and examples. Laboratory exercises center around experimental design, graphing and data analysis, and the interpretation of results through the lens of meaning to the scientific community and the average citizen. Students participate fully in the process of experimentation with the goal of maximizing their development of hands-on laboratory skills and communicating their work through scientific writing. Students will study the process of science, ecology, biochemistry, cells, reproduction, genetics, protein synthesis, and evolution in this course.",
       "credits_toward": [
         "Science"
       ]
@@ -958,7 +955,7 @@
         11,
         12
       ],
-      "prereqs": "Biology and B+ or Higher in Geometry or Applied Physics.",
+      "prereqs": "Biology and A- or Higher in Geometry or Applied Physics.",
       "prereq_ids": [
         "biology"
       ],
@@ -1022,7 +1019,7 @@
         "biology",
         "chemistry"
       ],
-      "coreqs": "Advanced Precalculus (or higher). If in Precalculus, permission required from Academic Dean and chair of the science department.",
+      "coreqs": "Extended Precalculus (or higher). If in Precalculus, permission required from Academic Dean and chair of the science department.",
       "notes": null,
       "description": "The focus of Physics is to examine, explain, and analyze physical phenomena that occur in the world around us. New concepts are developed primarily through class discussion and laboratory work, and solving problems related to this material refines the understanding of these concepts. Students are expected to take responsibility for their own learning, both by working independently as well as with other students.",
       "credits_toward": [
@@ -1040,7 +1037,7 @@
         11,
         12
       ],
-      "prereqs": "Applied Chemistry or Chemistry, B- or Higher in Biology.",
+      "prereqs": "B- (or higher in Biology) Applied Chemistry or Chemistry.",
       "prereq_ids": [
         "biology",
         "applied-chemistry",
@@ -1118,7 +1115,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": null,
-      "description": "Students will apply hands-on field methods to address an environmental proposal in this lab-based course and should expect to be outside in the field (on campus) multiple times per week.",
+      "description": "Students will learn about an important part of the environmental science process in this hands-on field class that utilizes Madeira's amazing forests as a case study. Students will regularly be outdoors (multiple times a week) in the field in order to complete a biodiversity and health assessment of Madeira's forest and adjacent waterways in this lab-based course. Students will learn the applicable field methods to study the tree, vertebrate, and macroinvertebrate communities to better understand the air and water quality as well as biodiversity of Madeira's forests. Students should be comfortable being outdoors in a variety of safe weather conditions, hiking on uneven terrain in the forest, and walking in stream water with the appropriate safety equipment provided. This course happens on a rotating basis with the other field course, Citizen Science.",
       "credits_toward": [
         "Science"
       ]
@@ -1140,7 +1137,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": null,
-      "description": "Students will learn the background, methodology, and skills needed to participate in ongoing citizen science projects with the result of contributing data to the scientific community in this lab-based course. Students should expect to be outside in the field (on- and/or off-campus) multiple times per week.",
+      "description": "Students will learn the background, methodology, and laboratory and field skills needed to participate in ongoing citizen science projects with the result of contributing data to the scientific community in this lab-based course. Students should expect to be outside in the field multiple times per week. Students should be comfortable being outdoors in a variety of safe weather conditions, hiking on uneven terrain in the forest, and walking in stream water with the appropriate safety equipment provided. This course happens on a rotating basis with the other field course, Field Ecology.",
       "credits_toward": [
         "Science"
       ]
@@ -1162,7 +1159,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": null,
-      "description": "In this course, students will study the history, science, and policy issues related to current environmental matters. Topics covered will include a selection of the following: biodiversity; food, agriculture, and soil; water resource and pollution issues; solid waste disposal; fossil fuels; alternative energy resources; the atmosphere and air pollution; acid deposition; ozone depletion; and climate change. Students will play a role in determining which topics are covered during the module. The coursework will be supported by laboratory work. Students should expect to be outside (on campus) one time per week.",
+      "description": "In this course, students will study the origins of the study of environmental science, and will touch on the history, science, and policy issues related to current environmental issues. General topics could include human population growth, earth's resources, biodiversity, invasive species, pollution, overharvesting, land use and agriculture, and green technologies.",
       "credits_toward": [
         "Science"
       ]
@@ -1240,8 +1237,8 @@
         "biology"
       ],
       "coreqs": "None",
-      "notes": "Offered on a rotating basis with Marine Environmental Issues. Includes a required 3-day weekend field trip to the Chincoteague Bay Field Station occurring during the mod. Required field trip fee.",
-      "description": "Students will examine the taxonomy of life in the oceans, the characteristics that make marine organisms successful in this unique environment and will explore the varying ecologies of the world ocean.",
+      "notes": "Offered on a rotating basis with Marine Environmental Issues. A corresponding field trip to the Chincoteague Bay Field Station may occur around the time of this course.",
+      "description": "Students examine what makes the marine habitat unique, and how living things meet the challenge of this wet, salty environment through specialized adaptations. They will touch on taxonomy of life in the oceans and will explore the varying ecological habitats it holds. A corresponding field trip to the Chincoteague Bay Field Station may occur around the time of this course — Marine Ecology students are encouraged to register. This course happens on a rotating basis with the other marine science course, Marine Environmental Issues.",
       "credits_toward": [
         "Science"
       ]
@@ -1261,8 +1258,8 @@
       "prereqs": "None",
       "prereq_ids": [],
       "coreqs": "None",
-      "notes": "Offered on a rotating basis with Marine Ecology. Includes a required 3-day weekend field trip to the Chincoteague Bay Field Station occurring during the mod. Required field trip fee.",
-      "description": "Students will investigate the current environmental issues that plague the marine habitat and its biodiversity in this project-based course.",
+      "notes": "Offered on a rotating basis with Marine Ecology. A corresponding field trip to the Chincoteague Bay Field Station may occur around the time of this course.",
+      "description": "Students investigate the current environmental issues that plague the marine habitat and its biodiversity in this project-based course. Students will also learn how humans benefit daily from ecosystem services provided by the marine habitat and how the oceans are uniquely poised to provide possibilities for tackling many of the world's largest environmental issues. A corresponding field trip to the Chincoteague Bay Field Station may occur around the time of this course — Marine Environmental Issues students are encouraged to register. This course happens on a rotating basis with the other marine science course, Marine Ecology.",
       "credits_toward": [
         "Science"
       ]
@@ -1298,6 +1295,7 @@
       "blocks_min": 1,
       "blocks_max": 1,
       "grade_levels": [
+        9,
         10,
         11,
         12
@@ -1305,7 +1303,7 @@
       "prereqs": "Must be competing/practicing on a Junior Varsity or Varsity athletic team at Madeira.",
       "prereq_ids": [],
       "coreqs": "None",
-      "notes": null,
+      "notes": "Open to grades 10-12 in Mods 1-2; Open to grades 9-12 in Mods 6-7.",
       "description": "This course is designed to engage students in critical thinking as it applies to the study of human behavior in sport. Students will explore factors related to success and skill development in human performance, basic principles of confidence, motivation, and goal setting, as well as the prominent theories related to happiness and positive mood and how they relate to human performance and exercise. This course will also reference and apply the theoretical and empirical research pertaining to the psychological structure of performance.",
       "credits_toward": [
         "Science"
@@ -1327,7 +1325,7 @@
       "prereq_ids": [],
       "coreqs": "None",
       "notes": null,
-      "description": "The Comparative Global Studies I course invites students to consider what it means to be a member of our global community. Students will explore their place in the world through a skills-intensive and multi-disciplinary regional studies curriculum. Course work will draw from the histories of Africa, Asia, Latin America, and the Middle East and will focus on regional interactions as well as the origins of cultural foundations. Students will be introduced to research, analytical writing, and source evaluation. This course is committed to global citizenship and excellence in the humanities, which asks students to think critically and independently and form a deeper awareness of self and others in the world.",
+      "description": "The Comparative Global Studies I course invites students to consider what it means to be a member of our global community. Students will explore their place in the world through a skills-intensive and multi-disciplinary regional studies curriculum. Course work will draw from the histories of Africa, Asia, Latin America, and the Middle East and will focus on how humans come together to form communities and the interactions among them. Students will be introduced to research, analytical writing, and source evaluation. This course is committed to global citizenship and excellence in the humanities, which asks students to think critically and independently and form a deeper awareness of self and others in the world.",
       "credits_toward": [
         "History"
       ]
@@ -1369,7 +1367,7 @@
       ],
       "coreqs": "None",
       "notes": null,
-      "description": "Since a large part of understanding who we are and what we aspire to be requires an awareness of what has come before us, this course will provide the material to help Madeira students identify their place in the narrative of United States history. Students will continue to develop the skills established during their history coursework from 9th and 10th grade, including critical analysis of primary and secondary sources; oral expression in the form of classroom discussion, debates, and role playing in historical simulations; analysis and expression in essays and short answer questions; and in-depth historical research techniques. The first module will provide students with a working knowledge of how the U.S. government functions and what role Capitol Hill plays. One module will provide Juniors with the skills necessary to thrive in a congressional office, including oral and written skills, awareness of current events, and the research skills necessary for completing the Co-Curriculum Capstone Project.",
+      "description": "Since a large part of understanding who we are and what we aspire to be requires an awareness of what has come before us, this course will provide the material to help Madeira students, both American and international, identify their place in the narrative of United States history. Students will continue to develop the skills established during their history coursework from 9th and 10th grade, including critical analysis of primary and secondary sources; oral expression in the form of classroom discussion, debates, and role playing in historical simulations; analysis and expression through in-class historical identifications and essays and short answer questions; and in-depth historical research techniques. 11th grade U.S. History is fully integrated with the Junior Co-curriculum program. The first module will provide students with a working knowledge of how the U.S. government functions and what role Capitol Hill plays. At the beginning of the year, students select a public policy issue in which they have an interest. Throughout their modules of history and during their Co-curriculum internship, students research the issue and create a legislative proposal to address a related problem.",
       "credits_toward": [
         "History"
       ],
@@ -1483,9 +1481,9 @@
       "id": "senior-history-genocide",
       "name": "Senior History: Genocide and Moral Duty",
       "department": "history",
-      "blocks": "1-2",
+      "blocks": "1",
       "blocks_min": 1,
-      "blocks_max": 2,
+      "blocks_max": 1,
       "grade_levels": [
         12
       ],
@@ -1495,7 +1493,7 @@
       ],
       "coreqs": "None",
       "notes": "Students can elect to take any 1-mod History course as a standalone Senior History Course or with the History Research Seminar.",
-      "description": "Genocide and Moral Duty explores student-selected historical & ongoing case studies while analyzing the moral responsibilities of individuals, nations, and international institutions. Through primary sources, philosophical texts, and contemporary debates, the course challenges students to consider the limits of justice, memory, and intervention. We will also devote significant time to recent efforts to anticipate and prevent mass atrocities globally. Ultimately, students will develop a deeper understanding of how history informs our ethical obligations in the face of crimes against humanity.",
+      "description": "Genocide and Moral Duty explores student-selected historical and ongoing case studies while analyzing the moral responsibilities of individuals, nations, and international institutions. Through primary sources, philosophical texts, and contemporary debates, the course challenges students to consider the limits of justice, memory, and intervention. We will also devote significant time to recent efforts to anticipate and prevent mass atrocities globally. Ultimately, students will develop a deeper understanding of how history informs our ethical obligations in the face of crimes against humanity.",
       "credits_toward": [
         "History"
       ]
@@ -1504,9 +1502,9 @@
       "id": "senior-history-gender",
       "name": "Senior History: Gender, Sex, and Activism",
       "department": "history",
-      "blocks": "1-2",
+      "blocks": "1",
       "blocks_min": 1,
-      "blocks_max": 2,
+      "blocks_max": 1,
       "grade_levels": [
         12
       ],
@@ -1726,29 +1724,6 @@
       ]
     },
     {
-      "id": "french-elective-north-africa",
-      "name": "Advanced French Elective: Culture and Society of Francophone North Africa",
-      "department": "language",
-      "blocks": "1",
-      "blocks_min": 1,
-      "blocks_max": 1,
-      "grade_levels": [
-        11,
-        12
-      ],
-      "prereqs": "Completion of AP French Language & Culture or Advanced Topics in French",
-      "prereq_ids": [
-        "ap-french",
-        "french-advanced-topics"
-      ],
-      "coreqs": "None",
-      "notes": "The language of the classroom is French.",
-      "description": "In this one-module course, students will delve into the societies of Francophone North Africa, also known as the Maghreb, encompassing Morocco, Algeria, and Tunisia. These countries, as we will discover together, have wonderfully rich histories. We will navigate themes related to French colonialism and neocolonialism, the struggle for independence, and pressing contemporary issues in each of these countries. The latter will include topics such as women in society, youth unemployment, and life under authoritarian regimes. This course aims to not only bolster students' French language skills but also to deepen their understanding of a significant and vibrant region of the Francophone world. Through an engaging mix of historical background, cultural perspective, and contemporary analysis, this participatory class promises a rich, immersive learning experience.",
-      "credits_toward": [
-        "World Languages"
-      ]
-    },
-    {
       "id": "latin-i",
       "name": "Latin I",
       "department": "language",
@@ -1814,30 +1789,6 @@
       "coreqs": "None",
       "notes": null,
       "description": "Latin III reinforces the work students have done in Latin II and introduces them to the translation and interpretation of authentic Latin texts. Students become familiar with a variety of styles and genres as they read and analyze representative samples of the most famous Latin authors and study the works in their cultural context. Readings include excerpts from Pliny's Letters, the epigrams of Martial, the poems of Horace and Catullus, Ovid's Metamorphoses, Vergil's Aeneid, and Tacitus's Annals.",
-      "credits_toward": [
-        "World Languages"
-      ]
-    },
-    {
-      "id": "latin-iv",
-      "name": "Latin IV",
-      "department": "language",
-      "blocks": "3",
-      "blocks_min": 3,
-      "blocks_max": 3,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "Returning students—Latin III. New students—by placement test and departmental approval",
-      "prereq_ids": [
-        "latin-iii"
-      ],
-      "coreqs": "None",
-      "notes": null,
-      "description": "Students read selected letters of Pliny the Younger, along with supplementary readings from contemporary literature and history, to develop their ability to comprehend, translate, and analyze authentic Latin texts, to place Pliny's letters in the context of a life and successful career under the Roman emperors, to understand the letters in terms of the epistolary genre, and to develop persuasive arguments regarding key, recurring themes in the letters. Students examine how Pliny portrays himself and others and touches on subjects as varied as the destruction of Pompeii, the existence of ghosts, happy relationships, and accusations under informers. Projects allow students to delve more deeply into the life of Pliny and history of the times. This course will help students develop the familiarity with Pliny, understanding of Latin, and skills they will need to succeed in AP Latin or pursue Latin at a higher level.",
       "credits_toward": [
         "World Languages"
       ]
@@ -2308,32 +2259,6 @@
       ]
     },
     {
-      "id": "photography-alternative-processes",
-      "name": "Photography: Alternative Processes",
-      "department": "art",
-      "blocks": "1",
-      "blocks_min": 1,
-      "blocks_max": 1,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "Darkroom or Digital Photography",
-      "prereq_ids": [
-        "photography-darkroom",
-        "photography-digital"
-      ],
-      "coreqs": "None",
-      "notes": "Meets Design Thinking and art credit.",
-      "description": "This course introduces students to the fundamentals of non-silver alternative photographic processes with emphasis on technical skills, and critique of photographic work. Among the processes studied: Caffenol development, and medium and large format photographic processes. Students will learn skills related to safe chemistry usage, scanning, Photoshop manipulation to create and print digital negatives, paper coating and contact printing techniques.",
-      "credits_toward": [
-        "Art",
-        "Design Thinking"
-      ]
-    },
-    {
       "id": "acting-i",
       "name": "Acting I: Acting Skills",
       "department": "art",
@@ -2537,29 +2462,6 @@
         "Art"
       ],
       "schedule": "Open to grades 9-12, Mods 1 & 2, Mods 3 & 4, Mods 5 & 6 on Tuesdays and Thursdays, 6:30-8:30 p.m."
-    },
-    {
-      "id": "tech-events-crew",
-      "name": "Tech Events Crew (Evening)",
-      "department": "art",
-      "blocks": "Yearlong",
-      "blocks_min": null,
-      "blocks_max": null,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "None",
-      "prereq_ids": [],
-      "coreqs": "None",
-      "notes": "Does not meet D-block requirement.",
-      "description": "Tech Events Crew is a hands-on introduction to basic theatre technology focusing on stage crew and booth operations. Students of every level gain a working knowledge of theatre terminology and handle all operations involved in running special events and All School Meetings throughout the school year. In addition to crew/booth responsibilities, students will learn specialized carpentry, painting, lighting, and sound skills through monthly workshops and seminars. Includes teaching workshops and staffing events.",
-      "credits_toward": [
-        "Art"
-      ],
-      "schedule": "Yearlong non-D Block activity."
     }
   ],
   "other": [
@@ -2797,54 +2699,6 @@
       "movement": false
     },
     {
-      "id": "esports",
-      "name": "Esports",
-      "department": "d_blocks",
-      "blocks": "1 per season",
-      "blocks_min": null,
-      "blocks_max": null,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "None",
-      "prereq_ids": [],
-      "coreqs": "None",
-      "notes": "Maximum of 10 students.",
-      "description": "The Madeira esports team fuses passion and opportunity to ensure students succeed in a competitive digital world. During this activity students will explore careers in digital industries, learn the fundamentals of live video streaming, and explore ethics and contemporary issues through a variety of different digital experiences and game styles. Students will develop skills in teamwork and problem solving helping to foster self-confidence and independent critical thinking while maintaining a healthy environment for competition through digital game play.",
-      "credits_toward": [
-        "Activities"
-      ],
-      "season": "Fall",
-      "movement": false
-    },
-    {
-      "id": "math-team",
-      "name": "Math Team",
-      "department": "d_blocks",
-      "blocks": "1 per season",
-      "blocks_min": null,
-      "blocks_max": null,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "None",
-      "prereq_ids": [],
-      "coreqs": "None",
-      "notes": null,
-      "description": "Students participate in math related challenges, activities, and competitions. No prior math or computer science knowledge is required, only an interest in learning and participating. Students may participate in math competitions.",
-      "credits_toward": [
-        "Activities"
-      ],
-      "season": "Fall",
-      "movement": false
-    },
-    {
       "id": "model-un",
       "name": "Model United Nations",
       "department": "d_blocks",
@@ -2917,54 +2771,6 @@
       "movement": false
     },
     {
-      "id": "space-mission-exploration",
-      "name": "Space Mission Exploration",
-      "department": "d_blocks",
-      "blocks": "1 per season",
-      "blocks_min": null,
-      "blocks_max": null,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "None",
-      "prereq_ids": [],
-      "coreqs": "None",
-      "notes": null,
-      "description": "Students will design their own space mission through an interdisciplinary lens. Students will consider the science, engineering, management, budget, and geopolitical requirements for the design and execution of a successful space mission. The D Block will be based on a simulation of the NASA project mission design process, from conceptual study, preliminary analysis, and definition to the design, development, and operational phases of a space mission.",
-      "credits_toward": [
-        "Activities"
-      ],
-      "season": "Spring",
-      "movement": false
-    },
-    {
-      "id": "global-activism",
-      "name": "Global Activism",
-      "department": "d_blocks",
-      "blocks": "1 per season",
-      "blocks_min": null,
-      "blocks_max": null,
-      "grade_levels": [
-        9,
-        10,
-        11,
-        12
-      ],
-      "prereqs": "None",
-      "prereq_ids": [],
-      "coreqs": "None",
-      "notes": null,
-      "description": "Students in Global Activism will discuss theories of change, explore the architecture and toolkit of protests around the world, meet with activists locally and globally, and, ultimately, design (from start to finish) a piece of activism related to art, justice, anti-poverty, anti-racism, immigration, indigenous land rights, the sex-gender system, planetary health, community change, or a topic of choice.",
-      "credits_toward": [
-        "Activities"
-      ],
-      "season": "Spring",
-      "movement": false
-    },
-    {
       "id": "intro-fitness-strength",
       "name": "Intro to Fitness & Strength Training",
       "department": "d_blocks",
@@ -3001,13 +2807,13 @@
         11,
         12
       ],
-      "prereqs": "Students must complete Intro to Fitness & Strength Training or Compete on a Varsity Team",
+      "prereqs": "None",
       "prereq_ids": [
         "intro-fitness-strength"
       ],
       "coreqs": "None",
-      "notes": "Roster Minimum: 4, Roster Maximum: 12.",
-      "description": "Advanced Weight Training aims to illustrate our athletic philosophy by developing strong women who succeed at life. Strength builds confidence. Students will engage in free-weight training led by our Strength and Conditioning Coach using barbell, dumbbell, kettlebell, and medicine ball movements. Students will learn the value of consistent work to reach their maximum potential through the techniques of strength training.",
+      "notes": "Counts as a team experience (Team Credit). Roster Minimum: 4, Roster Maximum: 12.",
+      "description": "Advanced Weight Training builds upon foundational strength principles to help students reach their peak athletic potential. This course embodies the athletic philosophy of developing strong women who succeed in life. Students will participate in a structured, coach-led program using barbells, dumbbells, kettlebells, and medicine balls. Training sessions emphasize advanced lifting techniques, individualized goal setting, and safe, progressive overload. Students will learn to apply principles of strength, mobility, and recovery while developing the mental toughness and consistency that drive long-term success. Because this course emphasizes teamwork and accountability, it is considered a team activity. Each class functions as a training group that encourages, challenges, and celebrates one another. The semester will conclude with a Performance Challenge, where students demonstrate measurable strength and conditioning progress through individual and team events.",
       "credits_toward": [
         "Activities"
       ],

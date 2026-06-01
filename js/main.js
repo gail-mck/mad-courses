@@ -19,6 +19,10 @@ const notesMap = {}
 // key is courseId_grade so the same course can have different counts in different years
 const blocksSelectionMap = {}
 
+// for d-blocks with multiple seasons (e.g. Dance: Fall, Winter, Spring) stores which seasons
+// the student is actually doing — key is courseId_grade, value is array of selected seasons
+const dblockSeasonMap = {}
+
 // grade the student entered Madeira — changes which graduation requirements are shown
 let entryGrade = 9
 
@@ -142,11 +146,12 @@ function savePlan() {
       11: Array.from(planState[11]).filter(id => !courseMap[id]?.locked),
       12: Array.from(planState[12]).filter(id => !courseMap[id]?.locked),
     },
-    notes:           notesMap,
-    statuses:        statusMap,
-    blocksSelection: blocksSelectionMap,
+    notes:            notesMap,
+    statuses:         statusMap,
+    blocksSelection:  blocksSelectionMap,
+    dblockSeasons:    dblockSeasonMap,
     // save which locked courses the student intentionally removed
-    lockedOverrides: Array.from(lockedOverrides),
+    lockedOverrides:  Array.from(lockedOverrides),
   }
   localStorage.setItem('madeiraPlan', JSON.stringify(data))
 }
@@ -358,14 +363,24 @@ function updateDistributionTracker() {
   const activeGrades = [9, 10, 11, 12].filter(g => g >= entryGrade)
   activeGrades.forEach(grade => {
     const dblockIds = Array.from(planState[grade]).filter(id => courseMap[id]?.department === 'd_blocks')
-    const seasons = dblockIds.length
+
+    // count unique seasons actually covered, using the student's season picker selections
+    // so Dance on Fall+Winter = 2 seasons, not 1 course
+    const coveredSeasons = new Set()
+    dblockIds.forEach(id => {
+      const seasons = dblockSeasonMap[`${id}_${grade}`] ||
+        (courseMap[id].season || '').split(',').map(s => s.trim()).filter(Boolean)
+      seasons.forEach(s => coveredSeasons.add(s))
+    })
+    const seasonCount = coveredSeasons.size
+
     const teamCount = dblockIds.filter(id => TEAM_DBLOCKS.has(id)).length
     const movCount  = dblockIds.filter(id => MOVEMENT_DBLOCKS.has(id)).length
     if (grade <= 10) {
-      addRow(`${gradeLabel[grade]} D-Blocks`, seasons, 3)
+      addRow(`${gradeLabel[grade]} D-Blocks`, seasonCount, 3)
       addSubRow(`Team/group experiences ${check(teamCount >= 2)} &nbsp; (${teamCount} of 2 required)`)
     } else {
-      addRow(`${gradeLabel[grade]} D-Blocks`, seasons, 2)
+      addRow(`${gradeLabel[grade]} D-Blocks`, seasonCount, 2)
       addSubRow(`Movement activity ${check(movCount >= 1)} &nbsp; (${movCount} of 1 required)`)
     }
   })
@@ -467,9 +482,10 @@ function addCourseToGrade(course, grade, savedNote = '') {
   planState[grade].add(courseId)
 
   // build the block display for the mini-card subtitle
+  // for d-blocks the subtitle is set dynamically after the season picker is initialized
   let blocksDisplay
   if (course.department === 'd_blocks') {
-    blocksDisplay = course.season
+    blocksDisplay = course.season  // placeholder — overwritten below if multi-season
   } else if (course.department === 'co_curriculum') {
     blocksDisplay = 'Offered'
   } else if (course.blocks === 'Yearlong') {
@@ -626,11 +642,96 @@ function addCourseToGrade(course, grade, savedNote = '') {
     })
   }
 
-  // append to the correct grade column's drop-zone, then sort by department
-  const column   = document.querySelector(`.grade-column[data-grade="${grade}"]`)
-  const dropZone = column.querySelector('.drop-zone')
-  dropZone.appendChild(item)
-  sortDropZone(dropZone)
+  // d-blocks: season picker so students can select which seasons apply
+  // supports courses offered across multiple seasons (e.g. Dance: Fall, Winter, Spring)
+  if (course.department === 'd_blocks' && course.season) {
+    const courseSeasons = course.season.split(',').map(s => s.trim())
+    const key = `${courseId}_${grade}`
+    const subtitle = item.querySelector('.plan-subtitle')
+
+    // returns the set of seasons already claimed by other d-blocks in this grade
+    function getTakenSeasons() {
+      const taken = new Set()
+      Array.from(planState[grade]).forEach(otherId => {
+        if (otherId === courseId) return
+        if (courseMap[otherId]?.department !== 'd_blocks') return
+        const otherSeasons = dblockSeasonMap[`${otherId}_${grade}`] || []
+        otherSeasons.forEach(s => taken.add(s))
+      })
+      return taken
+    }
+
+    // initialize selection: use saved value, or default to all available seasons
+    if (!dblockSeasonMap[key]) {
+      const taken = getTakenSeasons()
+      dblockSeasonMap[key] = courseSeasons.filter(s => !taken.has(s))
+    }
+
+    // keep the subtitle in sync with whatever seasons are selected
+    function refreshSubtitle() {
+      const sel = dblockSeasonMap[key] || []
+      subtitle.textContent = sel.length > 0 ? `${sel.join(', ')} · D-Block` : 'D-Block'
+    }
+    refreshSubtitle()
+
+    // if the course spans multiple seasons, show toggle buttons so the student can pick
+    if (courseSeasons.length > 1) {
+      const picker = document.createElement('div')
+      picker.className = 'season-picker'
+
+      const label = document.createElement('span')
+      label.className = 'block-picker-label'
+      label.textContent = 'seasons:'
+      picker.appendChild(label)
+
+      courseSeasons.forEach(season => {
+        const btn = document.createElement('button')
+        btn.className = 'block-pick-btn season-btn'
+        btn.textContent = season
+        btn.dataset.season = season
+        if ((dblockSeasonMap[key] || []).includes(season)) btn.classList.add('active')
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation()
+          if (btn.classList.contains('active')) {
+            // don't allow deselecting the last remaining season
+            if ((dblockSeasonMap[key] || []).length <= 1) {
+              showToast('At least one season must be selected. Drag the card back to the catalog to remove it.')
+              return
+            }
+            dblockSeasonMap[key] = (dblockSeasonMap[key] || []).filter(s => s !== season)
+            btn.classList.remove('active')
+          } else {
+            // only allow selecting if no other d-block already owns this season
+            if (getTakenSeasons().has(season)) {
+              showToast(`You already have a ${season} D-block in this grade.`)
+              return
+            }
+            dblockSeasonMap[key] = [...(dblockSeasonMap[key] || []), season]
+            btn.classList.add('active')
+          }
+          refreshSubtitle()
+          updateGradeCounter(grade)
+          updateDistributionTracker()
+          savePlan()
+        })
+
+        picker.appendChild(btn)
+      })
+      item.appendChild(picker)
+    }
+  }
+
+  // append to the correct zone: d-blocks go to their own section, everything else to drop-zone
+  const column = document.querySelector(`.grade-column[data-grade="${grade}"]`)
+  if (course.department === 'd_blocks') {
+    column.querySelector('.dblock-zone').appendChild(item)
+  } else {
+    const dropZone = column.querySelector('.drop-zone')
+    dropZone.appendChild(item)
+    sortDropZone(dropZone)
+  }
+
   updateCatalogCard(courseId)
   updateGradeCounter(grade)
   updateDistributionTracker()
@@ -686,6 +787,9 @@ function restorePlan() {
 
   // restore block selections before rebuilding cards so the pickers show the right value
   if (data.blocksSelection) Object.assign(blocksSelectionMap, data.blocksSelection)
+
+  // restore d-block season selections before rebuilding cards
+  if (data.dblockSeasons) Object.assign(dblockSeasonMap, data.dblockSeasons)
 
   // restore any locked-course removals the student intentionally made
   if (data.lockedOverrides) data.lockedOverrides.forEach(id => lockedOverrides.add(id))
@@ -934,6 +1038,10 @@ function updateGradeVisibility() {
 
       // clear state FIRST so updateCatalogCard reads the now-empty grade and removes the badge
       planState[grade].clear()
+      // clean up d-block season selections for this grade
+      Object.keys(dblockSeasonMap).forEach(k => {
+        if (k.endsWith(`_${grade}`)) delete dblockSeasonMap[k]
+      })
       courseIds.forEach(id => updateCatalogCard(id))
       updateGradeCounter(grade)
       savePlan()
@@ -1058,18 +1166,24 @@ gradeColumns.forEach(column => {
       planState[fromGrade].delete(courseId)
       planState[toGrade].add(courseId)
 
-      // move the existing DOM element so notes are preserved
-      // use the compound grade key so we move exactly the fromGrade copy, not a sibling grade's card
+      // move the existing DOM element so notes and season picker are preserved
       const planCard = document.querySelector(`.plan-card[data-grade-key="${courseId}_${fromGrade}"]`)
-      const dropZone = column.querySelector('.drop-zone')
+      const isDblock = movedCourse?.department === 'd_blocks'
+      const targetZone = isDblock
+        ? column.querySelector('.dblock-zone')
+        : column.querySelector('.drop-zone')
+
       if (planCard) {
         planCard.dataset.gradeKey = `${courseId}_${toGrade}`
-        dropZone.appendChild(planCard)
+        // carry the season selection over to the new grade
+        dblockSeasonMap[`${courseId}_${toGrade}`] = dblockSeasonMap[`${courseId}_${fromGrade}`]
+        delete dblockSeasonMap[`${courseId}_${fromGrade}`]
+        targetZone.appendChild(planCard)
       }
 
-      // update grade badge on the catalog card and sort the new column
+      // update grade badge on the catalog card and sort the new column (academic only)
       updateCatalogCard(courseId)
-      sortDropZone(dropZone)
+      if (!isDblock) sortDropZone(targetZone)
       updateGradeCounter(fromGrade)
       updateGradeCounter(toGrade)
       updateDistributionTracker()
@@ -1090,17 +1204,21 @@ gradeColumns.forEach(column => {
     // if this course is already in this year, do nothing
     if (planState[targetGrade].has(courseId)) return
 
-    // d-blocks: prevent dropping a season that's already covered in this grade year
-    // season field is a comma-separated string like "Fall" or "Fall, Winter, Spring"
+    // d-blocks: block the drop only if ALL of the course's seasons are already taken
+    // if at least one season is free, allow it — the season picker handles the rest
     if (course.department === 'd_blocks' && course.season) {
       const incomingSeasons = course.season.split(',').map(s => s.trim())
-      const existingDblocks = Array.from(planState[targetGrade])
-        .filter(id => courseMap[id]?.department === 'd_blocks' && courseMap[id]?.season)
-      const existingSeasons = existingDblocks.flatMap(id => courseMap[id].season.split(',').map(s => s.trim()))
-      const conflict = incomingSeasons.find(s => existingSeasons.includes(s))
-      if (conflict) {
+      const takenSeasons = new Set()
+      Array.from(planState[targetGrade]).forEach(otherId => {
+        if (courseMap[otherId]?.department !== 'd_blocks') return
+        const otherSeasons = dblockSeasonMap[`${otherId}_${targetGrade}`] ||
+          (courseMap[otherId].season || '').split(',').map(s => s.trim())
+        otherSeasons.forEach(s => takenSeasons.add(s))
+      })
+      const available = incomingSeasons.filter(s => !takenSeasons.has(s))
+      if (available.length === 0) {
         const labels = { 9: '9th', 10: '10th', 11: '11th', 12: '12th' }
-        showToast(`You already have a ${conflict} D-block in ${labels[targetGrade]} grade.`)
+        showToast(`All seasons for "${course.name}" are already filled in ${labels[targetGrade]} grade.`)
         return
       }
     }
@@ -1150,8 +1268,9 @@ catalogWrapper.addEventListener('drop', (event) => {
 
   planState[grade].delete(courseId)
 
-  // clean up any saved block selection for this course/grade combo
+  // clean up any saved block or season selection for this course/grade combo
   delete blocksSelectionMap[`${courseId}_${grade}`]
+  delete dblockSeasonMap[`${courseId}_${grade}`]
 
   // use the compound grade key so only this grade's copy is removed, not all copies
   const planCard = document.querySelector(`.plan-card[data-grade-key="${courseId}_${grade}"]`)
@@ -1231,6 +1350,7 @@ document.getElementById('clear-btn').addEventListener('click', () => {
   ;[9, 10, 11, 12].forEach(g => planState[g].clear())
   Object.keys(notesMap).forEach(k => delete notesMap[k])
   Object.keys(blocksSelectionMap).forEach(k => delete blocksSelectionMap[k])
+  Object.keys(dblockSeasonMap).forEach(k => delete dblockSeasonMap[k])
   lockedOverrides.clear()
 
   // update catalog cards so grade badges and selected styles clear too

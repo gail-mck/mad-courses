@@ -1030,6 +1030,72 @@ hr {
   color: #B90124;
 }
 
+/* ── d-block section inside each grade column ───────────────── */
+
+/* hidden when the dblock-zone is empty so no stray heading shows */
+.dblock-section:has(.dblock-zone:empty) {
+  display: none;
+}
+
+.dblock-section {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #f0e8e8;
+}
+
+/* small "D-Blocks" label above the d-block mini-cards */
+.dblock-heading {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #bbb;
+  margin: 0 0 6px 0;
+  font-family: var(--font);
+}
+
+/* same grid layout as the regular drop-zone */
+.dblock-zone {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 6px;
+}
+
+/* ── season picker on d-block mini-cards ─────────────────────── */
+
+.season-picker {
+  display: flex;
+  gap: 3px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+/* small Fall / Winter / Spring toggle buttons */
+.season-btn {
+  background: none;
+  border: 1px solid #e8d8d8;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-size: 0.68rem;
+  cursor: pointer;
+  font-family: var(--font);
+  color: #bbb;
+  line-height: 1.4;
+}
+
+.season-btn.active {
+  border-color: #B90124;
+  color: #B90124;
+  background-color: #fdf0f2;
+}
+
+.season-btn:hover:not(:disabled) {
+  border-color: #B90124;
+  color: #B90124;
+}
+
 /*  locked required course plan cards */
 
 .plan-card--locked {
